@@ -1,0 +1,103 @@
+{
+  "lastUpdated": "2025-01-21T00:00:00.000Z",
+  "domains": [
+    {
+      "tld": ".com",
+      "register": "৳1990",
+      "transfer": "৳1990",
+      "renew": "৳1990",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".net",
+      "register": "৳1900",
+      "transfer": "৳1900",
+      "renew": "৳1900",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".org",
+      "register": "৳1600",
+      "transfer": "৳1600",
+      "renew": "৳1600",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".xyz",
+      "register": "৳200",
+      "transfer": "৳200",
+      "renew": "৳200",
+      "grace": "৳200"
+    },
+    {
+      "tld": ".tech",
+      "register": "৳1700",
+      "transfer": "৳1700",
+      "renew": "৳1700",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".biz",
+      "register": "৳1500",
+      "transfer": "৳1500",
+      "renew": "৳1500",
+      "grace": "৳400"
+    },
+    {
+      "tld": ".company",
+      "register": "৳2000",
+      "transfer": "৳2000",
+      "renew": "৳2000",
+      "grace": "৳600"
+    },
+    {
+      "tld": ".store",
+      "register": "৳1800",
+      "transfer": "৳1800",
+      "renew": "৳1800",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".bd",
+      "register": "৳3000",
+      "transfer": "৳3000",
+      "renew": "৳3000",
+      "grace": "৳800"
+    },
+    {
+      "tld": ".us",
+      "register": "৳1200",
+      "transfer": "৳1200",
+      "renew": "৳1200",
+      "grace": "৳400"
+    },
+    {
+      "tld": ".uk",
+      "register": "৳1100",
+      "transfer": "৳1100",
+      "renew": "৳1100",
+      "grace": "৳400"
+    },
+    {
+      "tld": ".dev",
+      "register": "৳1500",
+      "transfer": "৳1500",
+      "renew": "৳1500",
+      "grace": "৳400"
+    },
+    {
+      "tld": ".app",
+      "register": "৳1600",
+      "transfer": "৳1600",
+      "renew": "৳1600",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".online",
+      "register": "৳550",
+      "transfer": "৳550",
+      "renew": "৳550",
+      "grace": "৳300"
+    }
+  ]
+}
