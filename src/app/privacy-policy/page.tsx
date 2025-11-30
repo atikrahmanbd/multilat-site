@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
     <>
       {/* Two Column Layout - Full Height */}
       <div className="relative w-full bg-background min-h-screen">
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-7xl">
           <div className="flex border-l border-r border-t border-border">
             {/* Table Of Contents - Left Sidebar (Sticky) */}
             <div className="hidden xl:block xl:w-1/4 border-r border-dashed border-border bg-background bg-[linear-gradient(45deg,transparent_30%,rgba(0,0,0,.05)_30%,rgba(0,0,0,.05)_50%,transparent_50%,transparent_80%,rgba(0,0,0,.05)_80%,rgba(0,0,0,.05)_100%)] dark:bg-[linear-gradient(45deg,transparent_30%,rgba(255,255,255,.05)_30%,rgba(255,255,255,.05)_50%,transparent_50%,transparent_80%,rgba(255,255,255,.05)_80%,rgba(255,255,255,.05)_100%)] bg-[length:12px_12px] transition-all">
@@ -82,11 +82,11 @@ export default function PrivacyPolicyPage() {
                       Introduction
                     </h2>
                     <p className="text-muted-foreground leading-relaxed text-justify">
-                      B.S.T. or Business. Solution. Technology. (&quot;We&quot;,
-                      &quot;Us&quot;, Or &quot;Our&quot;) Is Committed To
-                      Protecting Your Privacy. This Privacy Policy Explains How
-                      We Collect, Use, Disclose, And Safeguard Your Information
-                      When You Visit Our Website And Use Our Services.
+                      Multilat (&quot;We&quot;, &quot;Us&quot;, Or
+                      &quot;Our&quot;) Is Committed To Protecting Your Privacy.
+                      This Privacy Policy Explains How We Collect, Use,
+                      Disclose, And Safeguard Your Information When You Visit
+                      Our Website And Use Our Services.
                     </p>
                   </section>
 

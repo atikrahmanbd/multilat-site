@@ -6,6 +6,8 @@ import { ThemeColorProvider } from "@/components/theme-context";
 import { Navbar } from "@/components/header/navbar";
 import { Footer } from "@/components/footer/footer";
 import { FooterBrandText } from "@/components/footer/footer-brand-text";
+import { GridLinesSection } from "@/components/ui/grid-lines";
+import ClickSpark from "@/components/ui/react-bits/ClickSpark";
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam-pro",
@@ -38,10 +40,19 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ThemeColorProvider>
-            <Navbar />
-            <main className="pt-16">{children}</main>
-            <Footer />
-            <FooterBrandText />
+            <ClickSpark sparkRadius={50} sparkCount={10} duration={500}>
+              <Navbar />
+              <main className="pt-16">{children}</main>
+              <GridLinesSection linePositions={[0, 100]}>
+                <Footer />
+              </GridLinesSection>
+              <GridLinesSection
+                showBottomIntersections={false}
+                linePositions={[0, 100]}
+              >
+                <FooterBrandText />
+              </GridLinesSection>
+            </ClickSpark>
           </ThemeColorProvider>
         </ThemeProvider>
       </body>

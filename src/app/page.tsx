@@ -9,21 +9,93 @@ import { CommonTrustedBrands } from "@/components/sections-common/common-trusted
 import { CommonWhatsNext } from "@/components/sections-common/common-whats-next";
 import { CommonFeaturesShowcase } from "@/components/sections-common/common-features-showcase";
 import { CommonBetterExperience } from "@/components/sections-common/common-better-experience";
+import { GridLinesSection } from "@/components/ui/grid-lines";
 
 export default function Home() {
   return (
     <>
-      <HomeMainHero />
-      <HomeServicesOffered />
-      <HomeAdditionalServices />
-      <CommonPortalPreview />
-      <HomeWhyChooseUs />
-      <CommonFeaturesShowcase />
-      <CommonTestimonials />
-      <CommonTrustedBrands />
-      <CommonBetterExperience />
-      <HomeFaqSection />
-      <CommonWhatsNext />
+      {/* Hero - 2 Lines At Edges */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showTopIntersections={false}
+        showBottomIntersections={false}
+      >
+        <HomeMainHero />
+      </GridLinesSection>
+
+      {/* Additional Services - 2 Lines At Edges */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showBottomIntersections={false}
+      >
+        <HomeAdditionalServices />
+      </GridLinesSection>
+
+      {/* Services - 4 Lines: 0%, 33%, 66%, 100% */}
+      <GridLinesSection linePositions={[0, 100]}>
+        <HomeServicesOffered />
+      </GridLinesSection>
+
+      {/* Portal Preview - 2 Lines At Edges */}
+      <GridLinesSection linePositions={[0, 100]}>
+        <CommonPortalPreview />
+      </GridLinesSection>
+
+      {/* Why Choose Us - Custom: 2/4, 1/4, 1/4 Distribution */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showBottomIntersections={false}
+      >
+        <HomeWhyChooseUs />
+      </GridLinesSection>
+      {/* Features - 5 Lines Evenly Distributed */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showBottomIntersections={false}
+      >
+        <CommonFeaturesShowcase />
+      </GridLinesSection>
+
+      {/* Testimonials - 3 Lines: 0%, 50%, 100% */}
+      <GridLinesSection
+        linePositions={[0, 50, 100]}
+        showBottomIntersections={false}
+      >
+        <CommonTestimonials />
+      </GridLinesSection>
+
+      {/* Trusted Brands - 2 Lines At Edges */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showBottomIntersections={false}
+      >
+        <CommonTrustedBrands />
+      </GridLinesSection>
+
+      {/* Better Experience - 2 Lines At Edges */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showBottomIntersections={false}
+      >
+        <CommonBetterExperience />
+      </GridLinesSection>
+
+      {/* FAQ - 3 Lines: 0%, 50%, 100% */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showBottomIntersections={false}
+      >
+        <HomeFaqSection />
+      </GridLinesSection>
+
+      {/* What's Next - 2 Lines At Edges */}
+      <GridLinesSection
+        linePositions={[0, 100]}
+        showTopIntersections={false}
+        showBottomIntersections={false}
+      >
+        <CommonWhatsNext />
+      </GridLinesSection>
     </>
   );
 }

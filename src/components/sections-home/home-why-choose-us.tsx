@@ -14,7 +14,7 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export function HomeWhyChooseUs() {
   return (
-    <section className="relative w-full pt-0 pb-16 sm:pb-24 md:pb-32 lg:pb-40 bg-background overflow-hidden">
+    <section className="relative w-full pt-0 pb-16 sm:pb-24 md:pb-32 lg:pb-40 bg-background">
       <div className="mx-auto max-w-7xl relative z-10">
         {/* Title And Subheading */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">

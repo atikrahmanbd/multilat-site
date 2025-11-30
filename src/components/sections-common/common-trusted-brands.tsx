@@ -39,10 +39,10 @@ export function CommonTrustedBrands() {
   ];
 
   return (
-    <section className="relative pt-0 pb-12 sm:pb-16 md:pb-20 px-4 dark:bg-black/50 border-b border-border">
-      <div className="mx-auto w-full max-w-7xl">
+    <section className="relative dark:bg-black/50">
+      <div className="mx-auto max-w-7xl p-4 sm:p-6 md:p-8 py-8 sm:py-16 md:py-20">
         {/* Title And Subheading */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+        <div className="text-center">
           <h2 className="mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300">
             Trusted By Companies & Brands
           </h2>

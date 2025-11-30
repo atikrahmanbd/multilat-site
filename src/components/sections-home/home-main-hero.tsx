@@ -1,8 +1,8 @@
 "use client";
 
-import { BackgroundDot } from "@/components/ui/background-dot";
+import DotGrid from "@/components/ui/react-bits/DotGrid";
 import { HomeMainContent } from "@/components/sections-home/home-main-content";
-import { CommonDomainSearch } from "@/components/sections-common/common-domain-search";
+// import { CommonDomainSearch } from "@/components/sections-common/common-domain-search";
 import { CommonDomainScrollPricing } from "@/components/sections-common/common-domain-scroll-pricing";
 import {
   BorderMagicButton,
@@ -12,13 +12,25 @@ import { Rocket, ArrowRight } from "lucide-react";
 
 export function HomeMainHero() {
   return (
-    <div className="relative w-full overflow-hidden bg-background py-16 sm:py-24 md:py-32">
-      <BackgroundDot backgroundColor="bg-background" fadeDirection="bottom" />
+    <div className="relative w-full bg-background py-16 sm:py-24 md:py-32">
+      {/* Interactive Dot Grid Background With Mask Fade - z-0 below lines */}
+      <div className="absolute inset-0 z-0 overflow-hidden [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_0%,rgba(0,0,0,1)_75%,rgba(0,0,0,0.5)_90%,rgba(0,0,0,0.2)_100%)] [mask-size:100%_100%] [mask-repeat:no-repeat]">
+        <DotGrid
+          dotSize={2}
+          gap={16}
+          proximity={120}
+          shockRadius={300}
+          shockStrength={5}
+          resistance={1000}
+          returnDuration={2}
+        />
+      </div>
 
-      <div className="relative z-20 flex items-center justify-center">
+      {/* Content - z-10 above lines (z-[5]) */}
+      <div className="relative z-10 flex items-center justify-center">
         <div className="mx-auto max-w-5xl text-center w-full">
           <HomeMainContent />
-          <CommonDomainSearch />
+          {/* <CommonDomainSearch /> */}
           <CommonDomainScrollPricing />
 
           {/* CTA Buttons */}

@@ -14,6 +14,7 @@ import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { CircleCheckBig } from "lucide-react";
 import { motion } from "motion/react";
 import GradientText from "../ui/gradient-text";
+import { SingleHorizontalLine } from "../ui/grid-lines";
 
 const SoftwareDevelopmentHeader = () => (
   <div className="absolute inset-0 p-4 sm:p-6 md:p-6 flex flex-col">
@@ -141,7 +142,9 @@ const WebDesignStep = ({ title }: { title: string }) => {
   return (
     <li className="flex gap-2 sm:gap-3 items-start">
       <CircleCheckBig className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 mt-0.5 shrink-0" />
-      <p className="text-sm sm:text-base text-neutral-700 dark:text-white">{title}</p>
+      <p className="text-sm sm:text-base text-neutral-700 dark:text-white">
+        {title}
+      </p>
     </li>
   );
 };
@@ -190,19 +193,26 @@ export function HomeAdditionalServices() {
   ];
 
   return (
-    <section className="relative pt-0 pb-12 sm:pb-16 md:pb-20 px-4">
-      <div className="mx-auto my-10 sm:my-16 md:my-20 w-full max-w-7xl px-2 sm:px-4 md:px-8">
+    <section className="relative">
+      <div className="mx-auto max-w-7xl">
         {/* Title And Subheading */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="mb-3 sm:mb-4 text-xl md:text-2xl lg:text-3xl font-bold text-slate-700 dark:text-slate-300">
-            Additional Services
+        <div className="text-center py-8 sm:py-16 md:py-20 relative">
+          <SingleHorizontalLine
+            position={100}
+            showLeftPlus={true}
+            showRightPlus={true}
+            className="hidden md:block"
+          />
+          <h2 className="px-2 pb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300">
+            <GradientText>Service Avenue</GradientText>
           </h2>
-          <p className="mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground md:text-xl leading-relaxed px-4 sm:px-0">
-            Comprehensive Digital Solutions To Elevate Your Business Presence
+          <p className="max-w-2xl mx-auto px-4 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
+            Comprehensive Hosting Solutions And Domain Services Tailored To
+            Power Your Digital Presence
           </p>
         </div>
 
-        <BentoGrid className="max-w-7xl mx-auto">
+        <BentoGrid className="max-w-7xl mx-auto p-4 sm:p-6 md:p-8 pb-8">
           {items.map((item, i) => (
             <div
               key={i}

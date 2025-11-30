@@ -14,26 +14,45 @@ import { motion } from "motion/react";
 import { IconBrandWordpress } from "@tabler/icons-react";
 import GradientText from "../ui/gradient-text";
 import { CommonOrbitalDomainIcons } from "@/components/sections-common/common-orbital-domain-icons";
+import {
+  SingleVerticalLine,
+  MultipleVerticalLines,
+  MultipleHorizontalLines,
+} from "@/components/ui/grid-lines";
 
 export function HomeServicesOffered() {
   return (
-    <section className="pt-10 sm:pt-16 md:pt-20 lg:py-32 relative overflow-hidden">
-      <div className="max-w-7xl px-4 sm:px-6 md:px-8 mx-auto">
+    <section className="relative">
+      <div className="max-w-7xl mx-auto">
         {/* Title And Subheading */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300 px-2">
+        <div className="text-center py-8 sm:py-16 md:py-20 relative">
+          <h2 className="px-2 pb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300">
             <GradientText>Services Offered</GradientText>
           </h2>
-          <p className="px-4 mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed px-2">
+          <p className="max-w-2xl mx-auto px-4 text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
             Comprehensive Hosting Solutions And Domain Services Tailored To
             Power Your Digital Presence
           </p>
         </div>
 
         {/* Grid With 2 Columns On Larger Screens */}
-        <div className="grid grid-cols-1 md:grid-cols-2 pb-4 sm:pb-0 border-y border-border divide-y md:divide-y-0 md:divide-x divide-border">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 pb-4 sm:pb-0">
+          <MultipleHorizontalLines
+            lines={[
+              { position: 0, showLeftPlus: true, showRightPlus: true },
+              { position: 100, showLeftPlus: true, showRightPlus: true },
+            ]}
+            className="hidden md:block"
+          />
           {/* Left Column - Web Hosting Services */}
-          <div className="flex flex-col justify-between overflow-hidden">
+          <div className="relative flex flex-col justify-between">
+            {/* Vertical Divider On Right Edge - Visible On md+ */}
+            <SingleVerticalLine
+              position={99.5}
+              className="hidden md:block"
+              showTopPlus={true}
+              showBottomPlus={true}
+            />
             <div className="py-4 px-2 sm:px-0 sm:p-6 md:p-8 text-center md:text-left">
               <Link
                 href="#"
@@ -47,7 +66,7 @@ export function HomeServicesOffered() {
                 Reliable Customer Support Tailored For Businesses of All Sizes
               </p>
             </div>
-            <div className="relative h-80 sm:h-60 flex flex-col md:h-90 pt-2">
+            <div className="relative h-80 sm:h-60 flex flex-col md:h-90 pt-2 overflow-hidden">
               {/* Placeholder For Visual Content */}
               <motion.div
                 className="w-full sm:max-w-[22rem] lg:max-w-sm mx-auto absolute inset-x-0 pb-0 px-2 sm:px-0"
@@ -144,7 +163,6 @@ export function HomeServicesOffered() {
               </motion.div>
             </div>
           </div>
-
           {/* Right Column - Domains */}
           <div>
             <div className="relative h-[32rem] md:h-[36rem] lg:h-[32rem] mx-auto overflow-hidden">
@@ -170,8 +188,16 @@ export function HomeServicesOffered() {
         </div>
 
         {/* Bottom Grid - 3 Column Features */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 px-2 pt-8 pb-8 sm:px-8 md:py-12 border-b border-border sm:border-b-0">
-          <div className="text-center md:text-left">
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <MultipleVerticalLines
+            lines={[
+              { position: 33.33, showTopPlus: false, showBottomPlus: true },
+              { position: 66.66, showTopPlus: false, showBottomPlus: true },
+            ]}
+            className="hidden md:block"
+          />
+          {/* Column 1 - With Right Border */}
+          <div className="text-center md:text-left p-4 sm:p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-2 justify-center md:justify-start">
               <Clock className="size-8 md:size-5 text-primary mb-2 md:mb-0" />
               <h3 className="font-bold text-base sm:text-lg text-muted-foreground">
@@ -183,7 +209,8 @@ export function HomeServicesOffered() {
               Guaranteed.
             </p>
           </div>
-          <div className="text-center md:text-left">
+          {/* Column 2 - With Right Border */}
+          <div className="text-center md:text-left p-4 sm:p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-2 justify-center md:justify-start">
               <Zap className="size-8 md:size-5 text-primary mb-2 md:mb-0" />
               <h3 className="font-bold text-base sm:text-lg text-muted-foreground">
@@ -195,7 +222,8 @@ export function HomeServicesOffered() {
               400+ Extensions.
             </p>
           </div>
-          <div className="sm:col-span-2 md:col-span-1 text-center md:text-left">
+          {/* Column 3 - No Right Border */}
+          <div className="sm:col-span-2 md:col-span-1 text-center md:text-left p-4 sm:p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-2 justify-center md:justify-start">
               <Headphones className="size-8 md:size-5 text-primary mb-2 md:mb-0" />
               <h3 className="font-bold text-base sm:text-lg text-muted-foreground">

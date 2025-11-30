@@ -69,7 +69,7 @@ export function Footer() {
                     Go To Dashboard:
                   </p>
                   <a
-                    href="https://my.bst.com.bd"
+                    href="https://my.bst.com.bd/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg sm:text-xl md:text-2xl font-semibold hover:text-primary transition-colors break-all block"
@@ -86,7 +86,7 @@ export function Footer() {
                 href="mailto:hello@bst.com.bd"
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-regular hover:text-primary transition-colors break-all text-center lg:text-right"
               >
-                hello@bst.com.bd
+                hello@multilat.xyz
               </a>
 
               <div className="flex items-center gap-8 sm:gap-10 md:gap-12">

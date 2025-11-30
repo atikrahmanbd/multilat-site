@@ -43,7 +43,7 @@ export function CommonTestimonials() {
   ];
 
   return (
-    <section className="relative py-12 sm:py-16 md:py-20 px-4 dark:bg-black/50 border-t border-border">
+    <section className="relative py-12 sm:py-16 md:py-20 px-4 dark:bg-black/50">
       <div className="mx-auto w-full max-w-7xl">
         {/* Title And Subheading */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
