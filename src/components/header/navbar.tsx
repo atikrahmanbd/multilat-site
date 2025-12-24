@@ -19,6 +19,7 @@ import {
   TrendingUp,
   Building2,
   Mail,
+  BookOpen,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { GlassContainer } from "@/components/ui/glass-container";
@@ -123,14 +124,15 @@ export function Navbar() {
       },
     },
     {
-      label: "About Us",
-      href: "/about",
-      hasDropdown: false,
-    },
-    {
       label: "Contact Us",
       href: "/contact",
       hasDropdown: false,
+    },
+    {
+      label: "Guides",
+      href: "https://guides.multilat.xyz",
+      hasDropdown: false,
+      isExternal: true,
     },
   ];
 
@@ -179,6 +181,13 @@ export function Navbar() {
   ];
 
   const bottomMenuItems = [
+    {
+      label: "Guides",
+      ariaLabel: "Guides And Tutorials",
+      link: "https://guides.multilat.xyz",
+      icon: BookOpen,
+      isExternal: true,
+    },
     {
       label: "About Us",
       ariaLabel: "About Multilat",
@@ -321,18 +330,31 @@ export function Navbar() {
                       const Icon = item.icon;
                       return (
                         <li key={item.link}>
-                          <Link
-                            href={item.link}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
-                              pathname === item.link
-                                ? "bg-muted text-foreground"
-                                : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                            }`}
-                          >
-                            <Icon className="h-4 w-4 flex-shrink-0" />
-                            <span>{item.label}</span>
-                          </Link>
+                          {item.isExternal ? (
+                            <a
+                              href={item.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setMobileMenuOpen(false)}
+                              className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors text-muted-foreground hover:bg-muted hover:text-foreground"
+                            >
+                              <Icon className="h-4 w-4 flex-shrink-0" />
+                              <span>{item.label}</span>
+                            </a>
+                          ) : (
+                            <Link
+                              href={item.link}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
+                                pathname === item.link
+                                  ? "bg-muted text-foreground"
+                                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                              }`}
+                            >
+                              <Icon className="h-4 w-4 flex-shrink-0" />
+                              <span>{item.label}</span>
+                            </Link>
+                          )}
                         </li>
                       );
                     })}
@@ -341,8 +363,10 @@ export function Navbar() {
 
                 {/* Footer */}
                 <div className="p-4 border-t border-border space-y-3">
-                  <Link
-                    href="/login"
+                  <a
+                    href="https://hub.multilat.xyz"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block"
                   >
@@ -354,7 +378,7 @@ export function Navbar() {
                       <LogIn className="h-4 w-4 mr-2" />
                       Login
                     </HoverBorderGradientButton>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -441,6 +465,16 @@ export function Navbar() {
                     {item.label}
                     <ChevronDown className="h-3 w-3" />
                   </button>
+                ) : item.isExternal ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 rounded-sm bg-primary/5 px-3 py-1.5 ring-1 ring-primary/15 text-sm font-semibold transition-colors hover:bg-primary/10 hover:ring-primary/30 cursor-pointer text-primary ml-2"
+                  >
+                    <BookOpen className="h-4 w-4" />
+                    {item.label}
+                  </a>
                 ) : (
                   <Link
                     href={item.href}
@@ -460,7 +494,12 @@ export function Navbar() {
           {/* Right Side Actions */}
           <div className="flex items-center gap-4 ml-auto md:ml-0">
             <ThemeSwitch />
-            <Link href="/login" className="hidden md:block">
+            <a
+              href="https://hub.multilat.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:block"
+            >
               <HoverBorderGradientButton
                 shape="pill"
                 size="sm"
@@ -469,8 +508,13 @@ export function Navbar() {
                 <LogIn className="h-4 w-4 mr-2" />
                 Login
               </HoverBorderGradientButton>
-            </Link>
-            <Link href="/login" className="block md:hidden">
+            </a>
+            <a
+              href="https://hub.multilat.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block md:hidden"
+            >
               <HoverBorderGradientButton
                 shape="pill"
                 size="sm"
@@ -479,7 +523,7 @@ export function Navbar() {
                 <LogIn className="h-3 w-3 mr-1.5" />
                 Login
               </HoverBorderGradientButton>
-            </Link>
+            </a>
           </div>
         </div>
 
