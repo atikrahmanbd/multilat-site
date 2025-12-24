@@ -43,12 +43,15 @@ export default function RootLayout({
             <ClickSpark sparkRadius={50} sparkCount={10} duration={500}>
               <Navbar />
               <main className="pt-16">{children}</main>
-              <GridLinesSection linePositions={[0, 100]}>
+              <GridLinesSection
+                linePositions={[0, 100]}
+                showBottomIntersections={false}
+              >
                 <Footer />
               </GridLinesSection>
               <GridLinesSection
-                showBottomIntersections={false}
                 linePositions={[0, 100]}
+                showBottomIntersections={false}
               >
                 <FooterBrandText />
               </GridLinesSection>

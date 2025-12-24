@@ -22,7 +22,7 @@ const PAYMENT_ICONS = [
   { icon: "visa", alt: "Visa" },
   { icon: "mastercard", alt: "Mastercard" },
   { icon: "discover", alt: "Discover" },
-  { icon: "unionpay", alt: "UnionPay" },
+  // { icon: "unionpay", alt: "UnionPay" },
   { icon: "american-express", alt: "American Express" },
   // Digital Wallets
   { icon: "paypal", alt: "PayPal" },

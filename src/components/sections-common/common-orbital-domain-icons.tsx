@@ -6,8 +6,8 @@ export function CommonOrbitalDomainIcons() {
   return (
     <div className="flex-1 gap-2 flex items-center justify-center w-full h-full absolute inset-0 py-2 mt-16 sm:mt-20">
       {/* Fade Overlay - Top And Bottom (Only For Orbital System) */}
-      <div className="absolute top-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-b from-background to-transparent z-[25] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-background to-transparent z-[25] pointer-events-none"></div>
+      <div className="absolute top-0 left-px right-px h-16 sm:h-20 bg-gradient-to-b from-background to-transparent z-[25] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-px right-px h-24 sm:h-32 bg-gradient-to-t from-background to-transparent z-[25] pointer-events-none"></div>
 
       {/* Background Concentric Circles - Match Orbital Paths With Symmetrical Gaps */}
       {/* Orbit 1 Path - 35% of container */}

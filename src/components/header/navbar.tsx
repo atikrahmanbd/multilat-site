@@ -214,7 +214,7 @@ export function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-black/40 backdrop-blur-md z-[60] md:hidden"
+              className="fixed inset-0 bg-black/40 backdrop-blur-md z-[60] lg:hidden"
             />
 
             {/* Drawer */}
@@ -223,11 +223,11 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 bottom-0 w-[75%] w-min-[200px] bg-background/60 backdrop-blur-sm border-r border-border z-[70] md:hidden overflow-y-auto"
+              className="fixed top-0 left-0 bottom-0 w-[75%] sm:w-1/2 min-w-[200px] bg-background/60 backdrop-blur-sm border-r border-border z-[70] lg:hidden overflow-y-auto"
             >
               <div className="flex flex-col h-full">
                 {/* Header */}
-                <div className="flex items-center justify-between px-6 h-[65px] border-b border-border">
+                <div className="flex items-center justify-between px-6 h-[64px] min-h-[64px] border-b border-border">
                   <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                     <Image
                       src="/logos/multilat-logo-for-light.svg"
@@ -388,9 +388,9 @@ export function Navbar() {
 
       {/* Desktop Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/60 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:px-0">
           {/* Mobile Hamburger + Logo */}
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-3 lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="pl-0 p-2 hover:bg-muted rounded-md transition-colors"
@@ -419,7 +419,7 @@ export function Navbar() {
           </div>
 
           {/* Desktop Logo */}
-          <Link href="/" className="hidden md:flex items-center">
+          <Link href="/" className="hidden lg:flex items-center">
             <Image
               src="/logos/multilat-logo-for-light.svg"
               alt="Multilat"
@@ -439,7 +439,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-1 md:flex absolute left-1/2 -translate-x-1/2">
+          <div className="hidden items-center gap-1 lg:flex absolute left-1/2 -translate-x-1/2">
             {menuItems.map((item) => (
               <div
                 key={item.label}
@@ -492,13 +492,13 @@ export function Navbar() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="flex items-center gap-4 ml-auto md:ml-0">
+          <div className="flex items-center gap-4 ml-auto lg:ml-0">
             <ThemeSwitch />
             <a
               href="https://hub.multilat.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:block"
+              className="hidden lg:block"
             >
               <HoverBorderGradientButton
                 shape="pill"
@@ -513,7 +513,7 @@ export function Navbar() {
               href="https://hub.multilat.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="block md:hidden"
+              className="block lg:hidden"
             >
               <HoverBorderGradientButton
                 shape="pill"

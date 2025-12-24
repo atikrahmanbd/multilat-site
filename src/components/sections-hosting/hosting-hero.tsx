@@ -66,7 +66,7 @@ const heroSentences = [
 
 export function HostingHero() {
   const features = [
-    { icon: SquareActivity, text: "99.9% Uptime Guarantee", color: "blue" },
+    { icon: SquareActivity, text: "99.99% Uptime Guarantee", color: "blue" },
     { icon: BadgeCheck, text: "Genuine cPanel License", color: "green" },
     {
       icon: ShieldCheck,

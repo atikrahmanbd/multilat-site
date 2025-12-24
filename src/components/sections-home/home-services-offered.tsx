@@ -42,7 +42,6 @@ export function HomeServicesOffered() {
               { position: 0, showLeftPlus: true, showRightPlus: true },
               { position: 100, showLeftPlus: true, showRightPlus: true },
             ]}
-            className="hidden md:block"
           />
           {/* Left Column - Web Hosting Services */}
           <div className="relative flex flex-col justify-between">
@@ -62,7 +61,7 @@ export function HomeServicesOffered() {
                 <ArrowRight className="size-5 sm:size-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
               </Link>
               <p className="text-muted-foreground font-normal mt-2 text-sm sm:text-base text-balance">
-                High-Performance Hosting With Fast Speeds, 99.9% Uptime, and
+                High-Performance Hosting With Fast Speeds, 99.99% Uptime, and
                 Reliable Customer Support Tailored For Businesses of All Sizes
               </p>
             </div>
@@ -201,7 +200,7 @@ export function HomeServicesOffered() {
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-2 justify-center md:justify-start">
               <Clock className="size-8 md:size-5 text-primary mb-2 md:mb-0" />
               <h3 className="font-bold text-base sm:text-lg text-muted-foreground">
-                <GradientText>99.9% Uptime</GradientText>
+                <GradientText>99.99% Uptime</GradientText>
               </h3>
             </div>
             <p className="text-muted-foreground text-sm sm:text-base mt-2">
