@@ -13,11 +13,11 @@ export default function WebHostingPage() {
     <>
       <HostingHero />
       <HostingPlans />
-      <HostingNeedHelp />
       <HostingComparisonTable />
       <HostingFeatures />
       <CommonTestimonials />
       <CommonTrustedBrands />
+      <HostingNeedHelp />
       <HostingFaqSection />
       <HostingWhatsNext />
     </>

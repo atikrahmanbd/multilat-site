@@ -338,7 +338,7 @@ export default function TermsAndConditionsPage() {
                     </p>
                     <div className="mt-4 p-4 rounded-lg bg-muted/50 border border-border">
                       <p className="text-foreground">
-                        <strong>Email:</strong> legal@bst.com.bd
+                        <strong>Email:</strong> legal@multilat.xyz
                       </p>
                       <p className="text-foreground mt-2">
                         <strong>Address:</strong> Dhaka, Bangladesh

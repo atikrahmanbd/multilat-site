@@ -13,6 +13,7 @@ import {
   Database,
   Code,
   HeadphonesIcon,
+  Crown,
 } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import GradientText from "../ui/gradient-text";
@@ -30,6 +31,7 @@ interface PlanFeature {
   starter: string | boolean;
   business: string | boolean;
   professional: string | boolean;
+  corporate: string | boolean;
 }
 
 type IconName =
@@ -41,7 +43,8 @@ type IconName =
   | "Mail"
   | "Database"
   | "Code"
-  | "HeadphonesIcon";
+  | "HeadphonesIcon"
+  | "Crown";
 
 interface FeatureCategory {
   category: string;
@@ -59,6 +62,7 @@ const iconMap = {
   Database,
   Code,
   HeadphonesIcon,
+  Crown,
 };
 
 const comparisonData: FeatureCategory[] = [
@@ -67,39 +71,86 @@ const comparisonData: FeatureCategory[] = [
     iconName: "Server",
     features: [
       {
-        feature: "Number Of Websites",
-        starter: "1",
-        business: "100",
-        professional: "Unlimited",
+        feature: "Disk Space",
+        starter: "5 GB NVMe",
+        business: "10 GB NVMe",
+        professional: "25 GB NVMe",
+        corporate: "50 GB NVMe",
       },
       {
-        feature: "Disk Space",
-        starter: "10 GB SSD",
-        business: "50 GB SSD",
-        professional: "100 GB SSD",
+        feature: "Sites Hosted",
+        starter: "2 (1 Main + 1 Addon)",
+        business: "Unlimited",
+        professional: "Unlimited",
+        corporate: "Unlimited",
+      },
+      {
+        feature: "Domains Aliases",
+        starter: "5",
+        business: "Unlimited",
+        professional: "Unlimited",
+        corporate: "Unlimited",
+      },
+      {
+        feature: "Sub Domains",
+        starter: "5",
+        business: "Unlimited",
+        professional: "Unlimited",
+        corporate: "Unlimited",
+      },
+      {
+        feature: "Email Accounts",
+        starter: "Unlimited",
+        business: "Unlimited",
+        professional: "Unlimited",
+        corporate: "Unlimited",
       },
       {
         feature: "Bandwidth",
-        starter: "100 GB",
-        business: "500 GB",
+        starter: "Unlimited",
+        business: "Unlimited",
         professional: "Unlimited",
+        corporate: "Unlimited",
       },
       {
-        feature: "Memory (RAM)",
-        starter: "1 GB",
+        feature: "LVE Memory (RAM)",
+        starter: "2 GB",
         business: "2 GB",
         professional: "2 GB",
+        corporate: "4 GB",
       },
       {
-        feature: "CPU Cores",
-        starter: "1 vCPU",
+        feature: "LVE CPU Cores",
+        starter: "2 vCPU",
         business: "2 vCPU",
         professional: "2 vCPU",
+        corporate: "2 vCPU",
+      },
+      {
+        feature: "Backup",
+        starter: "Daily",
+        business: "Daily",
+        professional: "Daily",
+        corporate: "Daily",
+      },
+      {
+        feature: "Free Domain",
+        starter: false,
+        business: false,
+        professional: false,
+        corporate: true,
+      },
+      {
+        feature: "SSH Access",
+        starter: false,
+        business: true,
+        professional: true,
+        corporate: true,
       },
     ],
   },
   {
-    category: "Offers And Inclusion",
+    category: "Offers & Inclusion",
     iconName: "Gift",
     features: [
       {
@@ -107,47 +158,54 @@ const comparisonData: FeatureCategory[] = [
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Free Domain",
         starter: false,
-        business: true,
-        professional: true,
+        business: false,
+        professional: false,
+        corporate: true,
       },
       {
         feature: "Uptime Guarantee",
-        starter: "99.50%",
+        starter: "99.99%",
         business: "99.99%",
         professional: "99.99%",
+        corporate: "99.99%",
       },
       {
         feature: "Money Back Guarantee",
-        starter: "45 Days",
-        business: "45 Days",
-        professional: "45 Days",
+        starter: "30 Days",
+        business: "30 Days",
+        professional: "30 Days",
+        corporate: "30 Days",
       },
       {
         feature: "Free Setup",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Expert Migration",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Location Choices",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
     ],
   },
   {
-    category: "Server Setup",
+    category: "Server & Security",
     iconName: "Settings",
     features: [
       {
@@ -155,54 +213,77 @@ const comparisonData: FeatureCategory[] = [
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "CloudLinux",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Softaculous",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Jetbackup",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Public Cloud",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Instant Setup",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "WP CLI",
         starter: true,
         business: true,
         professional: true,
-      },
-      {
-        feature: "Imunify360",
-        starter: true,
-        business: true,
-        professional: true,
+        corporate: true,
       },
       {
         feature: "SitePad Sitebuilder",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
+      },
+      {
+        feature: "Malware Protection",
+        starter: true,
+        business: true,
+        professional: true,
+        corporate: true,
+      },
+      {
+        feature: "Imunify360",
+        starter: true,
+        business: true,
+        professional: true,
+        corporate: true,
+      },
+      {
+        feature: "Firewall",
+        starter: true,
+        business: true,
+        professional: true,
+        corporate: true,
       },
     ],
   },
@@ -211,34 +292,53 @@ const comparisonData: FeatureCategory[] = [
     iconName: "Gauge",
     features: [
       {
+        feature: "Memory (RAM)",
+        starter: "2 GB",
+        business: "2 GB",
+        professional: "2 GB",
+        corporate: "4 GB",
+      },
+      {
+        feature: "CPU Cores",
+        starter: "2 vCPU",
+        business: "2 vCPU",
+        professional: "2 vCPU",
+        corporate: "2 vCPU",
+      },
+      {
         feature: "Entry Processes",
         starter: "30",
         business: "30",
-        professional: "35",
+        professional: "30",
+        corporate: "30",
       },
       {
-        feature: "Number Of Inodes",
+        feature: "Number of Inodes",
         starter: "Unlimited",
         business: "Unlimited",
         professional: "Unlimited",
+        corporate: "Unlimited",
       },
       {
         feature: "IOPS",
-        starter: "1024",
-        business: "1024",
-        professional: "1024",
+        starter: "2048",
+        business: "2048",
+        professional: "2048",
+        corporate: "5120",
       },
       {
         feature: "IO",
         starter: "50 MB/S",
         business: "50 MB/S",
         professional: "50 MB/S",
+        corporate: "250 MB/S",
       },
       {
         feature: "CageFS Security",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
     ],
   },
@@ -251,12 +351,14 @@ const comparisonData: FeatureCategory[] = [
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "DNS Hosting",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
     ],
   },
@@ -269,72 +371,84 @@ const comparisonData: FeatureCategory[] = [
         starter: "Unlimited",
         business: "Unlimited",
         professional: "Unlimited",
+        corporate: "Unlimited",
       },
       {
         feature: "Secure Webmail Access",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Mailbox Size Limit",
         starter: "Unlimited",
         business: "Unlimited",
         professional: "Unlimited",
+        corporate: "Unlimited",
       },
       {
         feature: "IMAP/POP3",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Attachment Size",
         starter: "100 MB",
         business: "100 MB",
         professional: "100 MB",
+        corporate: "100 MB",
       },
       {
         feature: "Email Forwarders",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Catch All Email",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Auto Responders",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Hourly Sending Limit",
         starter: "100",
         business: "100",
         professional: "100",
+        corporate: "100",
       },
       {
         feature: "Spam Protection",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Outbound Spam Filtering",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Mail Reputation Protection",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
     ],
   },
@@ -347,24 +461,21 @@ const comparisonData: FeatureCategory[] = [
         starter: "Unlimited",
         business: "Unlimited",
         professional: "Unlimited",
+        corporate: "Unlimited",
       },
       {
         feature: "phpMyAdmin",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Remote MySQL Access",
         starter: true,
         business: true,
         professional: true,
-      },
-      {
-        feature: "Database Size",
-        starter: "5GB",
-        business: "5GB",
-        professional: "5GB",
+        corporate: true,
       },
     ],
   },
@@ -377,78 +488,132 @@ const comparisonData: FeatureCategory[] = [
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Node.js Support",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
-        feature: "SSH Access",
+        feature: "Python Support",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
+      },
+      {
+        feature: "SSH Access",
+        starter: false,
+        business: true,
+        professional: true,
+        corporate: true,
       },
       {
         feature: "FTP & SFTP",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Cron Jobs",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "File Manager",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: ".htaccess",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Mod_rewrite",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Mod_security",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "IP Address Blocking",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Git Support",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Memcached",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
       },
       {
         feature: "Redis",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
+      },
+    ],
+  },
+  {
+    category: "Premium Features",
+    iconName: "Crown",
+    features: [
+      {
+        feature: "LiteSpeed Caching",
+        starter: true,
+        business: true,
+        professional: true,
+        corporate: true,
+      },
+      {
+        feature: "Premium Cloud Servers",
+        starter: false,
+        business: false,
+        professional: false,
+        corporate: true,
+      },
+      {
+        feature: "PCI Compliance",
+        starter: false,
+        business: false,
+        professional: false,
+        corporate: true,
+      },
+      {
+        feature: "Dedicated IP",
+        starter: false,
+        business: false,
+        professional: false,
+        corporate: "On Demand (Charge Apply)",
       },
     ],
   },
@@ -461,24 +626,35 @@ const comparisonData: FeatureCategory[] = [
         starter: "24/7",
         business: "24/7",
         professional: "24/7",
+        corporate: "24/7 Priority",
       },
       {
         feature: "Live Chat Support",
-        starter: "24/7",
-        business: "24/7",
-        professional: "24/7",
+        starter: "Business Hours",
+        business: "Business Hours",
+        professional: "Business Hours",
+        corporate: "Business Hours Priority",
       },
       {
         feature: "Phone Support",
         starter: "Business Hours",
         business: "Business Hours",
         professional: "Business Hours",
+        corporate: "Business Hours Priority",
       },
       {
-        feature: "Knowledge Base",
+        feature: "Guides / Knowledge Base",
         starter: true,
         business: true,
         professional: true,
+        corporate: true,
+      },
+      {
+        feature: "Dedicated Support Manager",
+        starter: false,
+        business: false,
+        professional: false,
+        corporate: true,
       },
     ],
   },
@@ -503,10 +679,11 @@ function renderCellValue(value: string | boolean) {
 }
 
 export function HostingComparisonTable() {
-  // Get pricing from imported plans
+  // Get Pricing From Imported Plans
   const starterPlan = plans.find((p) => p.name === "Starter");
   const businessPlan = plans.find((p) => p.name === "Business");
   const professionalPlan = plans.find((p) => p.name === "Professional");
+  const corporatePlan = plans.find((p) => p.name === "Corporate");
 
   return (
     <section className="relative py-12 sm:py-16 md:py-20">
@@ -590,6 +767,16 @@ export function HostingComparisonTable() {
                                 </span>
                               </div>
                             </th>
+                            <th className="px-3 sm:px-4 md:px-6 py-4 sm:py-5 text-center text-sm sm:text-base font-semibold text-foreground border-l border-border/30 bg-gradient-to-b from-amber-500/20 to-amber-500/5 min-w-[150px]">
+                              <div className="flex flex-col items-center gap-1">
+                                <span className="text-md sm:text-lg font-semibold text-amber-600 dark:text-amber-400">
+                                  Corporate
+                                </span>
+                                <span className="text-xs sm:text-sm text-primary font-bold">
+                                  ৳{corporatePlan?.monthlyPrice}/Month
+                                </span>
+                              </div>
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -609,6 +796,9 @@ export function HostingComparisonTable() {
                               </td>
                               <td className="px-3 sm:px-4 md:px-6 py-4 sm:py-5 text-center text-sm sm:text-base text-muted-foreground border-l border-border/30 bg-accent/15">
                                 {renderCellValue(row.professional)}
+                              </td>
+                              <td className="px-3 sm:px-4 md:px-6 py-4 sm:py-5 text-center text-sm sm:text-base text-muted-foreground border-l border-border/30 bg-amber-500/5">
+                                {renderCellValue(row.corporate)}
                               </td>
                             </tr>
                           ))}

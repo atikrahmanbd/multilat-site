@@ -1,174 +1,151 @@
-"use client";
+import { DomainHeroClient } from "./domain-hero-client";
 
-import { BackgroundDot } from "@/components/ui/background-dot";
-import GradientText from "@/components/ui/gradient-text";
-import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { DomainOrbitalIcons } from "@/components/sections-domains/domain-orbital-icons";
-import { motion } from "motion/react";
-import { CircleCheckBig } from "lucide-react";
-import { CardSpotlight } from "@/components/ui/card-spotlight";
+interface DomainPriceData {
+  tld: string;
+  category?: string;
+  tag?: string | null;
+  register: string;
+  transfer: string;
+  renew: string;
+  grace?: string;
+}
 
-export function DomainHero() {
-  const placeholders = [
-    "Search Domain Names...",
-    "Check Availability...",
-    "400+ Domain Extensions...",
-    "Instant Purchase & Activation...",
-    "Domain ID Protection...",
-    "Start Building Your Web Presence...",
-  ];
+interface DomainPricingResponse {
+  lastUpdated: string;
+  currency: string;
+  spotlightTlds: DomainPriceData[];
+  domains: DomainPriceData[];
+}
 
-  const popularDomains = [
-    { extension: ".com", price: "৳1990", popular: true },
-    { extension: ".net", price: "৳1900", popular: false },
-    { extension: ".org", price: "৳1600", popular: false },
-    { extension: ".fun", price: "৳1200", popular: false },
-    { extension: ".xyz", price: "৳200", popular: true },
-    { extension: ".tech", price: "৳1700", popular: false },
-  ];
+// Extended Fallback TLD List (More Than 6 To Handle Edge Cases)
+const FALLBACK_TLDS = [
+  ".com",
+  ".net",
+  ".org",
+  ".xyz",
+  ".online",
+  ".store",
+  ".tech",
+  ".site",
+  ".fun",
+  ".info",
+];
 
-  const features = [
-    "DNS Management",
-    "Email Forwarding",
-    "Domain Forwarding",
-    "Domain Theft Protection",
-    "On-Demand Privacy Protect+",
-  ];
+// Default Prices For Fallback TLDs (Used Only If JSON Fetch Fails Completely)
+const DEFAULT_FALLBACK_PRICES: Record<string, string> = {
+  ".com": "৳1,799",
+  ".net": "৳1,900",
+  ".org": "৳1,600",
+  ".xyz": "৳200",
+  ".online": "৳550",
+  ".store": "৳1,800",
+  ".tech": "৳1,700",
+  ".site": "৳500",
+  ".fun": "৳1,200",
+  ".info": "৳1,500",
+};
 
-  const handleChange = () => {
-    // Handle Input Change
-  };
+interface FetchResult {
+  spotlightDomains: { extension: string; price: string; tag?: string | null }[];
+  totalDomains: number;
+}
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle Form Submission
-  };
+async function fetchSpotlightDomains(): Promise<FetchResult> {
+  try {
+    const externalJsonUrl =
+      process.env.NEXT_PUBLIC_DOMAIN_PRICING_URL ||
+      "https://hub.multilat.xyz/domain-prices.json";
+
+    const response = await fetch(externalJsonUrl, {
+      next: { revalidate: 3600 }, // Cache For 1 Hour
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed To Fetch Domain Pricing");
+    }
+
+    const data: DomainPricingResponse = await response.json();
+    const spotlightTlds = data.spotlightTlds || [];
+    const allDomains = data.domains || [];
+
+    // Create A Map For Quick Price Lookup From All Domains
+    const domainPriceMap = new Map<
+      string,
+      { register: string; tag?: string | null }
+    >();
+    allDomains.forEach((domain) => {
+      domainPriceMap.set(domain.tld.toLowerCase(), {
+        register: domain.register,
+        tag: domain.tag,
+      });
+    });
+
+    // Get First 6 Spotlight TLDs
+    const spotlightDomainsFromApi = spotlightTlds.slice(0, 6).map((domain) => ({
+      extension: domain.tld,
+      price: domain.register,
+      tag: domain.tag,
+    }));
+
+    // If We Have 6 Or More Spotlight TLDs, Return First 6
+    if (spotlightDomainsFromApi.length >= 6) {
+      return {
+        spotlightDomains: spotlightDomainsFromApi,
+        totalDomains: allDomains.length,
+      };
+    }
+
+    // If Less Than 6, Fill Remaining From Fallback List
+    const spotlightTldSet = new Set(
+      spotlightDomainsFromApi.map((d) => d.extension.toLowerCase())
+    );
+
+    const result = [...spotlightDomainsFromApi];
+
+    for (const fallbackTld of FALLBACK_TLDS) {
+      if (result.length >= 6) break;
+
+      // Skip If Already In Spotlight List
+      if (spotlightTldSet.has(fallbackTld.toLowerCase())) continue;
+
+      // Get Price From JSON Or Use Default
+      const domainInfo = domainPriceMap.get(fallbackTld.toLowerCase());
+      const price = domainInfo?.register || DEFAULT_FALLBACK_PRICES[fallbackTld] || "N/A";
+      const tag = domainInfo?.tag || null;
+
+      result.push({
+        extension: fallbackTld,
+        price,
+        tag,
+      });
+    }
+
+    return {
+      spotlightDomains: result,
+      totalDomains: allDomains.length,
+    };
+  } catch (error) {
+    console.error("Error Fetching Spotlight Domains:", error);
+
+    // Complete Fallback - Use Default Prices
+    return {
+      spotlightDomains: FALLBACK_TLDS.slice(0, 6).map((tld) => ({
+        extension: tld,
+        price: DEFAULT_FALLBACK_PRICES[tld] || "N/A",
+        tag: null,
+      })),
+      totalDomains: 550, // Fallback Count
+    };
+  }
+}
+
+export async function DomainHero() {
+  const { spotlightDomains, totalDomains } = await fetchSpotlightDomains();
 
   return (
-    <div className="relative w-full overflow-hidden bg-background py-16 sm:py-24 md:py-32">
-      <BackgroundDot backgroundColor="bg-background" fadeDirection="bottom" />
-
-      {/* Orbital Domain Icons - Bottom Half Only */}
-      <div className="absolute -top-4/6 left-1/2 -translate-x-1/2 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl aspect-square z-10">
-        <DomainOrbitalIcons />
-      </div>
-
-      <div className="relative z-20 flex items-center justify-center">
-        <div className="mx-auto w-full">
-          {/* Heading */}
-          <div className="max-w-5xl mx-auto text-center px-4 sm:px-6">
-            <motion.div
-              className="mb-8 sm:mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <h1 className="mb-3 sm:mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-2">
-                <GradientText>Find Your Perfect Domain</GradientText>
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl text-foreground max-w-xl mx-auto">
-                Search From 400+ Domain Extensions With Instant Activation And
-                Competitive Pricing
-              </p>
-            </motion.div>
-
-            {/* Domain Search */}
-            <div className="mb-8 sm:mb-12">
-              <div className="relative w-full max-w-xl mx-auto rounded-full">
-                <GlowingEffect
-                  blur={0}
-                  borderWidth={2}
-                  spread={60}
-                  glow={true}
-                  disabled={false}
-                  proximity={48}
-                  inactiveZone={0.01}
-                />
-                <PlaceholdersAndVanishInput
-                  placeholders={placeholders}
-                  onChange={handleChange}
-                  onSubmit={onSubmit}
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Pricing & Features Split Layout */}
-          <div className="max-w-7xl mt-24 mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-5 gap-6 sm:gap-8">
-            {/* Left Side - Pricing Grid (3/5) */}
-            <div className="md:col-span-3">
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {popularDomains.map((domain, index) => (
-                  <motion.div
-                    key={domain.extension}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className={`relative p-6 rounded-xl ${
-                      domain.popular
-                        ? "border border-primary bg-primary/5"
-                        : "border-2 border-border bg-card"
-                    } hover:border-primary/50 transition-colors hover:shadow-lg hover:shadow-primary/25 hover:transition-shadow duration-300`}
-                  >
-                    {domain.popular && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                        <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                          Popular
-                        </span>
-                      </div>
-                    )}
-                    <div className="text-center">
-                      <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                        {domain.extension}
-                      </h3>
-                      <p className="text-3xl sm:text-4xl font-bold text-primary mb-2">
-                        {domain.price}
-                      </p>
-                      <p className="text-sm text-muted-foreground">Per Year</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Side - What's Included (2/5) */}
-            <motion.div
-              className="md:col-span-2 relative overflow-hidden rounded-xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <CardSpotlight className="h-full w-full rounded-xl border-2 !border-primary bg-card p-6 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-neutral-800 dark:text-neutral-100 mb-3 sm:mb-4 relative z-20">
-                  <GradientText>What&apos;s Included</GradientText>
-                </h3>
-                <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-300 mb-4 relative z-20">
-                  Every Domain Comes With Premium Features To Help You Build
-                  Your Online Presence.
-                </p>
-                <div className="relative z-20">
-                  <ul className="list-none mt-2 space-y-3">
-                    {features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex gap-2 sm:gap-3 items-start"
-                      >
-                        <CircleCheckBig className="h-4 w-4 sm:h-5 sm:w-5 text-primary mt-0.5 shrink-0" />
-                        <p className="text-sm sm:text-base text-neutral-700 dark:text-white">
-                          {feature}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardSpotlight>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <DomainHeroClient
+      spotlightDomains={spotlightDomains}
+      totalDomains={totalDomains}
+    />
   );
 }

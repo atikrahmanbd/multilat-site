@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeColorProvider } from "@/components/theme-context";
@@ -9,10 +9,10 @@ import { FooterBrandText } from "@/components/footer/footer-brand-text";
 import { GridLinesSection } from "@/components/ui/grid-lines";
 import ClickSpark from "@/components/ui/react-bits/ClickSpark";
 
-const beVietnamPro = Be_Vietnam_Pro({
-  variable: "--font-be-vietnam-pro",
+const ubuntu = Ubuntu({
+  variable: "--font-ubuntu",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${beVietnamPro.variable} font-sans antialiased`}
+        className={`${ubuntu.variable} font-sans antialiased`}
         suppressHydrationWarning
       >
         <ThemeProvider

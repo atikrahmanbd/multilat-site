@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* Testimonials - 3 Lines: 0%, 50%, 100% */}
       <GridLinesSection
-        linePositions={[0, 50, 100]}
+        linePositions={[0, 100]}
         showBottomIntersections={false}
       >
         <CommonTestimonials />

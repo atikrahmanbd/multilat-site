@@ -26,6 +26,7 @@ const PAYMENT_ICONS = [
   { icon: "american-express", alt: "American Express" },
   // Digital Wallets
   { icon: "paypal", alt: "PayPal" },
+  { icon: "stripe", alt: "Stripe" },
   { icon: "google-pay", alt: "Google Pay" },
   // Bank Transfer
   { icon: "bd/bank-transfer", alt: "Bank Transfer" },
@@ -45,7 +46,10 @@ export function PaymentMethods({
     return (
       <div className="w-full grid grid-cols-6 sm:flex sm:flex-wrap items-center gap-0.5 sm:gap-2">
         {PAYMENT_ICONS.map(({ icon, alt }) => (
-          <div key={icon} className="hover-shake w-full sm:w-auto flex justify-center">
+          <div
+            key={icon}
+            className="hover-shake w-full sm:w-auto flex justify-center"
+          >
             <Image
               src={`/payment-logos/${icon}.svg`}
               alt={alt}
@@ -63,7 +67,10 @@ export function PaymentMethods({
   return (
     <div className="w-full grid grid-cols-6 sm:flex sm:flex-wrap items-center gap-y-3 sm:gap-2">
       {PAYMENT_ICONS.map(({ icon, alt }) => (
-        <div key={icon} className="hover-shake w-full sm:w-auto flex justify-center">
+        <div
+          key={icon}
+          className="hover-shake w-full sm:w-auto flex justify-center"
+        >
           <div
             className={cn(
               "inline-block overflow-hidden w-full max-w-[50px] h-auto aspect-[57/38] sm:w-[57px] sm:h-[38px] sm:max-w-none sm:aspect-auto",

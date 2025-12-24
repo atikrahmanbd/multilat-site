@@ -11,19 +11,21 @@ import {
   HeartHandshake,
 } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import GradientText from "../ui/gradient-text";
 
 export function HomeWhyChooseUs() {
   return (
     <section className="relative w-full pt-0 pb-16 sm:pb-24 md:pb-32 lg:pb-40 bg-background">
       <div className="mx-auto max-w-7xl relative z-10">
         {/* Title And Subheading */}
-        <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
-          <h2 className="mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300">
-            Why Choose Us
+        {/* <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4"> */}
+        <div className="text-center px-4 py-6 sm:py-8 md:pt-12 lg:pt-20">
+          <h2 className="text-center mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-slate-700 dark:text-slate-300">
+            <GradientText>Why Choose Multilat?</GradientText>
           </h2>
           <p className="px-4 mb-6 sm:mb-8 md:mb-12 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground md:text-xl leading-relaxed">
-            Eight Core Values That Drive Our Success And Ensure Your Project
-            Excellence
+            We Stand Out Through Our Commitment To Excellence, Innovation, And
+            Customer Satisfaction
           </p>
         </div>
 

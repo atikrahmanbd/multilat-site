@@ -1,18 +1,36 @@
 import { DomainPricingTableClient } from "./domain-pricing-table-client";
-import {
-  type CategoryKey,
-  categorizeTLD,
-} from "@/config/tld-categories";
 
 interface DomainPrice {
   tld: string;
+  category?: string;
+  tag?: string | null;
+  period?: number; // 1 = Per Year, 2 = Per 2 Years
   register: string;
   transfer: string;
   renew: string;
-  grace: string;
+  grace?: string;
 }
 
-type IconName = "Globe" | "Briefcase" | "Flag" | "Sparkles";
+type IconName =
+  | "Globe"
+  | "Briefcase"
+  | "Flag"
+  | "Sparkles"
+  | "Palette"
+  | "MapPin"
+  | "Trophy"
+  | "Monitor"
+  | "Wrench"
+  | "Coins"
+  | "GraduationCap"
+  | "UtensilsCrossed"
+  | "Gamepad2"
+  | "ShoppingCart"
+  | "Home"
+  | "Laugh"
+  | "MoreHorizontal"
+  | "Star"
+  | "Tag";
 
 interface PricingCategory {
   category: string;
@@ -20,14 +38,36 @@ interface PricingCategory {
   domains: DomainPrice[];
 }
 
+// Map WHMCS Categories To Icons
+const categoryIconMap: Record<string, IconName> = {
+  "Spotlight": "Star",
+  "Sale": "Tag",
+  "Popular": "Globe",
+  "Business": "Briefcase",
+  "Geographic": "MapPin",
+  "Sports": "Trophy",
+  "Technology": "Monitor",
+  "Services": "Wrench",
+  "Money and Finance": "Coins",
+  "Education": "GraduationCap",
+  "Food and Drink": "UtensilsCrossed",
+  "Leisure and Recreation": "Gamepad2",
+  "Shopping": "ShoppingCart",
+  "Real Estate": "Home",
+  "Novelty": "Laugh",
+  "Arts and Entertainment": "Palette",
+  "Other": "MoreHorizontal",
+};
+
 // Fallback Data In Case API Fails
 const fallbackData: PricingCategory[] = [
   {
-    category: "Popular Domains",
+    category: "Popular",
     iconName: "Globe",
     domains: [
       {
         tld: ".com",
+        tag: null,
         register: "৳1990",
         transfer: "৳1990",
         renew: "৳1990",
@@ -35,6 +75,7 @@ const fallbackData: PricingCategory[] = [
       },
       {
         tld: ".net",
+        tag: null,
         register: "৳1900",
         transfer: "৳1900",
         renew: "৳1900",
@@ -42,6 +83,7 @@ const fallbackData: PricingCategory[] = [
       },
       {
         tld: ".org",
+        tag: null,
         register: "৳1600",
         transfer: "৳1600",
         renew: "৳1600",
@@ -49,26 +91,21 @@ const fallbackData: PricingCategory[] = [
       },
       {
         tld: ".xyz",
+        tag: "sale",
         register: "৳200",
         transfer: "৳200",
         renew: "৳200",
         grace: "৳200",
       },
-      {
-        tld: ".tech",
-        register: "৳1700",
-        transfer: "৳1700",
-        renew: "৳1700",
-        grace: "৳500",
-      },
     ],
   },
   {
-    category: "Business Domains",
+    category: "Business",
     iconName: "Briefcase",
     domains: [
       {
         tld: ".biz",
+        tag: null,
         register: "৳1500",
         transfer: "৳1500",
         renew: "৳1500",
@@ -76,6 +113,7 @@ const fallbackData: PricingCategory[] = [
       },
       {
         tld: ".company",
+        tag: null,
         register: "৳2000",
         transfer: "৳2000",
         renew: "৳2000",
@@ -83,6 +121,7 @@ const fallbackData: PricingCategory[] = [
       },
       {
         tld: ".store",
+        tag: "hot",
         register: "৳1800",
         transfer: "৳1800",
         renew: "৳1800",
@@ -91,38 +130,12 @@ const fallbackData: PricingCategory[] = [
     ],
   },
   {
-    category: "Country Code Domains",
-    iconName: "Flag",
-    domains: [
-      {
-        tld: ".bd",
-        register: "৳3000",
-        transfer: "৳3000",
-        renew: "৳3000",
-        grace: "৳800",
-      },
-      {
-        tld: ".us",
-        register: "৳1200",
-        transfer: "৳1200",
-        renew: "৳1200",
-        grace: "৳400",
-      },
-      {
-        tld: ".uk",
-        register: "৳1100",
-        transfer: "৳1100",
-        renew: "৳1100",
-        grace: "৳400",
-      },
-    ],
-  },
-  {
-    category: "Special Domains",
-    iconName: "Sparkles",
+    category: "Technology",
+    iconName: "Monitor",
     domains: [
       {
         tld: ".dev",
+        tag: null,
         register: "৳1500",
         transfer: "৳1500",
         renew: "৳1500",
@@ -130,99 +143,167 @@ const fallbackData: PricingCategory[] = [
       },
       {
         tld: ".app",
+        tag: "new",
         register: "৳1600",
         transfer: "৳1600",
         renew: "৳1600",
         grace: "৳500",
       },
       {
-        tld: ".online",
-        register: "৳550",
-        transfer: "৳550",
-        renew: "৳550",
-        grace: "৳300",
+        tld: ".io",
+        tag: null,
+        register: "৳4500",
+        transfer: "৳4500",
+        renew: "৳4500",
+        grace: "৳1200",
       },
     ],
   },
 ];
 
-const categoryIcons: Record<CategoryKey, IconName> = {
-  popular: "Globe",
-  business: "Briefcase",
-  countryCode: "Flag",
-  special: "Sparkles",
-};
+interface DomainPricingResponse {
+  lastUpdated: string;
+  currency: string;
+  spotlightTlds: DomainPrice[];
+  saleTlds: DomainPrice[];
+  domains: DomainPrice[];
+}
 
-async function fetchDomainPricing(): Promise<PricingCategory[]> {
+interface FetchResult {
+  pricingData: PricingCategory[];
+  lastUpdated: string | null;
+}
+
+async function fetchDomainPricing(): Promise<FetchResult> {
   try {
     // Try To Fetch From External JSON URL First
     let allDomains: DomainPrice[] = [];
+    let spotlightTlds: DomainPrice[] = [];
+    let saleTlds: DomainPrice[] = [];
+    let lastUpdated: string | null = null;
 
     try {
-      const externalJsonUrl = process.env.NEXT_PUBLIC_DOMAIN_PRICING_URL || "https://my.bst.com.bd/domain-prices.json";
+      const externalJsonUrl =
+        process.env.NEXT_PUBLIC_DOMAIN_PRICING_URL ||
+        "https://hub.multilat.xyz/domain-prices.json";
       const response = await fetch(externalJsonUrl, {
-        next: { revalidate: 3600 }, // Cache For 1 Hour (Update More Frequently)
+        next: { revalidate: 3600 }, // Cache For 1 Hour
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        // Handle Both Formats: { domains: [...] } or [...]
-        allDomains = Array.isArray(data) ? data : (data.domains || []);
-      } else {
+      if (!response.ok) {
         throw new Error("External JSON Fetch Failed");
       }
-    } catch {
-      console.log("Falling Back To Local Static JSON Data");
-      // Fallback To Local Static JSON Data
-      const pricingDataFile = await import("@/data/domain-pricing.json");
-      allDomains = pricingDataFile.domains;
+
+      const data: DomainPricingResponse = await response.json();
+      allDomains = Array.isArray(data) ? data : data.domains || [];
+      spotlightTlds = data.spotlightTlds || [];
+      saleTlds = data.saleTlds || [];
+      lastUpdated = data.lastUpdated || null;
+    } catch (err) {
+      console.error("Error Fetching Domain Pricing:", err);
+      // Will Use Hardcoded Fallback Data Below
     }
 
-    // Organize Domains By Category
-    const categorizedDomains: Record<CategoryKey, DomainPrice[]> = {
-      popular: [],
-      business: [],
-      countryCode: [],
-      special: [],
-    };
+    // Organize Domains By Category (Using API Category Field)
+    const categorizedDomains: Record<string, DomainPrice[]> = {};
 
-    // Categorize Each Domain
+    // Group Domains By Their Category From API
     allDomains.forEach((domain) => {
-      const category = categorizeTLD(domain.tld);
-      if (category && categorizedDomains[category]) {
-        categorizedDomains[category].push(domain);
+      const category = domain.category || "Other";
+      if (!categorizedDomains[category]) {
+        categorizedDomains[category] = [];
+      }
+      categorizedDomains[category].push(domain);
+    });
+
+    // Define Category Display Order (Spotlight First If Available)
+    const categoryOrder = [
+      "Popular",
+      "Business",
+      "Technology",
+      "Geographic",
+      "Arts and Entertainment",
+      "Services",
+      "Shopping",
+      "Money and Finance",
+      "Education",
+      "Sports",
+      "Food and Drink",
+      "Leisure and Recreation",
+      "Real Estate",
+      "Novelty",
+      "Other",
+    ];
+
+    // Start With Empty Pricing Data Array
+    const pricingData: PricingCategory[] = [];
+
+    // Add Spotlight Category First If We Have At Least 1 Spotlight TLD
+    // Keep Original Order From Backend (No Sorting)
+    if (spotlightTlds.length > 0) {
+      pricingData.push({
+        category: "Spotlight",
+        iconName: "Star",
+        domains: spotlightTlds,
+      });
+    }
+
+    // Add Sale Category Second If We Have At Least 1 Sale TLD
+    // Keep Original Order From Backend (No Sorting)
+    if (saleTlds.length > 0) {
+      pricingData.push({
+        category: "Sale",
+        iconName: "Tag",
+        domains: saleTlds,
+      });
+    }
+
+    // Add Remaining Categories In Order
+    categoryOrder
+      .filter((category) => categorizedDomains[category]?.length > 0)
+      .forEach((category) => {
+        pricingData.push({
+          category,
+          iconName: categoryIconMap[category] || "MoreHorizontal",
+          domains: categorizedDomains[category].sort((a, b) =>
+            a.tld.localeCompare(b.tld)
+          ),
+        });
+      });
+
+    // Add Any Categories Not In The Order List
+    Object.keys(categorizedDomains).forEach((category) => {
+      if (
+        !categoryOrder.includes(category) &&
+        categorizedDomains[category].length > 0
+      ) {
+        pricingData.push({
+          category,
+          iconName: categoryIconMap[category] || "MoreHorizontal",
+          domains: categorizedDomains[category].sort((a, b) =>
+            a.tld.localeCompare(b.tld)
+          ),
+        });
       }
     });
 
-    // Convert To Component Format
-    const pricingData: PricingCategory[] = (
-      Object.keys(categorizedDomains) as CategoryKey[]
-    )
-      .filter((key) => categorizedDomains[key].length > 0)
-      .map((key) => ({
-        category:
-          key === "popular"
-            ? "Popular Domains"
-            : key === "business"
-              ? "Business Domains"
-              : key === "countryCode"
-                ? "Country Code Domains"
-                : "Special Domains",
-        iconName: categoryIcons[key],
-        domains: categorizedDomains[key].sort((a, b) =>
-          a.tld.localeCompare(b.tld)
-        ),
-      }));
-
-    return pricingData.length > 0 ? pricingData : fallbackData;
+    return {
+      pricingData: pricingData.length > 0 ? pricingData : fallbackData,
+      lastUpdated,
+    };
   } catch (error) {
     console.error("Error Fetching Domain Pricing:", error);
-    return fallbackData;
+    return { pricingData: fallbackData, lastUpdated: null };
   }
 }
 
 export async function DomainPricingTable() {
-  const pricingData = await fetchDomainPricing();
+  const { pricingData, lastUpdated } = await fetchDomainPricing();
 
-  return <DomainPricingTableClient pricingData={pricingData} />;
+  return (
+    <DomainPricingTableClient
+      pricingData={pricingData}
+      lastUpdated={lastUpdated}
+    />
+  );
 }

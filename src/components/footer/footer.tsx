@@ -14,12 +14,17 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { PaymentMethods } from "@/components/footer/payment-methods";
 import { cn } from "@/lib/utils";
 
-const footerLinks = [
+const footerLinks: {
+  href: string;
+  label: string;
+  isExternal?: boolean;
+}[] = [
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact Us" },
   {
-    href: "https://my.bst.com.bd/submitticket.php",
+    href: "https://hub.multilat.xyz/submitticket.php",
     label: "Report Abuse",
+    isExternal: true,
   },
   { href: "/privacy-policy", label: "Privacy" },
   { href: "/cookie-policy", label: "Cookie" },
@@ -54,7 +59,7 @@ export function Footer() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <p className="mb-1 text-xs sm:text-sm text-muted-foreground">
-                    WhatApp Us:
+                    WhatsApp Us:
                   </p>
                   <a
                     href="tel:+8801725414131"
@@ -69,12 +74,12 @@ export function Footer() {
                     Go To Dashboard:
                   </p>
                   <a
-                    href="https://my.bst.com.bd/"
+                    href="https://hub.multilat.xyz/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg sm:text-xl md:text-2xl font-semibold hover:text-primary transition-colors break-all block"
                   >
-                    https://my.bst.com.bd
+                    https://hub.multilat.xyz
                   </a>
                 </div>
               </div>
@@ -83,7 +88,7 @@ export function Footer() {
             {/* Right Side - Email And Social */}
             <div className="flex flex-col items-center justify-center lg:items-end lg:justify-end gap-12 sm:gap-16 md:gap-20 pt-8 sm:pt-10 md:pt-12">
               <a
-                href="mailto:hello@bst.com.bd"
+                href="mailto:hello@multilat.xyz"
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-regular hover:text-primary transition-colors break-all text-center lg:text-right"
               >
                 hello@multilat.xyz
@@ -143,17 +148,28 @@ export function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm">
             {footerLinks.map((link, index) => (
               <React.Fragment key={link.href}>
-                <Link
-                  href={link.href}
-                  className={cn(
-                    "transition-colors",
-                    pathname === link.href
-                      ? "text-black dark:text-white font-medium"
-                      : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  {link.label}
-                </Link>
+                {link.isExternal ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors text-muted-foreground hover:text-foreground"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "transition-colors",
+                      pathname === link.href
+                        ? "text-black dark:text-white font-medium"
+                        : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                )}
                 {index < footerLinks.length - 1 && (
                   <span className="text-primary">•</span>
                 )}
