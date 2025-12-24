@@ -1,103 +1,6420 @@
 {
-  "lastUpdated": "2025-01-21T00:00:00.000Z",
-  "domains": [
+  "lastUpdated": "2025-12-24T04:24:56+00:00",
+  "currency": "৳",
+  "spotlightTlds": [
     {
       "tld": ".com",
-      "register": "৳1990",
-      "transfer": "৳1990",
-      "renew": "৳1990",
-      "grace": "৳500"
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,590",
+      "transfer": "৳1,590",
+      "renew": "৳1,950",
+      "grace": "৳488"
     },
     {
       "tld": ".net",
-      "register": "৳1900",
-      "transfer": "৳1900",
-      "renew": "৳1900",
-      "grace": "৳500"
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,950",
+      "transfer": "৳1,950",
+      "renew": "৳2,450",
+      "grace": "৳613"
     },
     {
       "tld": ".org",
-      "register": "৳1600",
-      "transfer": "৳1600",
-      "renew": "৳1600",
-      "grace": "৳500"
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,950",
+      "transfer": "৳1,950",
+      "renew": "৳2,450",
+      "grace": "৳613"
     },
     {
       "tld": ".xyz",
-      "register": "৳200",
-      "transfer": "৳200",
-      "renew": "৳200",
-      "grace": "৳200"
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳2,260",
+      "renew": "৳2,800",
+      "grace": "৳700"
     },
     {
-      "tld": ".tech",
-      "register": "৳1700",
-      "transfer": "৳1700",
-      "renew": "৳1700",
-      "grace": "৳500"
+      "tld": ".top",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳1,330",
+      "renew": "৳1,580",
+      "grace": "৳395"
     },
     {
-      "tld": ".biz",
-      "register": "৳1500",
-      "transfer": "৳1500",
-      "renew": "৳1500",
-      "grace": "৳400"
+      "tld": ".shop",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳5,770",
+      "renew": "৳6,950",
+      "grace": "৳1,738"
     },
     {
-      "tld": ".company",
-      "register": "৳2000",
-      "transfer": "৳2000",
-      "renew": "৳2000",
-      "grace": "৳600"
+      "tld": ".fun",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳399",
+      "transfer": "৳4,400",
+      "renew": "৳4,620",
+      "grace": "৳1,155"
     },
     {
-      "tld": ".store",
-      "register": "৳1800",
-      "transfer": "৳1800",
-      "renew": "৳1800",
-      "grace": "৳500"
+      "tld": ".digital",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳5,050",
+      "renew": "৳5,350",
+      "grace": "৳1,338"
+    }
+  ],
+  "saleTlds": [
+    {
+      "tld": ".agency",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳699",
+      "transfer": "৳3,670",
+      "renew": "৳3,890",
+      "grace": "৳973"
     },
     {
-      "tld": ".bd",
-      "register": "৳3000",
-      "transfer": "৳3000",
-      "renew": "৳3000",
-      "grace": "৳800"
+      "tld": ".bargains",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,690",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
     },
     {
-      "tld": ".us",
-      "register": "৳1200",
-      "transfer": "৳1200",
-      "renew": "৳1200",
-      "grace": "৳400"
+      "tld": ".bet",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳3,140",
+      "renew": "৳3,810",
+      "grace": "৳953"
     },
     {
-      "tld": ".uk",
-      "register": "৳1100",
-      "transfer": "৳1100",
-      "renew": "৳1100",
-      "grace": "৳400"
+      "tld": ".bike",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
     },
     {
-      "tld": ".dev",
-      "register": "৳1500",
-      "transfer": "৳1500",
-      "renew": "৳1500",
-      "grace": "৳400"
+      "tld": ".bio",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳9,950",
+      "renew": "৳11,910",
+      "grace": "৳2,978"
     },
     {
-      "tld": ".app",
-      "register": "৳1600",
-      "transfer": "৳1600",
-      "renew": "৳1600",
-      "grace": "৳500"
+      "tld": ".buzz",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳5,020",
+      "renew": "৳6,040",
+      "grace": "৳1,510"
+    },
+    {
+      "tld": ".center",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,370",
+      "renew": "৳4,110",
+      "grace": "৳1,028"
+    },
+    {
+      "tld": ".city",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳799",
+      "transfer": "৳3,370",
+      "renew": "৳4,110",
+      "grace": "৳1,028"
+    },
+    {
+      "tld": ".coffee",
+      "category": "Food and Drink",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".college",
+      "category": "Education",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳2,999",
+      "transfer": "৳9,860",
+      "renew": "৳11,810",
+      "grace": "৳2,953"
+    },
+    {
+      "tld": ".cool",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".coupons",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳399",
+      "transfer": "৳6,630",
+      "renew": "৳7,970",
+      "grace": "৳1,993"
+    },
+    {
+      "tld": ".credit",
+      "category": "Money and Finance",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,399",
+      "transfer": "৳14,230",
+      "renew": "৳17,020",
+      "grace": "৳4,255"
+    },
+    {
+      "tld": ".dance",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳3,370",
+      "renew": "৳3,960",
+      "grace": "৳990"
+    },
+    {
+      "tld": ".digital",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳5,050",
+      "renew": "৳5,350",
+      "grace": "৳1,338"
+    },
+    {
+      "tld": ".email",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳3,520",
+      "renew": "৳4,110",
+      "grace": "৳1,028"
+    },
+    {
+      "tld": ".energy",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,599",
+      "transfer": "৳14,230",
+      "renew": "৳17,020",
+      "grace": "৳4,255"
+    },
+    {
+      "tld": ".express",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,690",
+      "renew": "৳4,990",
+      "grace": "৳1,248"
+    },
+    {
+      "tld": ".fun",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳399",
+      "transfer": "৳4,400",
+      "renew": "৳4,620",
+      "grace": "৳1,155"
+    },
+    {
+      "tld": ".game",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳49,999",
+      "transfer": "৳58,710",
+      "renew": "৳69,970",
+      "grace": "৳17,493"
+    },
+    {
+      "tld": ".global",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳4,999",
+      "transfer": "৳10,860",
+      "renew": "৳12,910",
+      "grace": "৳3,228"
+    },
+    {
+      "tld": ".gold",
+      "category": "Money and Finance",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳13,940",
+      "renew": "৳16,730",
+      "grace": "৳4,183"
+    },
+    {
+      "tld": ".guru",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳5,280",
+      "renew": "৳6,310",
+      "grace": "৳1,578"
+    },
+    {
+      "tld": ".homes",
+      "category": "Real Estate",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳5,430",
+      "renew": "৳6,540",
+      "grace": "৳1,635"
+    },
+    {
+      "tld": ".host",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳14,920",
+      "renew": "৳17,770",
+      "grace": "৳4,443"
+    },
+    {
+      "tld": ".icu",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳2,100",
+      "renew": "৳2,230",
+      "grace": "৳558"
+    },
+    {
+      "tld": ".in.net",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳1,160",
+      "renew": "৳1,450",
+      "grace": "৳363"
+    },
+    {
+      "tld": ".info",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳599",
+      "transfer": "৳4,140",
+      "renew": "৳4,610",
+      "grace": "৳1,153"
+    },
+    {
+      "tld": ".international",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳3,830",
+      "renew": "৳4,080",
+      "grace": "৳1,020"
+    },
+    {
+      "tld": ".io",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳4,999",
+      "transfer": "৳7,700",
+      "renew": "৳9,170",
+      "grace": "৳2,293"
+    },
+    {
+      "tld": ".irish",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".kim",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".lat",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳282",
+      "transfer": "৳4,390",
+      "renew": "৳5,300",
+      "grace": "৳1,325"
+    },
+    {
+      "tld": ".life",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,400",
+      "renew": "৳5,280",
+      "grace": "৳1,320"
+    },
+    {
+      "tld": ".live",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳399",
+      "transfer": "৳3,960",
+      "renew": "৳4,690",
+      "grace": "৳1,173"
+    },
+    {
+      "tld": ".lol",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,390",
+      "renew": "৳5,300",
+      "grace": "৳1,325"
+    },
+    {
+      "tld": ".ltd",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳3,670",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".markets",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳8,510",
+      "renew": "৳10,270",
+      "grace": "৳2,568"
+    },
+    {
+      "tld": ".media",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳699",
+      "transfer": "৳5,560",
+      "renew": "৳5,910",
+      "grace": "৳1,478"
+    },
+    {
+      "tld": ".mom",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,930",
+      "renew": "৳5,940",
+      "grace": "৳1,485"
+    },
+    {
+      "tld": ".network",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳799",
+      "transfer": "৳4,180",
+      "renew": "৳4,440",
+      "grace": "৳1,110"
+    },
+    {
+      "tld": ".news",
+      "category": "Arts and Entertainment",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳3,960",
+      "renew": "৳4,690",
+      "grace": "৳1,173"
+    },
+    {
+      "tld": ".ninja",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,110",
+      "renew": "৳4,840",
+      "grace": "৳1,210"
     },
     {
       "tld": ".online",
-      "register": "৳550",
-      "transfer": "৳550",
-      "renew": "৳550",
-      "grace": "৳300"
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,930",
+      "renew": "৳4,930",
+      "grace": "৳1,233"
+    },
+    {
+      "tld": ".pet",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,080",
+      "renew": "৳3,810",
+      "grace": "৳953"
+    },
+    {
+      "tld": ".photography",
+      "category": "Arts and Entertainment",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,550",
+      "renew": "৳5,280",
+      "grace": "৳1,320"
+    },
+    {
+      "tld": ".pics",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,390",
+      "renew": "৳5,300",
+      "grace": "৳1,325"
+    },
+    {
+      "tld": ".pink",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".plus",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳5,560",
+      "renew": "৳5,910",
+      "grace": "৳1,478"
+    },
+    {
+      "tld": ".press",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳11,680",
+      "renew": "৳13,910",
+      "grace": "৳3,478"
+    },
+    {
+      "tld": ".pro",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳4,300",
+      "renew": "৳5,250",
+      "grace": "৳1,313"
+    },
+    {
+      "tld": ".pw",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳699",
+      "transfer": "৳3,080",
+      "renew": "৳3,650",
+      "grace": "৳913"
+    },
+    {
+      "tld": ".red",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".rent",
+      "category": "Real Estate",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳2,899",
+      "transfer": "৳8,940",
+      "renew": "৳10,710",
+      "grace": "৳2,678"
+    },
+    {
+      "tld": ".rocks",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳2,350",
+      "renew": "৳2,790",
+      "grace": "৳698"
+    },
+    {
+      "tld": ".run",
+      "category": "Sports",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳599",
+      "transfer": "৳3,140",
+      "renew": "৳3,340",
+      "grace": "৳835"
+    },
+    {
+      "tld": ".sale",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".services",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,870",
+      "renew": "৳5,180",
+      "grace": "৳1,295"
+    },
+    {
+      "tld": ".shop",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳5,770",
+      "renew": "৳6,950",
+      "grace": "৳1,738"
+    },
+    {
+      "tld": ".site",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳5,130",
+      "renew": "৳5,130",
+      "grace": "৳1,283"
+    },
+    {
+      "tld": ".social",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".software",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".space",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳3,670",
+      "renew": "৳3,710",
+      "grace": "৳928"
+    },
+    {
+      "tld": ".store",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳7,700",
+      "renew": "৳7,700",
+      "grace": "৳1,925"
+    },
+    {
+      "tld": ".systems",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳2,299",
+      "transfer": "৳3,810",
+      "renew": "৳4,550",
+      "grace": "৳1,138"
+    },
+    {
+      "tld": ".tech",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,399",
+      "transfer": "৳9,070",
+      "renew": "৳9,070",
+      "grace": "৳2,268"
+    },
+    {
+      "tld": ".technology",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,490",
+      "renew": "৳3,710",
+      "grace": "৳928"
+    },
+    {
+      "tld": ".tips",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳3,670",
+      "renew": "৳3,890",
+      "grace": "৳973"
+    },
+    {
+      "tld": ".today",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳3,520",
+      "renew": "৳4,250",
+      "grace": "৳1,063"
+    },
+    {
+      "tld": ".tools",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳4,360",
+      "renew": "৳5,210",
+      "grace": "৳1,303"
+    },
+    {
+      "tld": ".top",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳1,330",
+      "renew": "৳1,580",
+      "grace": "৳395"
+    },
+    {
+      "tld": ".uno",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,550",
+      "renew": "৳4,300",
+      "grace": "৳1,075"
+    },
+    {
+      "tld": ".website",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,400",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".works",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".world",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳349",
+      "transfer": "৳5,050",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".xyz",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳2,260",
+      "renew": "৳2,800",
+      "grace": "৳700"
+    },
+    {
+      "tld": ".zone",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    }
+  ],
+  "domains": [
+    {
+      "tld": ".5g.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".6g.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".aaa.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".aca.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".academy",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,740",
+      "transfer": "৳5,740",
+      "renew": "৳6,090",
+      "grace": "৳1,523"
+    },
+    {
+      "tld": ".accountant",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳4,680",
+      "grace": "৳1,170"
+    },
+    {
+      "tld": ".accountants",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,940",
+      "transfer": "৳13,940",
+      "renew": "৳16,730",
+      "grace": "৳4,183"
+    },
+    {
+      "tld": ".acct.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".actor",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,570",
+      "transfer": "৳5,570",
+      "renew": "৳6,750",
+      "grace": "৳1,688"
+    },
+    {
+      "tld": ".adult",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳16,450",
+      "transfer": "৳16,450",
+      "renew": "৳19,250",
+      "grace": "৳4,813"
+    },
+    {
+      "tld": ".adv.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".ae.org",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳5,330",
+      "grace": "৳1,333"
+    },
+    {
+      "tld": ".agency",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳699",
+      "transfer": "৳3,670",
+      "renew": "৳3,890",
+      "grace": "৳973"
+    },
+    {
+      "tld": ".ai",
+      "category": "Other",
+      "tag": null,
+      "period": 2,
+      "register": "৳25,000",
+      "transfer": "N/A",
+      "renew": "৳30,000",
+      "grace": "৳7,500"
+    },
+    {
+      "tld": ".ai.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".airforce",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,130",
+      "transfer": "৳5,130",
+      "renew": "৳6,160",
+      "grace": "৳1,540"
+    },
+    {
+      "tld": ".am.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".amsterdam",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,550",
+      "transfer": "৳5,550",
+      "renew": "৳6,680",
+      "grace": "৳1,670"
+    },
+    {
+      "tld": ".apartments",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".app",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,700",
+      "transfer": "৳2,700",
+      "renew": "৳3,300",
+      "grace": "৳825"
+    },
+    {
+      "tld": ".archi",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳12,470",
+      "transfer": "৳12,470",
+      "renew": "৳14,530",
+      "grace": "৳3,633"
+    },
+    {
+      "tld": ".army",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,840",
+      "transfer": "৳4,840",
+      "renew": "৳5,870",
+      "grace": "৳1,468"
+    },
+    {
+      "tld": ".arq.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".art",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,140",
+      "transfer": "৳4,140",
+      "renew": "৳5,100",
+      "grace": "৳1,275"
+    },
+    {
+      "tld": ".art.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".asia",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,130",
+      "transfer": "৳2,130",
+      "renew": "৳2,610",
+      "grace": "৳653"
+    },
+    {
+      "tld": ".associates",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,990",
+      "transfer": "৳4,990",
+      "renew": "৳6,010",
+      "grace": "৳1,503"
+    },
+    {
+      "tld": ".attorney",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,090",
+      "transfer": "৳7,090",
+      "renew": "৳8,510",
+      "grace": "৳2,128"
+    },
+    {
+      "tld": ".au",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,170",
+      "transfer": "N/A",
+      "renew": "৳1,170",
+      "grace": "৳293"
+    },
+    {
+      "tld": ".auction",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,360",
+      "transfer": "৳4,360",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".audio",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳19,570",
+      "transfer": "৳19,570",
+      "renew": "৳23,380",
+      "grace": "৳5,845"
+    },
+    {
+      "tld": ".auto",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳400,620",
+      "transfer": "৳400,620",
+      "renew": "৳477,010",
+      "grace": "৳119,253"
+    },
+    {
+      "tld": ".avocat.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".band",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,670",
+      "transfer": "৳3,670",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".bar",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳9,860",
+      "transfer": "৳9,860",
+      "renew": "৳11,810",
+      "grace": "৳2,953"
+    },
+    {
+      "tld": ".bar.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".bargains",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,690",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".beer",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,800",
+      "transfer": "৳4,800",
+      "renew": "৳5,840",
+      "grace": "৳1,460"
+    },
+    {
+      "tld": ".berlin",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,470",
+      "transfer": "৳7,470",
+      "renew": "৳7,940",
+      "grace": "৳1,985"
+    },
+    {
+      "tld": ".best",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳3,490",
+      "grace": "৳873"
+    },
+    {
+      "tld": ".bet",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳3,140",
+      "renew": "৳3,810",
+      "grace": "৳953"
+    },
+    {
+      "tld": ".bid",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳4,680",
+      "grace": "৳1,170"
+    },
+    {
+      "tld": ".bihar.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".bike",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".bingo",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".bio",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳9,950",
+      "renew": "৳11,910",
+      "grace": "৳2,978"
+    },
+    {
+      "tld": ".biz",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,960",
+      "transfer": "৳2,960",
+      "renew": "৳3,590",
+      "grace": "৳898"
+    },
+    {
+      "tld": ".biz.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".black",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳8,630",
+      "transfer": "৳8,630",
+      "renew": "৳10,340",
+      "grace": "৳2,585"
+    },
+    {
+      "tld": ".blackfriday",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳19,570",
+      "transfer": "৳19,570",
+      "renew": "৳23,380",
+      "grace": "৳5,845"
+    },
+    {
+      "tld": ".blog",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳4,660",
+      "grace": "৳1,165"
+    },
+    {
+      "tld": ".blog.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".blue",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".boutique",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,360",
+      "transfer": "৳4,360",
+      "renew": "৳4,620",
+      "grace": "৳1,155"
+    },
+    {
+      "tld": ".br",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".br.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,470",
+      "transfer": "৳6,470",
+      "renew": "৳7,780",
+      "grace": "৳1,945"
+    },
+    {
+      "tld": ".build",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳9,860",
+      "transfer": "৳9,860",
+      "renew": "৳11,810",
+      "grace": "৳2,953"
+    },
+    {
+      "tld": ".builders",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".business",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,760",
+      "transfer": "৳1,760",
+      "renew": "৳2,050",
+      "grace": "৳513"
+    },
+    {
+      "tld": ".business.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".buzz",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳5,020",
+      "renew": "৳6,040",
+      "grace": "৳1,510"
+    },
+    {
+      "tld": ".bz",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,000",
+      "transfer": "৳4,000",
+      "renew": "৳4,840",
+      "grace": "৳1,210"
+    },
+    {
+      "tld": ".ca",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,200",
+      "transfer": "৳2,200",
+      "renew": "৳2,750",
+      "grace": "৳688"
+    },
+    {
+      "tld": ".ca.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,190",
+      "transfer": "৳1,190",
+      "renew": "৳1,510",
+      "grace": "৳378"
+    },
+    {
+      "tld": ".cab",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".cafe",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,910",
+      "grace": "৳1,478"
+    },
+    {
+      "tld": ".cam",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,770",
+      "transfer": "৳2,770",
+      "renew": "৳3,370",
+      "grace": "৳843"
+    },
+    {
+      "tld": ".camera",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,940",
+      "transfer": "৳6,940",
+      "renew": "৳8,140",
+      "grace": "৳2,035"
+    },
+    {
+      "tld": ".camp",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,120",
+      "transfer": "৳7,120",
+      "renew": "৳8,330",
+      "grace": "৳2,083"
+    },
+    {
+      "tld": ".capetown",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,080",
+      "transfer": "৳3,080",
+      "renew": "৳3,740",
+      "grace": "৳935"
+    },
+    {
+      "tld": ".capital",
+      "category": "Money and Finance",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".car",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳400,620",
+      "transfer": "৳400,620",
+      "renew": "৳477,010",
+      "grace": "৳119,253"
+    },
+    {
+      "tld": ".cards",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".care",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".career",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,640",
+      "transfer": "৳14,640",
+      "renew": "৳17,510",
+      "grace": "৳4,378"
+    },
+    {
+      "tld": ".careers",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".cars",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳400,620",
+      "transfer": "৳400,620",
+      "renew": "৳477,010",
+      "grace": "৳119,253"
+    },
+    {
+      "tld": ".casa",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,680",
+      "transfer": "৳2,680",
+      "renew": "৳3,310",
+      "grace": "৳828"
+    },
+    {
+      "tld": ".cash",
+      "category": "Money and Finance",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,360",
+      "transfer": "৳4,360",
+      "renew": "৳5,210",
+      "grace": "৳1,303"
+    },
+    {
+      "tld": ".casino",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳20,690",
+      "transfer": "৳20,690",
+      "renew": "৳24,800",
+      "grace": "৳6,200"
+    },
+    {
+      "tld": ".catering",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".cc",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,540",
+      "transfer": "৳1,540",
+      "renew": "৳1,910",
+      "grace": "৳478"
+    },
+    {
+      "tld": ".center",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,370",
+      "renew": "৳4,110",
+      "grace": "৳1,028"
+    },
+    {
+      "tld": ".chat",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".cheap",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,360",
+      "transfer": "৳4,360",
+      "renew": "৳4,620",
+      "grace": "৳1,155"
+    },
+    {
+      "tld": ".christmas",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳9,400",
+      "transfer": "৳9,400",
+      "renew": "৳11,270",
+      "grace": "৳2,818"
+    },
+    {
+      "tld": ".church",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".city",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳799",
+      "transfer": "৳3,370",
+      "renew": "৳4,110",
+      "grace": "৳1,028"
+    },
+    {
+      "tld": ".cl",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,010",
+      "transfer": "৳2,010",
+      "renew": "৳2,390",
+      "grace": "৳598"
+    },
+    {
+      "tld": ".claims",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".cleaning",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳9,100",
+      "transfer": "৳9,100",
+      "renew": "৳9,100",
+      "grace": "৳2,275"
+    },
+    {
+      "tld": ".click",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,580",
+      "transfer": "৳1,580",
+      "renew": "৳1,730",
+      "grace": "৳433"
+    },
+    {
+      "tld": ".clinic",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".clothing",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".cloud",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".club",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳3,490",
+      "grace": "৳873"
+    },
+    {
+      "tld": ".cn",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,160",
+      "transfer": "৳1,160",
+      "renew": "৳1,450",
+      "grace": "৳363"
+    },
+    {
+      "tld": ".cn.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,400",
+      "transfer": "৳5,850",
+      "renew": "৳7,040",
+      "grace": "৳1,760"
+    },
+    {
+      "tld": ".cn.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".co",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,530",
+      "transfer": "৳4,530",
+      "renew": "৳5,490",
+      "grace": "৳1,373"
+    },
+    {
+      "tld": ".co.com",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳4,660",
+      "grace": "৳1,165"
+    },
+    {
+      "tld": ".co.de",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,410",
+      "transfer": "৳1,410",
+      "renew": "৳1,740",
+      "grace": "৳435"
+    },
+    {
+      "tld": ".co.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".co.nz",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,300",
+      "transfer": "N/A",
+      "renew": "৳4,000",
+      "grace": "৳1,000"
+    },
+    {
+      "tld": ".co.uk",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,190",
+      "transfer": "N/A",
+      "renew": "৳1,490",
+      "grace": "৳373"
+    },
+    {
+      "tld": ".co.za",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳780",
+      "transfer": "N/A",
+      "renew": "৳920",
+      "grace": "৳230"
+    },
+    {
+      "tld": ".coach",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".codes",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".coffee",
+      "category": "Food and Drink",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".college",
+      "category": "Education",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳2,999",
+      "transfer": "৳9,860",
+      "renew": "৳11,810",
+      "grace": "৳2,953"
+    },
+    {
+      "tld": ".com",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,590",
+      "transfer": "৳1,590",
+      "renew": "৳1,950",
+      "grace": "৳488"
+    },
+    {
+      "tld": ".com.au",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,700",
+      "transfer": "N/A",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".com.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".com.cn",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,160",
+      "transfer": "৳1,160",
+      "renew": "৳1,450",
+      "grace": "৳363"
+    },
+    {
+      "tld": ".com.co",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,010",
+      "transfer": "৳2,010",
+      "renew": "৳2,460",
+      "grace": "৳615"
+    },
+    {
+      "tld": ".com.de",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,080",
+      "transfer": "৳1,080",
+      "renew": "৳1,360",
+      "grace": "৳340"
+    },
+    {
+      "tld": ".com.ec",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,470",
+      "transfer": "৳6,470",
+      "renew": "৳7,780",
+      "grace": "৳1,945"
+    },
+    {
+      "tld": ".com.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".com.mx",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,010",
+      "transfer": "৳3,550",
+      "renew": "৳4,300",
+      "grace": "৳1,075"
+    },
+    {
+      "tld": ".com.ru",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳700",
+      "transfer": "N/A",
+      "renew": "৳910",
+      "grace": "৳228"
+    },
+    {
+      "tld": ".com.sc",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,790",
+      "transfer": "৳14,790",
+      "renew": "৳17,680",
+      "grace": "৳4,420"
+    },
+    {
+      "tld": ".community",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,870",
+      "transfer": "৳4,870",
+      "renew": "৳5,180",
+      "grace": "৳1,295"
+    },
+    {
+      "tld": ".company",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,910",
+      "transfer": "৳1,910",
+      "renew": "৳2,350",
+      "grace": "৳588"
+    },
+    {
+      "tld": ".computer",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".condos",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".construction",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".consulting",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,870",
+      "transfer": "৳5,870",
+      "renew": "৳6,900",
+      "grace": "৳1,725"
+    },
+    {
+      "tld": ".contractors",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".cooking",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,800",
+      "transfer": "৳4,800",
+      "renew": "৳5,840",
+      "grace": "৳1,460"
+    },
+    {
+      "tld": ".cool",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".coop.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".country",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳412,950",
+      "transfer": "৳412,950",
+      "renew": "৳498,800",
+      "grace": "৳124,700"
+    },
+    {
+      "tld": ".coupons",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳399",
+      "transfer": "৳6,630",
+      "renew": "৳7,970",
+      "grace": "৳1,993"
+    },
+    {
+      "tld": ".courses",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,330",
+      "transfer": "৳5,330",
+      "renew": "৳6,410",
+      "grace": "৳1,603"
+    },
+    {
+      "tld": ".cpa.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".credit",
+      "category": "Money and Finance",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,399",
+      "transfer": "৳14,230",
+      "renew": "৳17,020",
+      "grace": "৳4,255"
+    },
+    {
+      "tld": ".creditcard",
+      "category": "Money and Finance",
+      "tag": null,
+      "period": 1,
+      "register": "৳23,920",
+      "transfer": "৳23,920",
+      "renew": "৳28,470",
+      "grace": "৳7,118"
+    },
+    {
+      "tld": ".cricket",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳4,680",
+      "grace": "৳1,170"
+    },
+    {
+      "tld": ".cruises",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".cs.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".cymru",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,320",
+      "transfer": "৳2,320",
+      "renew": "৳2,830",
+      "grace": "৳708"
+    },
+    {
+      "tld": ".dance",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳3,370",
+      "renew": "৳3,960",
+      "grace": "৳990"
+    },
+    {
+      "tld": ".date",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳4,680",
+      "grace": "৳1,170"
+    },
+    {
+      "tld": ".dating",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".de",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,080",
+      "transfer": "৳1,080",
+      "renew": "৳1,360",
+      "grace": "৳340"
+    },
+    {
+      "tld": ".de.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳5,330",
+      "grace": "৳1,333"
+    },
+    {
+      "tld": ".deals",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,690",
+      "transfer": "৳4,690",
+      "renew": "৳4,990",
+      "grace": "৳1,248"
+    },
+    {
+      "tld": ".degree",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,010",
+      "transfer": "৳6,010",
+      "renew": "৳7,230",
+      "grace": "৳1,808"
+    },
+    {
+      "tld": ".delhi.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".delivery",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".democrat",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,550",
+      "transfer": "৳4,550",
+      "renew": "৳5,430",
+      "grace": "৳1,358"
+    },
+    {
+      "tld": ".dental",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".dentist",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳8,670",
+      "transfer": "৳8,670",
+      "renew": "৳9,210",
+      "grace": "৳2,303"
+    },
+    {
+      "tld": ".desi",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,320",
+      "transfer": "৳2,320",
+      "renew": "৳2,830",
+      "grace": "৳708"
+    },
+    {
+      "tld": ".design",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,780",
+      "transfer": "৳7,780",
+      "renew": "৳9,320",
+      "grace": "৳2,330"
+    },
+    {
+      "tld": ".dev",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,400",
+      "transfer": "৳2,400",
+      "renew": "৳2,860",
+      "grace": "৳715"
+    },
+    {
+      "tld": ".diamonds",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".diet",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳19,570",
+      "transfer": "৳19,570",
+      "renew": "৳23,380",
+      "grace": "৳5,845"
+    },
+    {
+      "tld": ".digital",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳5,050",
+      "renew": "৳5,350",
+      "grace": "৳1,338"
+    },
+    {
+      "tld": ".direct",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".directory",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,140",
+      "transfer": "৳3,140",
+      "renew": "৳3,340",
+      "grace": "৳835"
+    },
+    {
+      "tld": ".discount",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".doctor",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳15,260",
+      "transfer": "৳15,260",
+      "renew": "৳18,190",
+      "grace": "৳4,548"
+    },
+    {
+      "tld": ".dog",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,630",
+      "transfer": "৳7,630",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".domains",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".download",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳4,680",
+      "grace": "৳1,170"
+    },
+    {
+      "tld": ".dr.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".durban",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,080",
+      "transfer": "৳3,080",
+      "renew": "৳3,740",
+      "grace": "৳935"
+    },
+    {
+      "tld": ".earth",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳3,560",
+      "grace": "৳890"
+    },
+    {
+      "tld": ".ec",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,630",
+      "transfer": "৳6,630",
+      "renew": "৳7,970",
+      "grace": "৳1,993"
+    },
+    {
+      "tld": ".eco",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳21,610",
+      "transfer": "৳21,610",
+      "renew": "৳22,960",
+      "grace": "৳5,740"
+    },
+    {
+      "tld": ".eco.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".education",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,180",
+      "transfer": "৳4,180",
+      "renew": "৳4,440",
+      "grace": "৳1,110"
+    },
+    {
+      "tld": ".email",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳3,520",
+      "renew": "৳4,110",
+      "grace": "৳1,028"
+    },
+    {
+      "tld": ".energy",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,599",
+      "transfer": "৳14,230",
+      "renew": "৳17,020",
+      "grace": "৳4,255"
+    },
+    {
+      "tld": ".eng.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".eng.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".engineer",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,550",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".engineering",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".enterprises",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".equipment",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".er.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".es",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,080",
+      "transfer": "N/A",
+      "renew": "৳1,360",
+      "grace": "৳340"
+    },
+    {
+      "tld": ".estate",
+      "category": "Money and Finance",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".eu",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,040",
+      "transfer": "৳1,040",
+      "renew": "৳1,300",
+      "grace": "৳325"
+    },
+    {
+      "tld": ".eu.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳5,330",
+      "grace": "৳1,333"
+    },
+    {
+      "tld": ".events",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".exchange",
+      "category": "Money and Finance",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".expert",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,290",
+      "transfer": "৳7,290",
+      "renew": "৳7,750",
+      "grace": "৳1,938"
+    },
+    {
+      "tld": ".exposed",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".express",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,690",
+      "renew": "৳4,990",
+      "grace": "৳1,248"
+    },
+    {
+      "tld": ".fail",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".faith",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".family",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,250",
+      "transfer": "৳4,250",
+      "renew": "৳5,130",
+      "grace": "৳1,283"
+    },
+    {
+      "tld": ".fans",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳10,170",
+      "transfer": "৳10,170",
+      "renew": "৳12,180",
+      "grace": "৳3,045"
+    },
+    {
+      "tld": ".farm",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".fashion",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".feedback",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳4,660",
+      "grace": "৳1,165"
+    },
+    {
+      "tld": ".fin.ec",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,470",
+      "transfer": "৳6,470",
+      "renew": "৳7,780",
+      "grace": "৳1,945"
+    },
+    {
+      "tld": ".finance",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".financial",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".firm.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".fish",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".fishing",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".fit",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".fitness",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,250",
+      "transfer": "৳4,870",
+      "renew": "৳5,180",
+      "grace": "৳1,295"
+    },
+    {
+      "tld": ".flights",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".florist",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,360",
+      "transfer": "৳4,360",
+      "renew": "৳4,620",
+      "grace": "৳1,155"
+    },
+    {
+      "tld": ".flowers",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳19,570",
+      "transfer": "৳19,570",
+      "renew": "৳23,380",
+      "grace": "৳5,845"
+    },
+    {
+      "tld": ".fm",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳18,030",
+      "transfer": "৳18,030",
+      "renew": "৳21,540",
+      "grace": "৳5,385"
+    },
+    {
+      "tld": ".football",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".forsale",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,360",
+      "transfer": "৳4,360",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".foundation",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,960",
+      "transfer": "৳3,960",
+      "renew": "৳3,970",
+      "grace": "৳993"
+    },
+    {
+      "tld": ".fr",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,080",
+      "transfer": "৳1,080",
+      "renew": "৳1,360",
+      "grace": "৳340"
+    },
+    {
+      "tld": ".fun",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳399",
+      "transfer": "৳4,400",
+      "renew": "৳4,620",
+      "grace": "৳1,155"
+    },
+    {
+      "tld": ".fund",
+      "category": "Money and Finance",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".furniture",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,230",
+      "transfer": "৳14,230",
+      "renew": "৳14,720",
+      "grace": "৳3,680"
+    },
+    {
+      "tld": ".futbol",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,910",
+      "transfer": "৳1,910",
+      "renew": "৳2,350",
+      "grace": "৳588"
+    },
+    {
+      "tld": ".fyi",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".gallery",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".game",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳49,999",
+      "transfer": "৳58,710",
+      "renew": "৳69,970",
+      "grace": "৳17,493"
+    },
+    {
+      "tld": ".games",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,670",
+      "transfer": "৳3,670",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".garden",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".gb.net",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,700",
+      "transfer": "৳1,700",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".gdn",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,700",
+      "transfer": "৳1,700",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".gen.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".gift",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,620",
+      "transfer": "৳2,620",
+      "renew": "৳3,200",
+      "grace": "৳800"
+    },
+    {
+      "tld": ".gifts",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".gives",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,170",
+      "transfer": "৳4,170",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".glass",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,630",
+      "transfer": "৳7,630",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".global",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳4,999",
+      "transfer": "৳10,860",
+      "renew": "৳12,910",
+      "grace": "৳3,228"
+    },
+    {
+      "tld": ".gmbh",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,130",
+      "transfer": "৳5,130",
+      "renew": "৳6,160",
+      "grace": "৳1,540"
+    },
+    {
+      "tld": ".gold",
+      "category": "Money and Finance",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳13,940",
+      "renew": "৳16,730",
+      "grace": "৳4,183"
+    },
+    {
+      "tld": ".golf",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".gr.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳5,330",
+      "grace": "৳1,333"
+    },
+    {
+      "tld": ".graphics",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".gratis",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".green",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳9,870",
+      "transfer": "৳9,870",
+      "renew": "৳10,490",
+      "grace": "৳2,623"
+    },
+    {
+      "tld": ".gripe",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".group",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,810",
+      "transfer": "৳3,810",
+      "renew": "৳4,550",
+      "grace": "৳1,138"
+    },
+    {
+      "tld": ".guide",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".guitars",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳19,570",
+      "transfer": "৳19,570",
+      "renew": "৳23,380",
+      "grace": "৳5,845"
+    },
+    {
+      "tld": ".gujarat.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".guru",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳5,280",
+      "renew": "৳6,310",
+      "grace": "৳1,578"
+    },
+    {
+      "tld": ".haus",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,170",
+      "transfer": "৳4,170",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".health",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳10,680",
+      "transfer": "৳10,680",
+      "renew": "৳12,790",
+      "grace": "৳3,198"
+    },
+    {
+      "tld": ".healthcare",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".help",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,240",
+      "transfer": "৳4,240",
+      "renew": "৳5,130",
+      "grace": "৳1,283"
+    },
+    {
+      "tld": ".hiphop",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳17,300",
+      "transfer": "৳17,300",
+      "renew": "৳18,390",
+      "grace": "৳4,598"
+    },
+    {
+      "tld": ".hockey",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".holdings",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".holiday",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".homes",
+      "category": "Real Estate",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳5,430",
+      "renew": "৳6,540",
+      "grace": "৳1,635"
+    },
+    {
+      "tld": ".horse",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".hospital",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,340",
+      "transfer": "৳7,340",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".host",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳14,920",
+      "renew": "৳17,770",
+      "grace": "৳4,443"
+    },
+    {
+      "tld": ".hosting",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳58,710",
+      "transfer": "৳58,710",
+      "renew": "৳69,890",
+      "grace": "৳17,473"
+    },
+    {
+      "tld": ".house",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".how",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳4,660",
+      "grace": "৳1,165"
+    },
+    {
+      "tld": ".hu.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".icu",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳2,100",
+      "renew": "৳2,230",
+      "grace": "৳558"
+    },
+    {
+      "tld": ".id",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,390",
+      "transfer": "৳3,390",
+      "renew": "৳4,030",
+      "grace": "৳1,008"
+    },
+    {
+      "tld": ".immo",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".immobilien",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,170",
+      "transfer": "৳4,170",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,790",
+      "transfer": "৳1,790",
+      "renew": "৳2,200",
+      "grace": "৳550"
+    },
+    {
+      "tld": ".in.net",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳1,160",
+      "renew": "৳1,450",
+      "grace": "৳363"
+    },
+    {
+      "tld": ".ind.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".ind.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".industries",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".info",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳599",
+      "transfer": "৳4,140",
+      "renew": "৳4,610",
+      "grace": "৳1,153"
+    },
+    {
+      "tld": ".info.ec",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,470",
+      "transfer": "৳6,470",
+      "renew": "৳7,780",
+      "grace": "৳1,945"
+    },
+    {
+      "tld": ".info.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".ink",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,060",
+      "transfer": "৳4,060",
+      "renew": "৳4,900",
+      "grace": "৳1,225"
+    },
+    {
+      "tld": ".institute",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".insure",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".int.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".international",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳3,830",
+      "renew": "৳4,080",
+      "grace": "৳1,020"
+    },
+    {
+      "tld": ".internet.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".investments",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,090",
+      "transfer": "৳14,090",
+      "renew": "৳16,730",
+      "grace": "৳4,183"
+    },
+    {
+      "tld": ".io",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳4,999",
+      "transfer": "৳7,700",
+      "renew": "৳9,170",
+      "grace": "৳2,293"
+    },
+    {
+      "tld": ".io.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".irish",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".jetzt",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳3,560",
+      "grace": "৳890"
+    },
+    {
+      "tld": ".jewelry",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".jobs",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳18,960",
+      "transfer": "৳18,960",
+      "renew": "৳22,640",
+      "grace": "৳5,660"
+    },
+    {
+      "tld": ".joburg",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,080",
+      "transfer": "৳3,080",
+      "renew": "৳3,740",
+      "grace": "৳935"
+    },
+    {
+      "tld": ".jpn.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".juegos",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳58,710",
+      "transfer": "৳58,710",
+      "renew": "৳69,970",
+      "grace": "৳17,493"
+    },
+    {
+      "tld": ".jur.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".kaufen",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,550",
+      "transfer": "৳4,550",
+      "renew": "৳5,430",
+      "grace": "৳1,358"
+    },
+    {
+      "tld": ".kim",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".kitchen",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,810",
+      "transfer": "৳7,810",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".kiwi",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,780",
+      "transfer": "৳4,780",
+      "renew": "৳5,770",
+      "grace": "৳1,443"
+    },
+    {
+      "tld": ".la",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,930",
+      "transfer": "৳4,930",
+      "renew": "৳5,940",
+      "grace": "৳1,485"
+    },
+    {
+      "tld": ".land",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".lat",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳282",
+      "transfer": "৳4,390",
+      "renew": "৳5,300",
+      "grace": "৳1,325"
+    },
+    {
+      "tld": ".law",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,630",
+      "transfer": "৳14,630",
+      "renew": "৳17,490",
+      "grace": "৳4,373"
+    },
+    {
+      "tld": ".law.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".lawyer",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,090",
+      "transfer": "৳7,090",
+      "renew": "৳8,510",
+      "grace": "৳2,128"
+    },
+    {
+      "tld": ".lease",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".legal",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳8,490",
+      "transfer": "৳8,490",
+      "renew": "৳9,020",
+      "grace": "৳2,255"
+    },
+    {
+      "tld": ".lgbt",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳233,180",
+      "transfer": "৳233,180",
+      "renew": "৳247,710",
+      "grace": "৳61,928"
+    },
+    {
+      "tld": ".life",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,400",
+      "renew": "৳5,280",
+      "grace": "৳1,320"
+    },
+    {
+      "tld": ".lighting",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".limited",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".limo",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".link",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,390",
+      "transfer": "৳1,390",
+      "renew": "৳1,730",
+      "grace": "৳433"
+    },
+    {
+      "tld": ".live",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳399",
+      "transfer": "৳3,960",
+      "renew": "৳4,690",
+      "grace": "৳1,173"
+    },
+    {
+      "tld": ".llc",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".loan",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".loans",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,230",
+      "transfer": "৳14,230",
+      "renew": "৳17,020",
+      "grace": "৳4,255"
+    },
+    {
+      "tld": ".lol",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,390",
+      "renew": "৳5,300",
+      "grace": "৳1,325"
+    },
+    {
+      "tld": ".london",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,320",
+      "transfer": "৳6,320",
+      "renew": "৳7,600",
+      "grace": "৳1,900"
+    },
+    {
+      "tld": ".lotto",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳246,540",
+      "transfer": "৳246,540",
+      "renew": "৳293,570",
+      "grace": "৳73,393"
+    },
+    {
+      "tld": ".love",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,170",
+      "transfer": "৳4,170",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".ltd",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳3,670",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".ltda",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,400",
+      "transfer": "৳5,400",
+      "renew": "৳6,500",
+      "grace": "৳1,625"
+    },
+    {
+      "tld": ".luxury",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳77,040",
+      "transfer": "৳77,040",
+      "renew": "৳91,790",
+      "grace": "৳22,948"
+    },
+    {
+      "tld": ".maison",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".management",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".market",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳7,030",
+      "grace": "৳1,758"
+    },
+    {
+      "tld": ".marketing",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".markets",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳8,510",
+      "renew": "৳10,270",
+      "grace": "৳2,568"
+    },
+    {
+      "tld": ".mba",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".me",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,790",
+      "transfer": "৳2,790",
+      "renew": "৳3,010",
+      "grace": "৳753"
+    },
+    {
+      "tld": ".me.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".me.uk",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,190",
+      "transfer": "N/A",
+      "renew": "৳1,490",
+      "grace": "৳373"
+    },
+    {
+      "tld": ".med.ec",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,470",
+      "transfer": "৳6,470",
+      "renew": "৳7,780",
+      "grace": "৳1,945"
+    },
+    {
+      "tld": ".med.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".media",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳699",
+      "transfer": "৳5,560",
+      "renew": "৳5,910",
+      "grace": "৳1,478"
+    },
+    {
+      "tld": ".memorial",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".men",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳4,680",
+      "grace": "৳1,170"
+    },
+    {
+      "tld": ".menu",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,930",
+      "transfer": "৳4,930",
+      "renew": "৳5,940",
+      "grace": "৳1,485"
+    },
+    {
+      "tld": ".miami",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,620",
+      "transfer": "৳2,620",
+      "renew": "৳2,830",
+      "grace": "৳708"
+    },
+    {
+      "tld": ".mn",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,940",
+      "transfer": "৳6,940",
+      "renew": "৳8,330",
+      "grace": "৳2,083"
+    },
+    {
+      "tld": ".mobi",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,780",
+      "transfer": "৳5,780",
+      "renew": "৳6,980",
+      "grace": "৳1,745"
+    },
+    {
+      "tld": ".moda",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,870",
+      "transfer": "৳4,870",
+      "renew": "৳5,180",
+      "grace": "৳1,295"
+    },
+    {
+      "tld": ".mom",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,930",
+      "renew": "৳5,940",
+      "grace": "৳1,485"
+    },
+    {
+      "tld": ".money",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".mortgage",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,450",
+      "transfer": "৳7,450",
+      "renew": "৳8,360",
+      "grace": "৳2,090"
+    },
+    {
+      "tld": ".mus.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".mx",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,780",
+      "transfer": "৳6,780",
+      "renew": "৳8,140",
+      "grace": "৳2,035"
+    },
+    {
+      "tld": ".nagoya",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,230",
+      "transfer": "৳3,230",
+      "renew": "৳3,960",
+      "grace": "৳990"
+    },
+    {
+      "tld": ".name",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,300",
+      "transfer": "৳1,300",
+      "renew": "৳1,610",
+      "grace": "৳403"
+    },
+    {
+      "tld": ".navy",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,870",
+      "transfer": "৳4,870",
+      "renew": "৳5,180",
+      "grace": "৳1,295"
+    },
+    {
+      "tld": ".net",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,950",
+      "transfer": "৳1,950",
+      "renew": "৳2,450",
+      "grace": "৳613"
+    },
+    {
+      "tld": ".net.au",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,700",
+      "transfer": "N/A",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".net.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".net.cn",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,160",
+      "transfer": "৳1,160",
+      "renew": "৳1,450",
+      "grace": "৳363"
+    },
+    {
+      "tld": ".net.co",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,010",
+      "transfer": "৳2,010",
+      "renew": "৳2,460",
+      "grace": "৳615"
+    },
+    {
+      "tld": ".net.ec",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,470",
+      "transfer": "৳6,470",
+      "renew": "৳7,780",
+      "grace": "৳1,945"
+    },
+    {
+      "tld": ".net.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".net.nz",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,300",
+      "transfer": "N/A",
+      "renew": "৳4,000",
+      "grace": "৳1,000"
+    },
+    {
+      "tld": ".net.ru",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳700",
+      "transfer": "N/A",
+      "renew": "৳910",
+      "grace": "৳228"
+    },
+    {
+      "tld": ".net.sc",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,790",
+      "transfer": "৳14,790",
+      "renew": "৳17,680",
+      "grace": "৳4,420"
+    },
+    {
+      "tld": ".network",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳799",
+      "transfer": "৳4,180",
+      "renew": "৳4,440",
+      "grace": "৳1,110"
+    },
+    {
+      "tld": ".news",
+      "category": "Arts and Entertainment",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳3,960",
+      "renew": "৳4,690",
+      "grace": "৳1,173"
+    },
+    {
+      "tld": ".ngo",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,010",
+      "transfer": "৳6,010",
+      "renew": "৳7,230",
+      "grace": "৳1,808"
+    },
+    {
+      "tld": ".ninja",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,110",
+      "renew": "৳4,840",
+      "grace": "৳1,210"
+    },
+    {
+      "tld": ".nl",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,470",
+      "transfer": "৳1,470",
+      "renew": "৳1,820",
+      "grace": "৳455"
+    },
+    {
+      "tld": ".no.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".nom.co",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,010",
+      "transfer": "৳2,010",
+      "renew": "৳2,460",
+      "grace": "৳615"
+    },
+    {
+      "tld": ".nyc",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,190",
+      "transfer": "৳5,190",
+      "renew": "৳6,280",
+      "grace": "৳1,570"
+    },
+    {
+      "tld": ".nz",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,390",
+      "transfer": "N/A",
+      "renew": "৳2,830",
+      "grace": "৳708"
+    },
+    {
+      "tld": ".one",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳2,990",
+      "grace": "৳748"
+    },
+    {
+      "tld": ".ong",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,010",
+      "transfer": "৳6,010",
+      "renew": "৳7,230",
+      "grace": "৳1,808"
+    },
+    {
+      "tld": ".online",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,930",
+      "renew": "৳4,930",
+      "grace": "৳1,233"
+    },
+    {
+      "tld": ".ooo",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,000",
+      "transfer": "৳4,000",
+      "renew": "৳4,840",
+      "grace": "৳1,210"
+    },
+    {
+      "tld": ".org",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,950",
+      "transfer": "৳1,950",
+      "renew": "৳2,450",
+      "grace": "৳613"
+    },
+    {
+      "tld": ".org.cn",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,160",
+      "transfer": "৳1,160",
+      "renew": "৳1,450",
+      "grace": "৳363"
+    },
+    {
+      "tld": ".org.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".org.mx",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,010",
+      "transfer": "৳3,550",
+      "renew": "৳4,300",
+      "grace": "৳1,075"
+    },
+    {
+      "tld": ".org.nz",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,300",
+      "transfer": "N/A",
+      "renew": "৳4,000",
+      "grace": "৳1,000"
+    },
+    {
+      "tld": ".org.ru",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳700",
+      "transfer": "N/A",
+      "renew": "৳910",
+      "grace": "৳228"
+    },
+    {
+      "tld": ".org.sc",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,790",
+      "transfer": "৳14,790",
+      "renew": "৳17,680",
+      "grace": "৳4,420"
+    },
+    {
+      "tld": ".org.uk",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,190",
+      "transfer": "N/A",
+      "renew": "৳1,490",
+      "grace": "৳373"
+    },
+    {
+      "tld": ".page",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,450",
+      "transfer": "৳2,450",
+      "renew": "৳2,610",
+      "grace": "৳653"
+    },
+    {
+      "tld": ".partners",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".parts",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".party",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳4,680",
+      "grace": "৳1,170"
+    },
+    {
+      "tld": ".pet",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,080",
+      "renew": "৳3,810",
+      "grace": "৳953"
+    },
+    {
+      "tld": ".pg.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".ph",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,910",
+      "transfer": "৳6,910",
+      "renew": "৳7,890",
+      "grace": "৳1,973"
+    },
+    {
+      "tld": ".photo",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,360",
+      "transfer": "৳4,360",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".photography",
+      "category": "Arts and Entertainment",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,550",
+      "renew": "৳5,280",
+      "grace": "৳1,320"
+    },
+    {
+      "tld": ".photos",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".physio",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳12,020",
+      "transfer": "৳12,020",
+      "renew": "৳14,380",
+      "grace": "৳3,595"
+    },
+    {
+      "tld": ".pics",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳4,390",
+      "renew": "৳5,300",
+      "grace": "৳1,325"
+    },
+    {
+      "tld": ".pictures",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,910",
+      "transfer": "৳1,910",
+      "renew": "৳2,350",
+      "grace": "৳588"
+    },
+    {
+      "tld": ".pink",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".pizza",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".place",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,640",
+      "transfer": "৳2,640",
+      "renew": "৳2,790",
+      "grace": "৳698"
+    },
+    {
+      "tld": ".plumbing",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,340",
+      "transfer": "৳7,340",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".plus",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳5,560",
+      "renew": "৳5,910",
+      "grace": "৳1,478"
+    },
+    {
+      "tld": ".poker",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳8,480",
+      "transfer": "৳8,480",
+      "renew": "৳10,170",
+      "grace": "৳2,543"
+    },
+    {
+      "tld": ".porn",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳16,450",
+      "transfer": "৳16,450",
+      "renew": "৳19,250",
+      "grace": "৳4,813"
+    },
+    {
+      "tld": ".post.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".press",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳11,680",
+      "renew": "৳13,910",
+      "grace": "৳3,478"
+    },
+    {
+      "tld": ".pro",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳4,300",
+      "renew": "৳5,250",
+      "grace": "৳1,313"
+    },
+    {
+      "tld": ".pro.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".pro.ec",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,470",
+      "transfer": "৳6,470",
+      "renew": "৳7,780",
+      "grace": "৳1,945"
+    },
+    {
+      "tld": ".pro.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".productions",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,870",
+      "transfer": "৳4,870",
+      "renew": "৳5,180",
+      "grace": "৳1,295"
+    },
+    {
+      "tld": ".promo",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,080",
+      "transfer": "৳3,080",
+      "renew": "৳3,810",
+      "grace": "৳953"
+    },
+    {
+      "tld": ".properties",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".property",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳19,570",
+      "transfer": "৳19,570",
+      "renew": "৳23,380",
+      "grace": "৳5,845"
+    },
+    {
+      "tld": ".protection",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳400,620",
+      "transfer": "৳400,620",
+      "renew": "৳477,010",
+      "grace": "৳119,253"
+    },
+    {
+      "tld": ".pub",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,550",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".pw",
+      "category": "Business",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳699",
+      "transfer": "৳3,080",
+      "renew": "৳3,650",
+      "grace": "৳913"
+    },
+    {
+      "tld": ".qc.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳5,330",
+      "grace": "৳1,333"
+    },
+    {
+      "tld": ".quebec",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,620",
+      "transfer": "৳4,620",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".racing",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".recht.pro",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳24,810",
+      "transfer": "৳24,810",
+      "renew": "৳29,610",
+      "grace": "৳7,403"
+    },
+    {
+      "tld": ".recipes",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".red",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳2,930",
+      "renew": "৳3,520",
+      "grace": "৳880"
+    },
+    {
+      "tld": ".rehab",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,840",
+      "transfer": "৳4,840",
+      "renew": "৳5,870",
+      "grace": "৳1,468"
+    },
+    {
+      "tld": ".reisen",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,640",
+      "transfer": "৳2,640",
+      "renew": "৳2,640",
+      "grace": "৳660"
+    },
+    {
+      "tld": ".rent",
+      "category": "Real Estate",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳2,899",
+      "transfer": "৳8,940",
+      "renew": "৳10,710",
+      "grace": "৳2,678"
+    },
+    {
+      "tld": ".rentals",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".repair",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".report",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".republican",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,840",
+      "transfer": "৳4,840",
+      "renew": "৳5,870",
+      "grace": "৳1,468"
+    },
+    {
+      "tld": ".rest",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,930",
+      "transfer": "৳4,930",
+      "renew": "৳5,940",
+      "grace": "৳1,485"
+    },
+    {
+      "tld": ".restaurant",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".review",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".reviews",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,340",
+      "transfer": "৳7,340",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".rip",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,080",
+      "transfer": "৳3,080",
+      "renew": "৳3,810",
+      "grace": "৳953"
+    },
+    {
+      "tld": ".rocks",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳2,350",
+      "renew": "৳2,790",
+      "grace": "৳698"
+    },
+    {
+      "tld": ".rodeo",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,600",
+      "transfer": "৳6,600",
+      "renew": "৳7,940",
+      "grace": "৳1,985"
+    },
+    {
+      "tld": ".ru",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳700",
+      "transfer": "N/A",
+      "renew": "৳910",
+      "grace": "৳228"
+    },
+    {
+      "tld": ".ru.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".run",
+      "category": "Sports",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳599",
+      "transfer": "৳3,140",
+      "renew": "৳3,340",
+      "grace": "৳835"
+    },
+    {
+      "tld": ".sa.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".sale",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".salon",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".sarl",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".sc",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳15,410",
+      "transfer": "৳15,410",
+      "renew": "৳18,420",
+      "grace": "৳4,605"
+    },
+    {
+      "tld": ".school",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".schule",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".science",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".scot",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,620",
+      "transfer": "৳4,620",
+      "renew": "৳5,500",
+      "grace": "৳1,375"
+    },
+    {
+      "tld": ".se.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".se.net",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".security",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳400,620",
+      "transfer": "৳400,620",
+      "renew": "৳477,010",
+      "grace": "৳119,253"
+    },
+    {
+      "tld": ".services",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,870",
+      "renew": "৳5,180",
+      "grace": "৳1,295"
+    },
+    {
+      "tld": ".sex",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳16,450",
+      "transfer": "৳16,450",
+      "renew": "৳19,250",
+      "grace": "৳4,813"
+    },
+    {
+      "tld": ".sexy",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳508,340",
+      "transfer": "৳508,340",
+      "renew": "৳605,160",
+      "grace": "৳151,290"
+    },
+    {
+      "tld": ".shiksha",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,700",
+      "transfer": "৳2,700",
+      "renew": "৳3,290",
+      "grace": "৳823"
+    },
+    {
+      "tld": ".shoes",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,630",
+      "transfer": "৳7,630",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".shop",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳5,770",
+      "renew": "৳6,950",
+      "grace": "৳1,738"
+    },
+    {
+      "tld": ".shopping",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,170",
+      "transfer": "৳4,170",
+      "renew": "৳5,030",
+      "grace": "৳1,258"
+    },
+    {
+      "tld": ".show",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".singles",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,250",
+      "transfer": "৳4,250",
+      "renew": "৳4,250",
+      "grace": "৳1,063"
+    },
+    {
+      "tld": ".site",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳899",
+      "transfer": "৳5,130",
+      "renew": "৳5,130",
+      "grace": "৳1,283"
+    },
+    {
+      "tld": ".ski",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,980",
+      "transfer": "৳7,980",
+      "renew": "৳9,100",
+      "grace": "৳2,275"
+    },
+    {
+      "tld": ".soccer",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".social",
+      "category": "Leisure and Recreation",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".software",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,999",
+      "transfer": "৳4,550",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".solar",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,630",
+      "transfer": "৳7,630",
+      "renew": "৳8,140",
+      "grace": "৳2,035"
+    },
+    {
+      "tld": ".solutions",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,960",
+      "transfer": "৳3,960",
+      "renew": "৳4,690",
+      "grace": "৳1,173"
+    },
+    {
+      "tld": ".soy",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,700",
+      "transfer": "৳3,700",
+      "renew": "৳4,470",
+      "grace": "৳1,118"
+    },
+    {
+      "tld": ".space",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳3,670",
+      "renew": "৳3,710",
+      "grace": "৳928"
+    },
+    {
+      "tld": ".srl",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,090",
+      "transfer": "৳5,090",
+      "renew": "৳6,130",
+      "grace": "৳1,533"
+    },
+    {
+      "tld": ".store",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,199",
+      "transfer": "৳7,700",
+      "renew": "৳7,700",
+      "grace": "৳1,925"
+    },
+    {
+      "tld": ".stream",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".studio",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,550",
+      "transfer": "৳4,550",
+      "renew": "৳5,280",
+      "grace": "৳1,320"
+    },
+    {
+      "tld": ".study",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,220",
+      "transfer": "৳5,220",
+      "renew": "৳6,250",
+      "grace": "৳1,563"
+    },
+    {
+      "tld": ".style",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".supplies",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".supply",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".support",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,520",
+      "transfer": "৳3,520",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".surf",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".surgery",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".sx",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,620",
+      "transfer": "৳4,620",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".systems",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳2,299",
+      "transfer": "৳3,810",
+      "renew": "৳4,550",
+      "grace": "৳1,138"
+    },
+    {
+      "tld": ".tattoo",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳6,010",
+      "transfer": "৳6,010",
+      "renew": "৳7,230",
+      "grace": "৳1,808"
+    },
+    {
+      "tld": ".tax",
+      "category": "Money and Finance",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".taxi",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".team",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".tech",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,399",
+      "transfer": "৳9,070",
+      "renew": "৳9,070",
+      "grace": "৳2,268"
+    },
+    {
+      "tld": ".technology",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,490",
+      "renew": "৳3,710",
+      "grace": "৳928"
+    },
+    {
+      "tld": ".tel",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,010",
+      "transfer": "৳2,010",
+      "renew": "৳2,460",
+      "grace": "৳615"
+    },
+    {
+      "tld": ".tennis",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".theater",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".theatre",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳100,320",
+      "transfer": "৳100,320",
+      "renew": "৳119,500",
+      "grace": "৳29,875"
+    },
+    {
+      "tld": ".tienda",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".tips",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳3,670",
+      "renew": "৳3,890",
+      "grace": "৳973"
+    },
+    {
+      "tld": ".tires",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,090",
+      "transfer": "৳14,090",
+      "renew": "৳16,870",
+      "grace": "৳4,218"
+    },
+    {
+      "tld": ".today",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳499",
+      "transfer": "৳3,520",
+      "renew": "৳4,250",
+      "grace": "৳1,063"
+    },
+    {
+      "tld": ".tokyo",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,230",
+      "transfer": "৳3,230",
+      "renew": "৳3,960",
+      "grace": "৳990"
+    },
+    {
+      "tld": ".tools",
+      "category": "Shopping",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,499",
+      "transfer": "৳4,360",
+      "renew": "৳5,210",
+      "grace": "৳1,303"
+    },
+    {
+      "tld": ".top",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳199",
+      "transfer": "৳1,330",
+      "renew": "৳1,580",
+      "grace": "৳395"
+    },
+    {
+      "tld": ".tours",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".town",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".toys",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,810",
+      "transfer": "৳7,810",
+      "renew": "৳8,800",
+      "grace": "৳2,200"
+    },
+    {
+      "tld": ".trade",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".trading",
+      "category": "Business",
+      "tag": null,
+      "period": 1,
+      "register": "৳10,270",
+      "transfer": "৳10,270",
+      "renew": "৳12,320",
+      "grace": "৳3,080"
+    },
+    {
+      "tld": ".training",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".travel",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳17,310",
+      "transfer": "৳17,310",
+      "renew": "৳20,690",
+      "grace": "৳5,173"
+    },
+    {
+      "tld": ".travel.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".tube",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,930",
+      "renew": "৳4,660",
+      "grace": "৳1,165"
+    },
+    {
+      "tld": ".tv",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,930",
+      "transfer": "৳4,930",
+      "renew": "৳5,940",
+      "grace": "৳1,485"
+    },
+    {
+      "tld": ".tv.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".uk",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,190",
+      "transfer": "N/A",
+      "renew": "৳1,490",
+      "grace": "৳373"
+    },
+    {
+      "tld": ".uk.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,780",
+      "transfer": "৳4,780",
+      "renew": "৳5,770",
+      "grace": "৳1,443"
+    },
+    {
+      "tld": ".uk.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".uk.net",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".university",
+      "category": "Education",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".uno",
+      "category": "Other",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳3,550",
+      "renew": "৳4,300",
+      "grace": "৳1,075"
+    },
+    {
+      "tld": ".up.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".us",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,320",
+      "transfer": "৳1,320",
+      "renew": "৳1,640",
+      "grace": "৳410"
+    },
+    {
+      "tld": ".us.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,930",
+      "transfer": "৳2,930",
+      "renew": "৳3,560",
+      "grace": "৳890"
+    },
+    {
+      "tld": ".us.in",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,000",
+      "transfer": "৳2,000",
+      "renew": "৳2,000",
+      "grace": "৳500"
+    },
+    {
+      "tld": ".vacations",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".vc",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,930",
+      "transfer": "৳4,930",
+      "renew": "৳5,940",
+      "grace": "৳1,485"
+    },
+    {
+      "tld": ".vegas",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,700",
+      "transfer": "৳7,700",
+      "renew": "৳9,240",
+      "grace": "৳2,310"
+    },
+    {
+      "tld": ".ventures",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".vet",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,050",
+      "transfer": "৳5,050",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".viajes",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".video",
+      "category": "Arts and Entertainment",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,690",
+      "transfer": "৳4,690",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".villas",
+      "category": "Real Estate",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".vin",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳7,120",
+      "transfer": "৳7,120",
+      "renew": "৳7,560",
+      "grace": "৳1,890"
+    },
+    {
+      "tld": ".vip",
+      "category": "Popular",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,700",
+      "transfer": "৳2,700",
+      "renew": "৳3,330",
+      "grace": "৳833"
+    },
+    {
+      "tld": ".vision",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".vodka",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".vote",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳11,150",
+      "transfer": "৳11,150",
+      "renew": "৳13,350",
+      "grace": "৳3,338"
+    },
+    {
+      "tld": ".voto",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳10,560",
+      "transfer": "৳10,560",
+      "renew": "৳12,620",
+      "grace": "৳3,155"
+    },
+    {
+      "tld": ".voyage",
+      "category": "Leisure and Recreation",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".wales",
+      "category": "Geographic",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,320",
+      "transfer": "৳2,320",
+      "renew": "৳2,830",
+      "grace": "৳708"
+    },
+    {
+      "tld": ".wang",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,390",
+      "transfer": "৳1,390",
+      "renew": "৳1,730",
+      "grace": "৳433"
+    },
+    {
+      "tld": ".watch",
+      "category": "Shopping",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".webcam",
+      "category": "Technology",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".website",
+      "category": "Technology",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,400",
+      "renew": "৳4,400",
+      "grace": "৳1,100"
+    },
+    {
+      "tld": ".wedding",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,960",
+      "transfer": "৳4,960",
+      "renew": "৳6,000",
+      "grace": "৳1,500"
+    },
+    {
+      "tld": ".wiki",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,060",
+      "transfer": "৳4,060",
+      "renew": "৳4,900",
+      "grace": "৳1,225"
+    },
+    {
+      "tld": ".wiki.br",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,940",
+      "transfer": "N/A",
+      "renew": "৳2,380",
+      "grace": "৳595"
+    },
+    {
+      "tld": ".win",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,930",
+      "transfer": "৳3,930",
+      "renew": "৳5,400",
+      "grace": "৳1,350"
+    },
+    {
+      "tld": ".wine",
+      "category": "Food and Drink",
+      "tag": null,
+      "period": 1,
+      "register": "৳13,650",
+      "transfer": "৳13,650",
+      "renew": "৳16,290",
+      "grace": "৳4,073"
+    },
+    {
+      "tld": ".work",
+      "category": "Services",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,760",
+      "transfer": "৳1,760",
+      "renew": "৳2,170",
+      "grace": "৳543"
+    },
+    {
+      "tld": ".works",
+      "category": "Services",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳999",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".world",
+      "category": "Geographic",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳349",
+      "transfer": "৳5,050",
+      "renew": "৳5,570",
+      "grace": "৳1,393"
+    },
+    {
+      "tld": ".ws",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳3,860",
+      "transfer": "৳3,860",
+      "renew": "৳4,660",
+      "grace": "৳1,165"
+    },
+    {
+      "tld": ".wtf",
+      "category": "Novelty",
+      "tag": null,
+      "period": 1,
+      "register": "৳5,560",
+      "transfer": "৳5,560",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".xxx",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳16,450",
+      "transfer": "৳16,450",
+      "renew": "৳19,250",
+      "grace": "৳4,813"
+    },
+    {
+      "tld": ".xyz",
+      "category": "Popular",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳299",
+      "transfer": "৳2,260",
+      "renew": "৳2,800",
+      "grace": "৳700"
+    },
+    {
+      "tld": ".yoga",
+      "category": "Sports",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,640",
+      "transfer": "৳4,640",
+      "renew": "৳5,590",
+      "grace": "৳1,398"
+    },
+    {
+      "tld": ".za.com",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳37,840",
+      "transfer": "৳37,840",
+      "renew": "৳40,210",
+      "grace": "৳10,053"
+    },
+    {
+      "tld": ".zone",
+      "category": "Novelty",
+      "tag": "sale",
+      "period": 1,
+      "register": "৳1,299",
+      "transfer": "৳4,690",
+      "renew": "৳5,720",
+      "grace": "৳1,430"
+    },
+    {
+      "tld": ".орг",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,700",
+      "transfer": "৳1,700",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".شبكة",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,160",
+      "transfer": "৳2,160",
+      "renew": "৳2,640",
+      "grace": "৳660"
+    },
+    {
+      "tld": ".भारत",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,670",
+      "transfer": "৳1,670",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".संगठन",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,700",
+      "transfer": "৳1,700",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".中文网",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳14,480",
+      "transfer": "৳14,480",
+      "renew": "৳17,310",
+      "grace": "৳4,328"
+    },
+    {
+      "tld": ".在线",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳4,780",
+      "transfer": "৳4,780",
+      "renew": "৳5,770",
+      "grace": "৳1,443"
+    },
+    {
+      "tld": ".机构",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳1,700",
+      "transfer": "৳1,700",
+      "renew": "৳2,100",
+      "grace": "৳525"
+    },
+    {
+      "tld": ".移动",
+      "category": "Other",
+      "tag": null,
+      "period": 1,
+      "register": "৳2,160",
+      "transfer": "৳2,160",
+      "renew": "৳2,640",
+      "grace": "৳660"
     }
   ]
 }
