@@ -172,12 +172,34 @@ export function CommonDomainSearch() {
 
   /**
    * Sanitize Domain Input
+   * - Extract domain from URLs (strip protocol, www, path, query, fragment)
    * - Allow: letters (including Unicode/IDN), numbers, hyphens, dots
    * - Remove: spaces, underscores, special characters
    * - Hyphens cannot be at start/end of domain name or TLD parts
    */
   const sanitizeDomainInput = (input: string): string => {
-    return input
+    let cleaned = input.trim().toLowerCase();
+
+    // Strip Protocol (http://, https://, ftp://, etc.) - Allow Spaces Around : And //
+    cleaned = cleaned.replace(/^[a-z][a-z0-9+.-]*\s*:\s*\/\s*\/\s*/i, "");
+
+    // Strip www. Prefix - Allow Optional Spaces Around www And Dot
+    cleaned = cleaned.replace(/^\s*www\s*\.\s*/i, "");
+
+    // Remove Any Remaining Leading/Trailing Spaces
+    cleaned = cleaned.replace(/\s+/g, "");
+
+    // Strip Path, Query String, And Fragment (Everything After First /)
+    cleaned = cleaned.replace(/[/?#].*$/, "");
+
+    // Strip Port Number (e.g., :8080, :443)
+    cleaned = cleaned.replace(/:\d+$/, "");
+
+    // Strip Trailing Dot (Some URLs End With Dot For FQDN)
+    cleaned = cleaned.replace(/\.$/, "");
+
+    // Now Apply Standard Domain Sanitization
+    return cleaned
       .replace(/[\s_]/g, "") // Remove Spaces And Underscores
       .replace(/[^a-zA-Z0-9\u0080-\uFFFF.\-]/g, "") // Keep Alphanumeric, Unicode, Dots, Hyphens
       .replace(/\.{2,}/g, ".") // Replace Multiple Dots With Single Dot
