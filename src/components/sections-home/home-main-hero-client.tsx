@@ -16,7 +16,6 @@ interface HomeMainHeroClientProps {
 }
 
 export function HomeMainHeroClient({
-  totalDomains,
   domainScrollPricing,
 }: HomeMainHeroClientProps) {
   return (

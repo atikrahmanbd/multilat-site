@@ -15,7 +15,6 @@ import {
   Server,
   Palette,
   Code,
-  Settings,
   TrendingUp,
   Building2,
   Mail,
@@ -99,7 +98,9 @@ export function Navbar() {
   const menuRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [moreServicesOpen, setMoreServicesOpen] = useState(true);
+  const [mobileHostingOpen, setMobileHostingOpen] = useState(false);
+  const [mobileMarketingOpen, setMobileMarketingOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -161,13 +162,13 @@ export function Navbar() {
             },
             {
               label: "High-Performance Hosting",
-              href: "/web-hosting",
+              href: "/high-performance-web-hosting",
               description: "Fast & Reliable Web Hosting",
               icon: Server,
             },
             {
-              label: "Cloud/VPS Hosting",
-              href: "/cloud-hosting",
+              label: "Cloud/VPS Servers",
+              href: "/cloud-and-vps-servers",
               description: "Scalable Cloud Infrastructure",
               icon: Cloud,
             },
@@ -182,13 +183,6 @@ export function Navbar() {
         {
           title: "Useful Tools",
           items: [
-            {
-              label: "Go To Dashboard",
-              href: "https://hub.multilat.xyz",
-              description: "Manage Your Services",
-              icon: LayoutDashboard,
-              isExternal: true,
-            },
             {
               label: "WHOIS Lookup",
               href: "/tools/whois",
@@ -258,34 +252,35 @@ export function Navbar() {
       dropdownSections: [
         {
           title: "Core Marketing Strategies",
+          titleHref: "/marketing",
           items: [
             {
               label: "360° Digital Marketing",
-              href: "/marketing/digital",
+              href: "/marketing/360-digital-marketing",
               description: "Complete Marketing Solutions",
               icon: Target,
             },
             {
               label: "Search Engine Optimization",
-              href: "/marketing/seo",
-              description: "Rank Higher On Search",
+              href: "/marketing/search-engine-optimization",
+              description: "Rank Higher on Search",
               icon: TrendingUp,
             },
             {
               label: "Social Media Marketing",
-              href: "/marketing/social-media",
+              href: "/marketing/social-media-marketing",
               description: "Engage Your Audience",
               icon: Share2,
             },
             {
               label: "Content Marketing",
-              href: "/marketing/content",
+              href: "/marketing/content-marketing",
               description: "Compelling Content Strategy",
               icon: PenTool,
             },
             {
               label: "Reputation Management",
-              href: "/marketing/reputation",
+              href: "/marketing/reputation-management",
               description: "Protect Your Brand Image",
               icon: Star,
             },
@@ -297,25 +292,25 @@ export function Navbar() {
             },
             {
               label: "Email Marketing",
-              href: "/marketing/email",
+              href: "/marketing/email-marketing",
               description: "Targeted Email Campaigns",
               icon: MailOpen,
             },
             {
               label: "AI Content Creation",
-              href: "/marketing/ai-content",
+              href: "/marketing/ai-content-creation",
               description: "AI-Powered Content",
               icon: Bot,
             },
             {
               label: "AI Marketing Automation",
-              href: "/marketing/ai-automation",
+              href: "/marketing/ai-marketing-automation",
               description: "Automate With AI",
               icon: Sparkles,
             },
             {
               label: "Influencer Marketing",
-              href: "/marketing/influencer",
+              href: "/marketing/influencer-marketing",
               description: "Partner With Influencers",
               icon: UserCheck,
             },
@@ -323,34 +318,35 @@ export function Navbar() {
         },
         {
           title: "Paid Advertising",
+          titleHref: "/paid-marketing",
           items: [
             {
               label: "Google Ads",
-              href: "/marketing/google-ads",
+              href: "/paid-marketing/google-ads",
               description: "Search, Display & YouTube",
               icon: CircleDollarSign,
             },
             {
               label: "Social Media Ads",
-              href: "/marketing/social-ads",
+              href: "/paid-marketing/social-media-ads",
               description: "Meta, Instagram, LinkedIn",
               icon: Megaphone,
             },
             {
               label: "PPC Campaign Management",
-              href: "/marketing/ppc",
+              href: "/paid-marketing/ppc-campaign-management",
               description: "Pay-Per-Click Campaigns",
               icon: MousePointerClick,
             },
             {
               label: "Retargeting & Remarketing",
-              href: "/marketing/retargeting",
+              href: "/paid-marketing/retargeting-remarketing",
               description: "Re-engage Your Visitors",
               icon: RefreshCcw,
             },
             {
               label: "Campaign Optimization",
-              href: "/marketing/optimization",
+              href: "/paid-marketing/campaign-optimization",
               description: "Maximize Your ROI",
               icon: BarChart3,
             },
@@ -378,120 +374,124 @@ export function Navbar() {
           width: "50%",
           sections: [
             {
-              title: "Core Solutions",
+              title: "Web Development",
+              titleHref: "/solutions/web-development",
               gridCols: 2,
               items: [
                 {
                   label: "Landing Page Design",
-                  href: "/solutions/landing-pages",
+                  href: "/solutions/web-development/landing-page-design",
                   description: "High-Converting Pages",
                   icon: Layout,
                 },
                 {
                   label: "WordPress Development",
-                  href: "/solutions/wordpress",
+                  href: "/solutions/web-development/wordpress-development",
                   description: "WordPress Expertise",
                   icon: Code,
                 },
                 {
-                  label: "Website Development",
-                  href: "/web-design-and-development",
+                  label: "Custom Website",
+                  href: "/solutions/web-development/custom-website",
                   description: "Custom Web Solutions",
                   icon: MonitorSmartphone,
                 },
                 {
-                  label: "Custom UI/UX Design",
-                  href: "/solutions/ui-ux",
+                  label: "UI/UX Design",
+                  href: "/solutions/web-development/ui-ux-design",
                   description: "User-Centered Design",
                   icon: PenSquare,
                 },
               ],
             },
             {
-              title: "E-commerce",
+              title: "E-commerce Development",
+              titleHref: "/solutions/ecommerce-development",
               gridCols: 2,
               items: [
                 {
                   label: "Shopify Development",
-                  href: "/solutions/shopify",
+                  href: "/solutions/ecommerce-development/shopify-development",
                   description: "Shopify Store Setup",
                   icon: ShoppingBag,
                 },
                 {
                   label: "WooCommerce Development",
-                  href: "/solutions/woocommerce",
+                  href: "/solutions/ecommerce-development/woocommerce-development",
                   description: "WordPress E-commerce",
                   icon: ShoppingCart,
                 },
                 {
                   label: "BigCommerce Development",
-                  href: "/solutions/bigcommerce",
+                  href: "/solutions/ecommerce-development/bigcommerce-development",
                   description: "Enterprise E-commerce",
                   icon: Store,
                 },
                 {
                   label: "Custom E-commerce",
-                  href: "/solutions/custom-ecommerce",
+                  href: "/solutions/ecommerce-development/custom-ecommerce",
                   description: "Tailored Online Stores",
                   icon: Boxes,
                 },
               ],
             },
             {
-              title: "Mobile Apps",
+              title: "Mobile App Development",
+              titleHref: "/solutions/mobile-app-development",
               gridCols: 2,
               items: [
                 {
                   label: "iOS App Development",
-                  href: "/mobile-app-development/ios",
+                  href: "/solutions/mobile-app-development#ios",
                   description: "Native iOS Apps",
                   icon: Apple,
                 },
                 {
                   label: "Android App Development",
-                  href: "/mobile-app-development/android",
+                  href: "/solutions/mobile-app-development#android",
                   description: "Native Android Apps",
                   icon: Smartphone,
                 },
                 {
                   label: "Flutter Development",
-                  href: "/mobile-app-development/flutter",
+                  href: "/solutions/mobile-app-development#flutter",
                   description: "Cross-Platform Apps",
                   icon: Layers,
                 },
                 {
                   label: "React Native Development",
-                  href: "/mobile-app-development/react-native",
+                  href: "/solutions/mobile-app-development#react-native",
                   description: "Hybrid Mobile Apps",
                   icon: Zap,
                 },
               ],
             },
             {
-              title: "Frontend",
+              title: "Frontend Development",
+              titleHref: "/solutions/frontend-development",
               gridCols: 2,
               items: [
                 {
                   label: "React Development",
-                  href: "/solutions/react",
+                  href: "/solutions/frontend-development#react",
                   description: "React.js Applications",
                   icon: Code,
                 },
                 {
                   label: "Next.js Development",
-                  href: "/solutions/nextjs",
+                  href: "/solutions/frontend-development#nextjs",
                   description: "Full-Stack React",
                   icon: Zap,
                 },
                 {
                   label: "Vue.js Development",
-                  href: "/solutions/vuejs",
+                  href: "/solutions/frontend-development#vuejs",
                   description: "Vue.js Applications",
                   icon: Layers,
                 },
                 {
                   label: "Tailwind CSS",
-                  href: "/solutions/tailwind",
+                  href: "/solutions/frontend-development#tailwind",
                   description: "Modern CSS Framework",
                   icon: Palette,
                 },
@@ -503,47 +503,48 @@ export function Navbar() {
           // Second column: Backend
           sections: [
             {
-              title: "Backend",
+              title: "Backend Development",
+              titleHref: "/solutions/backend-development",
               items: [
                 {
                   label: "PHP/Laravel Development",
-                  href: "/solutions/laravel",
+                  href: "/solutions/backend-development#laravel",
                   description: "PHP Framework",
                   icon: Code,
                 },
                 {
                   label: "Python/Django Development",
-                  href: "/solutions/django",
+                  href: "/solutions/backend-development#django",
                   description: "Python Framework",
                   icon: Database,
                 },
                 {
                   label: "Node.js Development",
-                  href: "/solutions/nodejs",
+                  href: "/solutions/backend-development#nodejs",
                   description: "JavaScript Backend",
                   icon: Server,
                 },
                 {
                   label: "RESTful APIs",
-                  href: "/solutions/rest-api",
+                  href: "/solutions/backend-development#restful-api",
                   description: "API Development",
                   icon: GitBranch,
                 },
                 {
                   label: "GraphQL Development",
-                  href: "/solutions/graphql",
+                  href: "/solutions/backend-development#graphql",
                   description: "GraphQL APIs",
                   icon: Network,
                 },
                 {
                   label: "Microservices",
-                  href: "/solutions/microservices",
+                  href: "/solutions/backend-development#microservices",
                   description: "Scalable Architecture",
                   icon: Boxes,
                 },
                 {
                   label: "Cloud & DevOps",
-                  href: "/solutions/cloud-devops",
+                  href: "/solutions/backend-development#cloud-devops",
                   description: "AWS Infrastructure",
                   icon: CloudCog,
                 },
@@ -556,40 +557,41 @@ export function Navbar() {
           sections: [
             {
               title: "IT Solutions",
+              titleHref: "/solutions/it-solutions",
               items: [
                 {
                   label: "IT Consulting",
-                  href: "/it-and-custom-solutions/consulting",
+                  href: "/solutions/it-solutions#consulting",
                   description: "Strategic IT Guidance",
                   icon: Lightbulb,
                 },
                 {
-                  label: "Cloud & Infrastructure",
-                  href: "/it-and-custom-solutions/cloud",
+                  label: "Cloud Infrastructure",
+                  href: "/solutions/it-solutions#cloud-infrastructure",
                   description: "Cloud Architecture",
                   icon: Cloud,
                 },
                 {
                   label: "Security & Compliance",
-                  href: "/it-and-custom-solutions/security",
+                  href: "/solutions/it-solutions#security-compliance",
                   description: "Protect Your Business",
                   icon: Lock,
                 },
                 {
                   label: "Managed IT Services",
-                  href: "/it-and-custom-solutions/managed",
+                  href: "/solutions/it-solutions#managed-it-services",
                   description: "24/7 IT Support",
                   icon: Headphones,
                 },
                 {
                   label: "Custom Software",
-                  href: "/it-and-custom-solutions/software",
+                  href: "/solutions/it-solutions#custom-software",
                   description: "Bespoke Applications",
                   icon: Cpu,
                 },
                 {
                   label: "Digital Transformation",
-                  href: "/it-and-custom-solutions/digital",
+                  href: "/solutions/it-solutions#digital-transformation",
                   description: "Modernize Your Business",
                   icon: Workflow,
                 },
@@ -689,70 +691,137 @@ export function Navbar() {
     },
   ];
 
-  // Mobile menu items
-  const mobileMenuItems = [
-    { label: "Home", ariaLabel: "Go To Home Page", link: "/", icon: Home },
+  // Mobile menu - Hosting sections (matching desktop)
+  const mobileHostingSections = [
     {
-      label: "Domains",
-      ariaLabel: "Domain Registration",
-      link: "/domains",
-      icon: Globe,
+      title: "Domains & Hosting Services",
+      items: [
+        { label: "Domains", href: "/domains", icon: Globe },
+        { label: "High-Performance Hosting", href: "/high-performance-web-hosting", icon: Server },
+        { label: "Cloud/VPS Servers", href: "/cloud-and-vps-servers", icon: Cloud },
+        { label: "Dedicated Servers", href: "/dedicated-servers", icon: HardDrive },
+      ],
     },
     {
-      label: "Web Hosting",
-      ariaLabel: "Web Hosting Plans",
-      link: "/web-hosting",
-      icon: Server,
-    },
-  ];
-
-  const moreServicesItems = [
-    {
-      label: "Web Design & Dev.",
-      ariaLabel: "Web Design and Development Services",
-      link: "/web-design-and-development",
-      icon: Palette,
-    },
-    {
-      label: "Mobile App Development",
-      ariaLabel: "Mobile App Development",
-      link: "/mobile-app-development",
-      icon: Code,
-    },
-    {
-      label: "IT & Custom Solutions",
-      ariaLabel: "IT and Custom Solutions",
-      link: "/it-and-custom-solutions",
-      icon: Settings,
-    },
-    {
-      label: "SEO & Marketing",
-      ariaLabel: "SEO and Marketing",
-      link: "/seo-and-marketing",
-      icon: TrendingUp,
+      title: "Useful Tools",
+      items: [
+        { label: "Go To Dashboard", href: "https://hub.multilat.xyz", icon: LayoutDashboard, isExternal: true },
+        { label: "WHOIS Lookup", href: "/tools/whois", icon: Search },
+        { label: "IP Lookup", href: "/tools/ip-lookup", icon: MapPin },
+        { label: "DNS Lookup", href: "/tools/dns-lookup", icon: Network },
+        { label: "SSL Checker", href: "/tools/ssl-checker", icon: ShieldCheck },
+        { label: "HTTP Header Checker", href: "/tools/http-headers", icon: FileText },
+        { label: "Speed Test", href: "/tools/speed-test", icon: Gauge },
+        { label: "Ping Test", href: "/tools/ping", icon: Radio },
+        { label: "Traceroute", href: "/tools/traceroute", icon: Route },
+      ],
     },
   ];
 
-  const bottomMenuItems = [
+  // Mobile menu - Marketing sections (matching desktop)
+  const mobileMarketingSections = [
     {
-      label: "Guides",
-      ariaLabel: "Guides and Tutorials",
-      link: "https://guides.multilat.xyz",
-      icon: BookOpen,
-      isExternal: true,
+      title: "Core Marketing Strategies",
+      titleHref: "/marketing",
+      items: [
+        { label: "360° Digital Marketing", href: "/marketing/360-digital-marketing", icon: Target },
+        { label: "Search Engine Optimization", href: "/marketing/search-engine-optimization", icon: TrendingUp },
+        { label: "Social Media Marketing", href: "/marketing/social-media-marketing", icon: Share2 },
+        { label: "Content Marketing", href: "/marketing/content-marketing", icon: PenTool },
+        { label: "Reputation Management", href: "/marketing/reputation-management", icon: Star },
+        { label: "Lead Generation", href: "/marketing/lead-generation", icon: Users },
+        { label: "Email Marketing", href: "/marketing/email-marketing", icon: MailOpen },
+        { label: "AI Content Creation", href: "/marketing/ai-content-creation", icon: Bot },
+        { label: "AI Marketing Automation", href: "/marketing/ai-marketing-automation", icon: Sparkles },
+        { label: "Influencer Marketing", href: "/marketing/influencer-marketing", icon: UserCheck },
+      ],
     },
     {
-      label: "About Us",
-      ariaLabel: "About Multilat",
-      link: "/about",
-      icon: Building2,
+      title: "Paid Advertising",
+      titleHref: "/paid-marketing",
+      items: [
+        { label: "Google Ads", href: "/paid-marketing/google-ads", icon: CircleDollarSign },
+        { label: "Social Media Ads", href: "/paid-marketing/social-media-ads", icon: Megaphone },
+        { label: "PPC Campaign Management", href: "/paid-marketing/ppc-campaign-management", icon: MousePointerClick },
+        { label: "Retargeting & Remarketing", href: "/paid-marketing/retargeting-remarketing", icon: RefreshCcw },
+        { label: "Campaign Optimization", href: "/paid-marketing/campaign-optimization", icon: BarChart3 },
+      ],
+    },
+  ];
+
+  // Mobile menu - Solutions sections (matching desktop)
+  const mobileSolutionsSections = [
+    {
+      title: "Web Development",
+      titleHref: "/solutions/web-development",
+      items: [
+        { label: "Landing Page Design", href: "/solutions/web-development/landing-page-design", icon: Layout },
+        { label: "WordPress Development", href: "/solutions/web-development/wordpress-development", icon: Code },
+        { label: "Custom Website", href: "/solutions/web-development/custom-website", icon: MonitorSmartphone },
+        { label: "UI/UX Design", href: "/solutions/web-development/ui-ux-design", icon: PenSquare },
+      ],
     },
     {
-      label: "Contact Us",
-      ariaLabel: "Contact Us",
-      link: "/contact",
-      icon: Mail,
+      title: "E-commerce Development",
+      titleHref: "/solutions/ecommerce-development",
+      items: [
+        { label: "Shopify Development", href: "/solutions/ecommerce-development/shopify-development", icon: ShoppingBag },
+        { label: "WooCommerce Development", href: "/solutions/ecommerce-development/woocommerce-development", icon: ShoppingCart },
+        { label: "BigCommerce Development", href: "/solutions/ecommerce-development/bigcommerce-development", icon: Store },
+        { label: "Custom E-commerce", href: "/solutions/ecommerce-development/custom-ecommerce", icon: Boxes },
+      ],
     },
+    {
+      title: "Mobile App Development",
+      titleHref: "/solutions/mobile-app-development",
+      items: [
+        { label: "iOS App Development", href: "/solutions/mobile-app-development#ios", icon: Apple },
+        { label: "Android App Development", href: "/solutions/mobile-app-development#android", icon: Smartphone },
+        { label: "Flutter Development", href: "/solutions/mobile-app-development#flutter", icon: Layers },
+        { label: "React Native Development", href: "/solutions/mobile-app-development#react-native", icon: Zap },
+      ],
+    },
+    {
+      title: "Frontend Development",
+      titleHref: "/solutions/frontend-development",
+      items: [
+        { label: "React Development", href: "/solutions/frontend-development#react", icon: Code },
+        { label: "Next.js Development", href: "/solutions/frontend-development#nextjs", icon: Zap },
+        { label: "Vue.js Development", href: "/solutions/frontend-development#vuejs", icon: Layers },
+        { label: "Tailwind CSS", href: "/solutions/frontend-development#tailwind", icon: Palette },
+      ],
+    },
+    {
+      title: "Backend Development",
+      titleHref: "/solutions/backend-development",
+      items: [
+        { label: "PHP/Laravel Development", href: "/solutions/backend-development#laravel", icon: Code },
+        { label: "Python/Django Development", href: "/solutions/backend-development#django", icon: Database },
+        { label: "Node.js Development", href: "/solutions/backend-development#nodejs", icon: Server },
+        { label: "RESTful APIs", href: "/solutions/backend-development#restful-api", icon: GitBranch },
+        { label: "GraphQL Development", href: "/solutions/backend-development#graphql", icon: Network },
+        { label: "Microservices", href: "/solutions/backend-development#microservices", icon: Boxes },
+        { label: "Cloud & DevOps", href: "/solutions/backend-development#cloud-devops", icon: CloudCog },
+      ],
+    },
+    {
+      title: "IT Solutions",
+      titleHref: "/solutions/it-solutions",
+      items: [
+        { label: "IT Consulting", href: "/solutions/it-solutions#consulting", icon: Lightbulb },
+        { label: "Cloud Infrastructure", href: "/solutions/it-solutions#cloud-infrastructure", icon: Cloud },
+        { label: "Security & Compliance", href: "/solutions/it-solutions#security-compliance", icon: Lock },
+        { label: "Managed IT Services", href: "/solutions/it-solutions#managed-it-services", icon: Headphones },
+        { label: "Custom Software", href: "/solutions/it-solutions#custom-software", icon: Cpu },
+        { label: "Digital Transformation", href: "/solutions/it-solutions#digital-transformation", icon: Workflow },
+      ],
+    },
+  ];
+
+  // Mobile menu - Bottom items
+  const mobileBottomItems = [
+    { label: "About Us", href: "/about", icon: Building2 },
+    { label: "Contact Us", href: "/contact", icon: Mail },
   ];
 
   return (
@@ -811,16 +880,240 @@ export function Navbar() {
                 {/* Menu Items */}
                 <nav className="flex-1 p-4">
                   <ul className="space-y-1">
-                    {/* Main Menu Items */}
-                    {mobileMenuItems.map((item) => {
+                    {/* Home */}
+                    <li>
+                      <Link
+                        href="/"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
+                          pathname === "/"
+                            ? "bg-muted text-foreground"
+                            : "text-muted-foreground hover:bg-muted hover:text-foreground"
+                        }`}
+                      >
+                        <Home className="h-4 w-4 flex-shrink-0" />
+                        <span>Home</span>
+                      </Link>
+                    </li>
+
+                    {/* Hosting - Expandable */}
+                    <li>
+                      <button
+                        onClick={() => setMobileHostingOpen(!mobileHostingOpen)}
+                        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      >
+                        <Server className="h-4 w-4 flex-shrink-0" />
+                        <span className="flex-1 text-left">Hosting</span>
+                        <ChevronDown
+                          className={`h-4 w-4 flex-shrink-0 transition-transform ${
+                            mobileHostingOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {mobileHostingOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
+                          >
+                            {mobileHostingSections.map((section) => (
+                              <div key={section.title} className="mb-2">
+                                <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
+                                  {section.title}
+                                </h4>
+                                <ul className="space-y-1">
+                                  {section.items.map((item) => {
+                                    const Icon = item.icon;
+                                    const isExternal = "isExternal" in item && item.isExternal;
+                                    return (
+                                      <li key={item.href}>
+                                        {isExternal ? (
+                                          <a
+                                            href={item.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
+                                          >
+                                            <Icon className="h-4 w-4 flex-shrink-0" />
+                                            <span>{item.label}</span>
+                                          </a>
+                                        ) : (
+                                          <Link
+                                            href={item.href}
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                              pathname === item.href
+                                                ? "text-foreground"
+                                                : "text-muted-foreground hover:text-foreground"
+                                            }`}
+                                          >
+                                            <Icon className="h-4 w-4 flex-shrink-0" />
+                                            <span>{item.label}</span>
+                                          </Link>
+                                        )}
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                              </div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </li>
+
+                    {/* Marketing - Expandable */}
+                    <li>
+                      <button
+                        onClick={() =>
+                          setMobileMarketingOpen(!mobileMarketingOpen)
+                        }
+                        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      >
+                        <Megaphone className="h-4 w-4 flex-shrink-0" />
+                        <span className="flex-1 text-left">Marketing</span>
+                        <ChevronDown
+                          className={`h-4 w-4 flex-shrink-0 transition-transform ${
+                            mobileMarketingOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {mobileMarketingOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
+                          >
+                            {mobileMarketingSections.map((section) => (
+                              <div key={section.title} className="mb-2">
+                                <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
+                                  {"titleHref" in section && section.titleHref ? (
+                                    <Link
+                                      href={section.titleHref}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+                                    >
+                                      {section.title}
+                                      <ArrowRight className="h-3 w-3 opacity-60" />
+                                    </Link>
+                                  ) : (
+                                    section.title
+                                  )}
+                                </h4>
+                                <ul className="space-y-1">
+                                  {section.items.map((item) => {
+                                    const Icon = item.icon;
+                                    return (
+                                      <li key={item.href}>
+                                        <Link
+                                          href={item.href}
+                                          onClick={() => setMobileMenuOpen(false)}
+                                          className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                            pathname === item.href
+                                              ? "text-foreground"
+                                              : "text-muted-foreground hover:text-foreground"
+                                          }`}
+                                        >
+                                          <Icon className="h-4 w-4 flex-shrink-0" />
+                                          <span>{item.label}</span>
+                                        </Link>
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                              </div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </li>
+
+                    {/* Solutions - Expandable */}
+                    <li>
+                      <button
+                        onClick={() =>
+                          setMobileSolutionsOpen(!mobileSolutionsOpen)
+                        }
+                        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                      >
+                        <Layers className="h-4 w-4 flex-shrink-0" />
+                        <span className="flex-1 text-left">Solutions</span>
+                        <ChevronDown
+                          className={`h-4 w-4 flex-shrink-0 transition-transform ${
+                            mobileSolutionsOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {mobileSolutionsOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
+                          >
+                            {mobileSolutionsSections.map((section) => (
+                              <div key={section.title} className="mb-2">
+                                <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
+                                  {"titleHref" in section && section.titleHref ? (
+                                    <Link
+                                      href={section.titleHref}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+                                    >
+                                      {section.title}
+                                      <ArrowRight className="h-3 w-3 opacity-60" />
+                                    </Link>
+                                  ) : (
+                                    section.title
+                                  )}
+                                </h4>
+                                <ul className="space-y-1">
+                                  {section.items.map((item) => {
+                                    const Icon = item.icon;
+                                    return (
+                                      <li key={item.href}>
+                                        <Link
+                                          href={item.href}
+                                          onClick={() => setMobileMenuOpen(false)}
+                                          className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                            pathname === item.href
+                                              ? "text-foreground"
+                                              : "text-muted-foreground hover:text-foreground"
+                                          }`}
+                                        >
+                                          <Icon className="h-4 w-4 flex-shrink-0" />
+                                          <span>{item.label}</span>
+                                        </Link>
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                              </div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </li>
+
+                    {/* Bottom Menu Items */}
+                    {mobileBottomItems.map((item) => {
                       const Icon = item.icon;
                       return (
-                        <li key={item.link}>
+                        <li key={item.href}>
                           <Link
-                            href={item.link}
+                            href={item.href}
                             onClick={() => setMobileMenuOpen(false)}
                             className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
-                              pathname === item.link
+                              pathname === item.href
                                 ? "bg-muted text-foreground"
                                 : "text-muted-foreground hover:bg-muted hover:text-foreground"
                             }`}
@@ -831,107 +1124,41 @@ export function Navbar() {
                         </li>
                       );
                     })}
-
-                    {/* More Services Expandable */}
-                    <li>
-                      <button
-                        onClick={() => setMoreServicesOpen(!moreServicesOpen)}
-                        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
-                      >
-                        <ChevronDown
-                          className={`h-4 w-4 flex-shrink-0 transition-transform ${
-                            moreServicesOpen ? "rotate-180" : ""
-                          }`}
-                        />
-                        <span className="flex-1 text-left">More Services</span>
-                      </button>
-                      <AnimatePresence>
-                        {moreServicesOpen && (
-                          <motion.ul
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="mt-1 space-y-2 overflow-hidden border-l-2 border-border ml-[19px]"
-                          >
-                            {moreServicesItems.map((item) => {
-                              const Icon = item.icon;
-                              return (
-                                <li key={item.link}>
-                                  <Link
-                                    href={item.link}
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
-                                      pathname === item.link
-                                        ? "text-foreground"
-                                        : "text-muted-foreground hover:text-foreground"
-                                    }`}
-                                  >
-                                    <Icon className="h-4 w-4 flex-shrink-0" />
-                                    <span>{item.label}</span>
-                                  </Link>
-                                </li>
-                              );
-                            })}
-                          </motion.ul>
-                        )}
-                      </AnimatePresence>
-                    </li>
-
-                    {/* Bottom Menu Items */}
-                    {bottomMenuItems.map((item) => {
-                      const Icon = item.icon;
-                      return (
-                        <li key={item.link}>
-                          {item.isExternal ? (
-                            <a
-                              href={item.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={() => setMobileMenuOpen(false)}
-                              className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors text-muted-foreground hover:bg-muted hover:text-foreground"
-                            >
-                              <Icon className="h-4 w-4 flex-shrink-0" />
-                              <span>{item.label}</span>
-                            </a>
-                          ) : (
-                            <Link
-                              href={item.link}
-                              onClick={() => setMobileMenuOpen(false)}
-                              className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
-                                pathname === item.link
-                                  ? "bg-muted text-foreground"
-                                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                              }`}
-                            >
-                              <Icon className="h-4 w-4 flex-shrink-0" />
-                              <span>{item.label}</span>
-                            </Link>
-                          )}
-                        </li>
-                      );
-                    })}
                   </ul>
                 </nav>
 
                 {/* Footer */}
-                <div className="p-4 border-t border-border space-y-3">
-                  <a
-                    href="https://hub.multilat.xyz"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block"
-                  >
-                    <HoverBorderGradientButton
-                      shape="pill"
-                      size="sm"
-                      className="w-full justify-center px-5 py-1.75 text-[0.8125rem]"
+                <div className="p-4 border-t border-border">
+                  <div className="flex gap-2">
+                    <a
+                      href="https://guides.multilat.xyz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex-1"
                     >
-                      <LogIn className="h-4 w-4 mr-2" />
-                      Login
-                    </HoverBorderGradientButton>
-                  </a>
+                      <button className="w-full flex items-center justify-center gap-2 h-9 rounded-full bg-primary/5 px-3 ring-1 ring-primary/15 text-sm font-medium transition-colors hover:bg-primary/10 hover:ring-primary/30 text-primary">
+                        <BookOpen className="h-4 w-4" />
+                        Guides
+                      </button>
+                    </a>
+                    <a
+                      href="https://hub.multilat.xyz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex-1"
+                    >
+                      <HoverBorderGradientButton
+                        shape="pill"
+                        size="sm"
+                        className="w-full justify-center px-5 py-1.75 text-[0.8125rem]"
+                      >
+                        <LogIn className="h-4 w-4 mr-2" />
+                        Login
+                      </HoverBorderGradientButton>
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -1153,59 +1380,82 @@ export function Navbar() {
                                 style={{ width: "50%", flexShrink: 0 }}
                               >
                                 {item.dropdownColumns[0].sections.map(
-                                  (section) => (
-                                    <div key={section.title} className="p-4">
-                                      <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
-                                        <GradientText>
-                                          {section.title}
-                                        </GradientText>
-                                      </h3>
-                                      <div
-                                        className={
-                                          "gridCols" in section &&
-                                          section.gridCols === 2
-                                            ? "grid grid-cols-2 gap-1"
-                                            : "space-y-1"
-                                        }
-                                      >
-                                        {section.items.map((dropdownItem) => {
-                                          const Icon = dropdownItem.icon;
-                                          const isExternal =
-                                            "isExternal" in dropdownItem &&
-                                            dropdownItem.isExternal;
-                                          const LinkComponent = isExternal
-                                            ? "a"
-                                            : Link;
-                                          const linkProps = isExternal
-                                            ? {
-                                                href: dropdownItem.href,
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                              }
-                                            : { href: dropdownItem.href };
-                                          return (
-                                            <LinkComponent
-                                              key={dropdownItem.href}
-                                              {...linkProps}
-                                              className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
-                                            >
-                                              <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
-                                                <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
-                                              </div>
-                                              <div className="flex-1 min-w-0">
-                                                <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
-                                                  {dropdownItem.label}
+                                  (section) => {
+                                    const hasGrid =
+                                      "gridCols" in section &&
+                                      section.gridCols === 2;
+                                    const rowCount = hasGrid
+                                      ? Math.ceil(section.items.length / 2)
+                                      : section.items.length;
+                                    return (
+                                      <div key={section.title} className="p-4">
+                                        <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
+                                          {"titleHref" in section && section.titleHref ? (
+                                            <Link href={section.titleHref} className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                                              <GradientText>
+                                                {section.title}
+                                              </GradientText>
+                                              <ArrowRight className="h-3 w-3 text-primary opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                                            </Link>
+                                          ) : (
+                                            <GradientText>
+                                              {section.title}
+                                            </GradientText>
+                                          )}
+                                        </h3>
+                                        <div
+                                          className={
+                                            hasGrid
+                                              ? "grid grid-cols-2 grid-flow-col gap-1"
+                                              : "space-y-1"
+                                          }
+                                          style={
+                                            hasGrid
+                                              ? {
+                                                  gridTemplateRows: `repeat(${rowCount}, auto)`,
+                                                }
+                                              : undefined
+                                          }
+                                        >
+                                          {section.items.map((dropdownItem) => {
+                                            const Icon = dropdownItem.icon;
+                                            const isExternal =
+                                              "isExternal" in dropdownItem &&
+                                              dropdownItem.isExternal;
+                                            const LinkComponent = isExternal
+                                              ? "a"
+                                              : Link;
+                                            const linkProps = isExternal
+                                              ? {
+                                                  href: dropdownItem.href,
+                                                  target: "_blank",
+                                                  rel: "noopener noreferrer",
+                                                }
+                                              : { href: dropdownItem.href };
+                                            return (
+                                              <LinkComponent
+                                                key={dropdownItem.href}
+                                                {...linkProps}
+                                                className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
+                                              >
+                                                <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                                  <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                                 </div>
-                                                <div className="text-xs text-muted-foreground whitespace-nowrap">
-                                                  {dropdownItem.description}
+                                                <div className="flex-1 min-w-0">
+                                                  <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
+                                                    {dropdownItem.label}
+                                                  </div>
+                                                  <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                                    {dropdownItem.description}
+                                                  </div>
                                                 </div>
-                                              </div>
-                                            </LinkComponent>
-                                          );
-                                        })}
+                                              </LinkComponent>
+                                            );
+                                          })}
+                                        </div>
                                       </div>
-                                    </div>
-                                  )
+                                    );
+                                  }
                                 )}
                               </div>
                             )}
@@ -1226,9 +1476,18 @@ export function Navbar() {
                                           className="p-4"
                                         >
                                           <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
-                                            <GradientText>
-                                              {section.title}
-                                            </GradientText>
+                                            {"titleHref" in section && section.titleHref ? (
+                                              <Link href={section.titleHref} className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                                                <GradientText>
+                                                  {section.title}
+                                                </GradientText>
+                                                <ArrowRight className="h-3 w-3 text-primary opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                                              </Link>
+                                            ) : (
+                                              <GradientText>
+                                                {section.title}
+                                              </GradientText>
+                                            )}
                                           </h3>
                                           <div className="space-y-1">
                                             {section.items.map(
@@ -1286,7 +1545,7 @@ export function Navbar() {
                                         {item.dropdownBottomSection.title}
                                       </GradientText>
                                     </h3>
-                                    <div className="grid grid-rows-4 grid-flow-col gap-1">
+                                    <div className="grid grid-cols-2 grid-rows-4 grid-flow-col gap-1">
                                       {item.dropdownBottomSection.items.map(
                                         (brandItem) => {
                                           const isExternal =
@@ -1420,49 +1679,58 @@ export function Navbar() {
                               return (
                                 <div key={section.title} className="p-4">
                                   <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
-                                    <GradientText>{section.title}</GradientText>
+                                    {"titleHref" in section && section.titleHref ? (
+                                      <Link href={section.titleHref} className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                                        <GradientText>
+                                          {section.title}
+                                        </GradientText>
+                                        <ArrowRight className="h-3 w-3 text-primary opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                                      </Link>
+                                    ) : (
+                                      <GradientText>{section.title}</GradientText>
+                                    )}
                                   </h3>
                                   <div
-                                    className="grid grid-flow-col gap-1"
+                                    className="grid grid-cols-2 grid-flow-col gap-1"
                                     style={{
                                       gridTemplateRows: `repeat(${rowCount}, auto)`,
                                     }}
                                   >
                                     {section.items.map((dropdownItem) => {
-                                    const Icon = dropdownItem.icon;
-                                    const isExternal =
-                                      "isExternal" in dropdownItem &&
-                                      dropdownItem.isExternal;
-                                    const LinkComponent = isExternal
-                                      ? "a"
-                                      : Link;
-                                    const linkProps = isExternal
-                                      ? {
-                                          href: dropdownItem.href,
-                                          target: "_blank",
-                                          rel: "noopener noreferrer",
-                                        }
-                                      : { href: dropdownItem.href };
-                                    return (
-                                      <LinkComponent
-                                        key={dropdownItem.href}
-                                        {...linkProps}
-                                        className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
-                                      >
-                                        <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
-                                          <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
-                                        </div>
-                                        <div className="flex-1 min-w-0">
-                                          <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
-                                            {dropdownItem.label}
+                                      const Icon = dropdownItem.icon;
+                                      const isExternal =
+                                        "isExternal" in dropdownItem &&
+                                        dropdownItem.isExternal;
+                                      const LinkComponent = isExternal
+                                        ? "a"
+                                        : Link;
+                                      const linkProps = isExternal
+                                        ? {
+                                            href: dropdownItem.href,
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
+                                          }
+                                        : { href: dropdownItem.href };
+                                      return (
+                                        <LinkComponent
+                                          key={dropdownItem.href}
+                                          {...linkProps}
+                                          className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
+                                        >
+                                          <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                            <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                           </div>
-                                          <div className="text-xs text-muted-foreground whitespace-nowrap">
-                                            {dropdownItem.description}
+                                          <div className="flex-1 min-w-0">
+                                            <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
+                                              {dropdownItem.label}
+                                            </div>
+                                            <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                              {dropdownItem.description}
+                                            </div>
                                           </div>
-                                        </div>
-                                      </LinkComponent>
-                                    );
-                                  })}
+                                        </LinkComponent>
+                                      );
+                                    })}
                                   </div>
                                 </div>
                               );
