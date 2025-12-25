@@ -1,6 +1,7 @@
 "use client"
 
 import React, { createContext, useContext, useEffect, useState } from "react"
+import { useTheme } from "next-themes"
 
 type ThemeColor = "green" | "blue" | "red" | "orange" | "yellow" | "gray"
 
@@ -13,6 +14,16 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeColorProvider({ children }: { children: React.ReactNode }) {
 	const [themeColor, setThemeColor] = useState<ThemeColor>("green")
+	const { resolvedTheme } = useTheme()
+
+	// Switch Theme Color Based On Light/Dark Theme
+	useEffect(() => {
+		if (resolvedTheme === "light") {
+			setThemeColor("blue")
+		} else if (resolvedTheme === "dark") {
+			setThemeColor("green")
+		}
+	}, [resolvedTheme])
 
 	useEffect(() => {
 		// Update CSS Variables When Theme Color Changes
@@ -23,19 +34,7 @@ export function ThemeColorProvider({ children }: { children: React.ReactNode }) 
 
 		// Add New Color Class
 		root.classList.add(`theme-${themeColor}`)
-
-		// Store In LocalStorage
-		localStorage.setItem("color-theme", themeColor)
 	}, [themeColor])
-
-	useEffect(() => {
-		// Load Theme Color From LocalStorage On Mount
-		const savedColor = localStorage.getItem("color-theme") as ThemeColor
-		if (savedColor && ["green", "blue", "red", "orange", "yellow", "gray"].includes(savedColor)) {
-			// eslint-disable-next-line react-hooks/set-state-in-effect
-			setThemeColor(savedColor)
-		}
-	}, [])
 
 	return (
 		<ThemeContext.Provider value={{ themeColor, setThemeColor }}>

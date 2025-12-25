@@ -209,7 +209,6 @@ export function SeoMarketingPlans() {
                   {/* Desktop Version - Electric Border */}
                   <div className="hidden lg:block h-full">
                     <ElectricBorder
-                      color="#0421ff"
                       speed={0.8}
                       chaos={0.3}
                       thickness={4}

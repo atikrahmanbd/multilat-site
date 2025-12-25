@@ -295,7 +295,6 @@ export function HostingPlans() {
                     {/* Desktop Version - ElectricBorder */}
                     <div className="hidden lg:block h-full">
                       <ElectricBorder
-                        color="#00EFAE"
                         speed={0.8}
                         chaos={0.3}
                         thickness={4}

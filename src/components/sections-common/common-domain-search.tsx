@@ -8,6 +8,10 @@ import { DomainSearchResults } from "./domain-search-results";
 import { checkDomainAvailability } from "@/lib/actions/domain-check";
 import type { DomainCheckResult } from "@/lib/types/domain-check";
 import { cn } from "@/lib/utils";
+import domainPricingData from "@/data/domain-pricing.json";
+
+// Get Actual TLD Count From Domain Pricing Data
+const INITIAL_TLD_COUNT = domainPricingData.domains?.length || 550;
 
 // WHMCS Cart URL For Adding Domains
 const WHMCS_CART_URL =
@@ -18,7 +22,7 @@ const WHMCS_CART_URL =
 const DOMAIN_PRICING_API = "/api/domain-pricing";
 
 // Debounce Delay In Milliseconds
-const DEBOUNCE_DELAY = 500;
+const DEBOUNCE_DELAY = 1000;
 
 // Default TLDs To Search (Includes Spotlight TLDs)
 const DEFAULT_SEARCH_TLDS =
@@ -38,7 +42,7 @@ export function CommonDomainSearch() {
   const [results, setResults] = useState<DomainCheckResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [tldCount, setTldCount] = useState(550); // Default Fallback
+  const [tldCount, setTldCount] = useState(INITIAL_TLD_COUNT);
 
   // Refs For Debouncing And Click Outside
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
@@ -71,7 +75,7 @@ export function CommonDomainSearch() {
         });
 
         // Update TLD Count From API
-        const domainsCount = data.domains?.length || 550;
+        const domainsCount = data.domains?.length || INITIAL_TLD_COUNT;
         setTldCount(domainsCount);
 
         pricingLoadedRef.current = true;

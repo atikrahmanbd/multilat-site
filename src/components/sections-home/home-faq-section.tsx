@@ -62,7 +62,7 @@ export const items = [
       {
         title: "Do You Offer Domain Registration and Renewal?",
         content:
-          "Yes. We Provide 400+ Domain Extensions With Instant Registration, Easy Renewal, Domain Locking, and Optional ID Protection.",
+          "Yes. We Provide 550+ Domain Extensions With Instant Registration, Easy Renewal, Domain Locking, and Optional ID Protection.",
       },
       {
         title: "Can I Transfer My Domain To Multilat?",

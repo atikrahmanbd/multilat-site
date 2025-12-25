@@ -34,7 +34,7 @@ export const items = [
       {
         title: "What Domain Extensions Do You Offer?",
         content:
-          "We Offer 400+ Domain Extensions Including .com, .net, .org, .bd, .xyz, .tech, .app, .dev, .io, And Many More Country-Code and Special TLDs.",
+          "We Offer 550+ Domain Extensions Including .com, .net, .org, .bd, .xyz, .tech, .app, .dev, .io, And Many More Country-Code and Special TLDs.",
       },
       {
         title: "Can I Register Multiple Domains At Once?",

@@ -19,6 +19,10 @@ import {
   MultipleVerticalLines,
   MultipleHorizontalLines,
 } from "@/components/ui/grid-lines";
+import domainPricingData from "@/data/domain-pricing.json";
+
+// Get Actual TLD Count From Domain Pricing Data
+const TLD_COUNT = domainPricingData.domains?.length || 550;
 
 export function HomeServicesOffered() {
   return (
@@ -171,11 +175,11 @@ export function HomeServicesOffered() {
                   href="#"
                   className="group inline-flex items-center gap-2 text-lg sm:text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors"
                 >
-                  <span className="sm:inline">Domains - 400+ Extensions</span>
+                  <span className="sm:inline">Domains - {TLD_COUNT}+ Extensions</span>
                   <ArrowRight className="size-5 sm:size-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                 </Link>
                 <p className="text-muted-foreground font-normal mt-2 text-sm sm:text-base">
-                  Choose From Over 400 Domain Extensions To Secure Your Online
+                  Choose From Over {TLD_COUNT} Domain Extensions To Secure Your Online
                   Identity With Instant Registration and Activation
                 </p>
               </div>
@@ -217,8 +221,8 @@ export function HomeServicesOffered() {
               </h3>
             </div>
             <p className="text-muted-foreground text-sm sm:text-base mt-2">
-              Register and Activate Your Domain Instantly With Access To Over
-              400+ Extensions.
+              Register and Activate Your Domain Instantly With Access To Over{" "}
+              {TLD_COUNT}+ Extensions.
             </p>
           </div>
           {/* Column 3 - No Right Border */}

@@ -13,7 +13,7 @@ type ElectricBorderProps = PropsWithChildren<{
 
 const ElectricBorder: React.FC<ElectricBorderProps> = ({
   children,
-  color = '#5227FF',
+  color,
   speed = 1,
   chaos = 1,
   thickness = 2,
@@ -89,7 +89,7 @@ const ElectricBorder: React.FC<ElectricBorderProps> = ({
   }, [updateAnim]);
 
   const vars = {
-    '--electric-border-color': color,
+    '--electric-border-color': color || 'var(--primary)',
     '--eb-border-width': `${thickness}px`
   } as CSSProperties;
 
