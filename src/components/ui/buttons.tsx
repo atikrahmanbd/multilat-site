@@ -600,7 +600,7 @@ export const TopGradientButton = ({
       {...props}
     >
       <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl bg-gradient-to-r from-transparent via-primary to-transparent" />
-      <span className="relative z-20">{children}</span>
+      <span className="relative z-20 inline-flex items-center">{children}</span>
     </button>
   );
 };

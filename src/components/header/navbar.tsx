@@ -68,10 +68,16 @@ import {
   Headphones,
   Cpu,
   Workflow,
+  // Footer Icons
+  Rocket,
+  ArrowRight,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { HoverBorderGradientButton } from "@/components/ui/buttons";
+import {
+  HoverBorderGradientButton,
+  TailwindConnectButton,
+} from "@/components/ui/buttons";
 import GradientText from "@/components/ui/gradient-text";
 
 export function Navbar() {
@@ -166,7 +172,7 @@ export function Navbar() {
           ],
         },
         {
-          title: "Tools",
+          title: "Useful Tools",
           items: [
             {
               label: "Go To Dashboard",
@@ -226,6 +232,14 @@ export function Navbar() {
           ],
         },
       ],
+      dropdownFooter: {
+        text: "Try Our Premium Hosting, Backed By 30-Day Money-Back Guarantee, No Questions Asked!",
+        buttonLabel: "Go To Dashboard",
+        buttonHref: "https://hub.multilat.xyz",
+        buttonExternal: true,
+        buttonIcon: ArrowRight,
+        buttonIconPosition: "before",
+      },
     },
     {
       label: "Marketing",
@@ -335,6 +349,14 @@ export function Navbar() {
           ],
         },
       ],
+      dropdownFooter: {
+        text: "Grow Your Business With Our Expert Marketing Strategies.",
+        buttonLabel: "Get Started",
+        buttonHref: "/contact",
+        buttonExternal: false,
+        buttonIcon: ArrowRight,
+        buttonIconPosition: "after",
+      },
     },
     {
       label: "Solutions",
@@ -364,16 +386,16 @@ export function Navbar() {
                   icon: PenSquare,
                 },
                 {
-                  label: "Website Development",
-                  href: "/web-design-and-development",
-                  description: "Custom Web Solutions",
-                  icon: MonitorSmartphone,
-                },
-                {
                   label: "WordPress Development",
                   href: "/solutions/wordpress",
                   description: "WordPress Expertise",
                   icon: Code,
+                },
+                {
+                  label: "Website Development",
+                  href: "/web-design-and-development",
+                  description: "Custom Web Solutions",
+                  icon: MonitorSmartphone,
                 },
               ],
             },
@@ -568,6 +590,14 @@ export function Navbar() {
           ],
         },
       ],
+      dropdownFooter: {
+        text: "Let's Build Something Amazing Together. Hire Us Today!",
+        buttonLabel: "Start A Project",
+        buttonHref: "/contact",
+        buttonExternal: false,
+        buttonIcon: Rocket,
+        buttonIconPosition: "before",
+      },
     },
     {
       label: "About Us",
@@ -1045,7 +1075,7 @@ export function Navbar() {
                               >
                                 {column.sections.map((section) => (
                                   <div key={section.title} className="p-4">
-                                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider">
+                                    <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
                                       <GradientText>
                                         {section.title}
                                       </GradientText>
@@ -1077,13 +1107,13 @@ export function Navbar() {
                                           <LinkComponent
                                             key={dropdownItem.href}
                                             {...linkProps}
-                                            className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors hover:bg-muted cursor-pointer group"
+                                            className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
                                           >
-                                            <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-primary/30 group-hover:bg-primary/5 transition-colors">
-                                              <Icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                            <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                              <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                             </div>
                                             <div className="flex-1 min-w-0">
-                                              <div className="text-sm font-medium text-foreground whitespace-nowrap">
+                                              <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
                                                 {dropdownItem.label}
                                               </div>
                                               <div className="text-xs text-muted-foreground whitespace-nowrap">
@@ -1103,7 +1133,7 @@ export function Navbar() {
                           <div className="divide-y divide-border">
                             {item.dropdownSections?.map((section) => (
                               <div key={section.title} className="p-4">
-                                <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider">
+                                <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
                                   <GradientText>{section.title}</GradientText>
                                 </h3>
                                 <div className="grid grid-cols-2 gap-1">
@@ -1126,13 +1156,13 @@ export function Navbar() {
                                       <LinkComponent
                                         key={dropdownItem.href}
                                         {...linkProps}
-                                        className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors hover:bg-muted cursor-pointer group"
+                                        className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
                                       >
-                                        <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-primary/30 group-hover:bg-primary/5 transition-colors">
-                                          <Icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                        <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                          <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                          <div className="text-sm font-medium text-foreground whitespace-nowrap">
+                                          <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
                                             {dropdownItem.label}
                                           </div>
                                           <div className="text-xs text-muted-foreground whitespace-nowrap">
@@ -1153,7 +1183,7 @@ export function Navbar() {
                                 key={section.title}
                                 className="flex-1 p-4 min-w-0"
                               >
-                                <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider">
+                                <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
                                   <GradientText>{section.title}</GradientText>
                                 </h3>
                                 <div className="space-y-1">
@@ -1176,13 +1206,13 @@ export function Navbar() {
                                       <LinkComponent
                                         key={dropdownItem.href}
                                         {...linkProps}
-                                        className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors hover:bg-muted cursor-pointer group"
+                                        className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
                                       >
-                                        <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-primary/30 group-hover:bg-primary/5 transition-colors">
-                                          <Icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                        <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                          <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                          <div className="text-sm font-medium text-foreground whitespace-nowrap">
+                                          <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
                                             {dropdownItem.label}
                                           </div>
                                           <div className="text-xs text-muted-foreground whitespace-nowrap">
@@ -1195,6 +1225,59 @@ export function Navbar() {
                                 </div>
                               </div>
                             ))}
+                          </div>
+                        )}
+                        {/* Dropdown Footer */}
+                        {"dropdownFooter" in item && item.dropdownFooter && (
+                          <div className="flex items-center justify-between gap-12 border-t border-border px-6 py-4 bg-muted/30 rounded-b-xl">
+                            <span className="text-sm text-muted-foreground">
+                              {item.dropdownFooter.text}
+                            </span>
+                            {item.dropdownFooter.buttonExternal ? (
+                              <a
+                                href={item.dropdownFooter.buttonHref}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <TailwindConnectButton
+                                  shape="pill"
+                                  size="md"
+                                  className="text-sm whitespace-nowrap"
+                                >
+                                  {item.dropdownFooter.buttonIcon &&
+                                    item.dropdownFooter.buttonIconPosition ===
+                                      "before" && (
+                                      <item.dropdownFooter.buttonIcon className="h-4 w-4 mr-2 -ml-2" />
+                                    )}
+                                  {item.dropdownFooter.buttonLabel}
+                                  {item.dropdownFooter.buttonIcon &&
+                                    item.dropdownFooter.buttonIconPosition ===
+                                      "after" && (
+                                      <item.dropdownFooter.buttonIcon className="h-4 w-4 ml-2 -mr-2" />
+                                    )}
+                                </TailwindConnectButton>
+                              </a>
+                            ) : (
+                              <Link href={item.dropdownFooter.buttonHref}>
+                                <TailwindConnectButton
+                                  shape="pill"
+                                  size="md"
+                                  className="text-sm whitespace-nowrap"
+                                >
+                                  {item.dropdownFooter.buttonIcon &&
+                                    item.dropdownFooter.buttonIconPosition ===
+                                      "before" && (
+                                      <item.dropdownFooter.buttonIcon className="h-4 w-4 mr-2 -ml-2" />
+                                    )}
+                                  {item.dropdownFooter.buttonLabel}
+                                  {item.dropdownFooter.buttonIcon &&
+                                    item.dropdownFooter.buttonIconPosition ===
+                                      "after" && (
+                                      <item.dropdownFooter.buttonIcon className="h-4 w-4 ml-2 -mr-2" />
+                                    )}
+                                </TailwindConnectButton>
+                              </Link>
+                            )}
                           </div>
                         )}
                       </div>
