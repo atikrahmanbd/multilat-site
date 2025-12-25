@@ -20,11 +20,59 @@ import {
   Building2,
   Mail,
   BookOpen,
+  // Domains & Hosting
+  Cloud,
+  HardDrive,
+  LayoutDashboard,
+  Search,
+  MapPin,
+  Network,
+  ShieldCheck,
+  FileText,
+  Gauge,
+  Radio,
+  Route,
+  // Marketing
+  Target,
+  Megaphone,
+  Share2,
+  PenTool,
+  Star,
+  Users,
+  MailOpen,
+  Bot,
+  Sparkles,
+  UserCheck,
+  CircleDollarSign,
+  MousePointerClick,
+  RefreshCcw,
+  BarChart3,
+  // Solutions
+  Layout,
+  PenSquare,
+  MonitorSmartphone,
+  Smartphone,
+  Apple,
+  Layers,
+  Zap,
+  ShoppingCart,
+  ShoppingBag,
+  Store,
+  Database,
+  GitBranch,
+  Boxes,
+  CloudCog,
+  // IT Solutions
+  Lightbulb,
+  Lock,
+  Headphones,
+  Cpu,
+  Workflow,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GlassContainer } from "@/components/ui/glass-container";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { HoverBorderGradientButton } from "@/components/ui/buttons";
+import GradientText from "@/components/ui/gradient-text";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -58,12 +106,19 @@ export function Navbar() {
   const handleMouseEnter = (label: string) => {
     setActiveDropdown(label);
     const element = menuRefs.current[label];
-    if (element) {
+    const menuItem = menuItems.find((item) => item.label === label);
+    if (element && menuItem) {
       const rect = element.getBoundingClientRect();
+      const dropdownWidth = menuItem.dropdownWidth || 550;
+      // Calculate content area bounds (max-w-7xl = 1280px centered)
+      const contentWidth = Math.min(1280, window.innerWidth);
+      const contentLeft = (window.innerWidth - contentWidth) / 2;
+      // Center dropdown within the content area
+      const left = contentLeft + (contentWidth - dropdownWidth) / 2;
       setDropdownPosition({
         top: rect.bottom - 1,
-        left: rect.left,
-        width: 550,
+        left: Math.max(contentLeft, left),
+        width: Math.min(dropdownWidth, contentWidth),
       });
     }
   };
@@ -75,64 +130,449 @@ export function Navbar() {
       hasDropdown: false,
     },
     {
-      label: "Domains",
+      label: "Hosting",
       href: "/domains",
-      hasDropdown: false,
-    },
-    {
-      label: "Web Hosting",
-      href: "/web-hosting",
-      hasDropdown: false,
-    },
-    {
-      label: "More Services",
-      href: "/services",
       hasDropdown: true,
+      dropdownWidth: 600,
+      dropdownLayout: "rows",
       dropdownSections: [
         {
-          title: "Additional Services",
+          title: "Domains & Hosting Services",
           items: [
             {
-              label: "Web Design & Development",
-              href: "/web-design-and-development",
-              description:
-                "Modern, Responsive Websites That Captivate Your Audience",
+              label: "Domains",
+              href: "/domains",
+              description: "Register & Manage Domain Names",
+              icon: Globe,
             },
             {
-              label: "Mobile App Development",
-              href: "/mobile-app-development",
-              description:
-                "Custom Mobile Applications From Concept To Deployment",
+              label: "Cloud/VPS Hosting",
+              href: "/cloud-hosting",
+              description: "Scalable Cloud Infrastructure",
+              icon: Cloud,
             },
             {
-              label: "IT & Custom Solutions",
-              href: "/it-and-custom-solutions",
-              description:
-                "Tailored IT Infrastructure And Technology Solutions",
+              label: "High-Performance Hosting",
+              href: "/web-hosting",
+              description: "Fast & Reliable Web Hosting",
+              icon: Server,
             },
             {
-              label: "SEO & Marketing",
-              href: "/seo-and-marketing",
-              description: "Boost Your Online Presence With Strategic SEO",
+              label: "Dedicated Servers",
+              href: "/dedicated-servers",
+              description: "Full Server Control & Power",
+              icon: HardDrive,
+            },
+          ],
+        },
+        {
+          title: "Tools",
+          items: [
+            {
+              label: "Go To Dashboard",
+              href: "https://hub.multilat.xyz",
+              description: "Manage Your Services",
+              icon: LayoutDashboard,
+              isExternal: true,
+            },
+            {
+              label: "WHOIS Lookup",
+              href: "/tools/whois",
+              description: "Domain Ownership Info",
+              icon: Search,
+            },
+            {
+              label: "IP Lookup",
+              href: "/tools/ip-lookup",
+              description: "IP Address Details",
+              icon: MapPin,
+            },
+            {
+              label: "DNS Lookup",
+              href: "/tools/dns-lookup",
+              description: "DNS Record Checker",
+              icon: Network,
+            },
+            {
+              label: "SSL Checker",
+              href: "/tools/ssl-checker",
+              description: "Verify SSL Certificates",
+              icon: ShieldCheck,
+            },
+            {
+              label: "HTTP Header Checker",
+              href: "/tools/http-headers",
+              description: "Inspect HTTP Headers",
+              icon: FileText,
+            },
+            {
+              label: "Speed Test",
+              href: "/tools/speed-test",
+              description: "Test Connection Speed",
+              icon: Gauge,
+            },
+            {
+              label: "Ping Test",
+              href: "/tools/ping",
+              description: "Check Server Response",
+              icon: Radio,
+            },
+            {
+              label: "Traceroute",
+              href: "/tools/traceroute",
+              description: "Trace Network Path",
+              icon: Route,
             },
           ],
         },
       ],
-      dropdownFooter: {
-        label: "Need A Different Solution? Contact Us",
-        href: "/contact",
-      },
     },
     {
-      label: "Contact Us",
-      href: "/contact",
-      hasDropdown: false,
+      label: "Marketing",
+      href: "/marketing",
+      hasDropdown: true,
+      dropdownWidth: 600,
+      dropdownLayout: "rows",
+      dropdownSections: [
+        {
+          title: "Core Marketing Strategies",
+          items: [
+            {
+              label: "360° Digital Marketing",
+              href: "/marketing/digital",
+              description: "Complete Marketing Solutions",
+              icon: Target,
+            },
+            {
+              label: "Search Engine Optimization",
+              href: "/marketing/seo",
+              description: "Rank Higher On Search",
+              icon: TrendingUp,
+            },
+            {
+              label: "Social Media Marketing",
+              href: "/marketing/social-media",
+              description: "Engage Your Audience",
+              icon: Share2,
+            },
+            {
+              label: "Content Marketing",
+              href: "/marketing/content",
+              description: "Compelling Content Strategy",
+              icon: PenTool,
+            },
+            {
+              label: "Reputation Management",
+              href: "/marketing/reputation",
+              description: "Protect Your Brand Image",
+              icon: Star,
+            },
+            {
+              label: "Lead Generation",
+              href: "/marketing/lead-generation",
+              description: "Capture Quality Leads",
+              icon: Users,
+            },
+            {
+              label: "Email Marketing",
+              href: "/marketing/email",
+              description: "Targeted Email Campaigns",
+              icon: MailOpen,
+            },
+            {
+              label: "AI Content Creation",
+              href: "/marketing/ai-content",
+              description: "AI-Powered Content",
+              icon: Bot,
+            },
+            {
+              label: "AI Marketing Automation",
+              href: "/marketing/ai-automation",
+              description: "Automate With AI",
+              icon: Sparkles,
+            },
+            {
+              label: "Influencer Marketing",
+              href: "/marketing/influencer",
+              description: "Partner With Influencers",
+              icon: UserCheck,
+            },
+          ],
+        },
+        {
+          title: "Paid Advertising",
+          items: [
+            {
+              label: "Google Ads",
+              href: "/marketing/google-ads",
+              description: "Search, Display & YouTube",
+              icon: CircleDollarSign,
+            },
+            {
+              label: "Social Media Ads",
+              href: "/marketing/social-ads",
+              description: "Meta, Instagram, LinkedIn",
+              icon: Megaphone,
+            },
+            {
+              label: "PPC Campaign Management",
+              href: "/marketing/ppc",
+              description: "Pay-Per-Click Campaigns",
+              icon: MousePointerClick,
+            },
+            {
+              label: "Retargeting & Remarketing",
+              href: "/marketing/retargeting",
+              description: "Re-engage Your Visitors",
+              icon: RefreshCcw,
+            },
+            {
+              label: "Campaign Optimization",
+              href: "/marketing/optimization",
+              description: "Maximize Your ROI",
+              icon: BarChart3,
+            },
+          ],
+        },
+      ],
     },
     {
-      label: "Guides",
-      href: "https://guides.multilat.xyz",
+      label: "Solutions",
+      href: "/solutions",
+      hasDropdown: true,
+      dropdownWidth: 1216,
+      dropdownLayout: "solutions",
+      dropdownColumns: [
+        {
+          // First column: 4 sections stacked (row-based) - half width
+          width: "50%",
+          sections: [
+            {
+              title: "Core Solutions",
+              gridCols: 2,
+              items: [
+                {
+                  label: "Landing Page Design",
+                  href: "/solutions/landing-pages",
+                  description: "High-Converting Pages",
+                  icon: Layout,
+                },
+                {
+                  label: "Custom UI/UX Design",
+                  href: "/solutions/ui-ux",
+                  description: "User-Centered Design",
+                  icon: PenSquare,
+                },
+                {
+                  label: "Website Development",
+                  href: "/web-design-and-development",
+                  description: "Custom Web Solutions",
+                  icon: MonitorSmartphone,
+                },
+                {
+                  label: "WordPress Development",
+                  href: "/solutions/wordpress",
+                  description: "WordPress Expertise",
+                  icon: Code,
+                },
+              ],
+            },
+            {
+              title: "E-commerce",
+              gridCols: 2,
+              items: [
+                {
+                  label: "Shopify Development",
+                  href: "/solutions/shopify",
+                  description: "Shopify Store Setup",
+                  icon: ShoppingBag,
+                },
+                {
+                  label: "WooCommerce Development",
+                  href: "/solutions/woocommerce",
+                  description: "WordPress E-commerce",
+                  icon: ShoppingCart,
+                },
+                {
+                  label: "BigCommerce Development",
+                  href: "/solutions/bigcommerce",
+                  description: "Enterprise E-commerce",
+                  icon: Store,
+                },
+                {
+                  label: "Custom E-commerce",
+                  href: "/solutions/custom-ecommerce",
+                  description: "Tailored Online Stores",
+                  icon: Boxes,
+                },
+              ],
+            },
+            {
+              title: "Mobile Apps",
+              gridCols: 2,
+              items: [
+                {
+                  label: "iOS App Development",
+                  href: "/mobile-app-development/ios",
+                  description: "Native iOS Apps",
+                  icon: Apple,
+                },
+                {
+                  label: "Android App Development",
+                  href: "/mobile-app-development/android",
+                  description: "Native Android Apps",
+                  icon: Smartphone,
+                },
+                {
+                  label: "Flutter Development",
+                  href: "/mobile-app-development/flutter",
+                  description: "Cross-Platform Apps",
+                  icon: Layers,
+                },
+                {
+                  label: "React Native Development",
+                  href: "/mobile-app-development/react-native",
+                  description: "Hybrid Mobile Apps",
+                  icon: Zap,
+                },
+              ],
+            },
+            {
+              title: "Frontend",
+              gridCols: 2,
+              items: [
+                {
+                  label: "React Development",
+                  href: "/solutions/react",
+                  description: "React.js Applications",
+                  icon: Code,
+                },
+                {
+                  label: "Next.js Development",
+                  href: "/solutions/nextjs",
+                  description: "Full-Stack React",
+                  icon: Zap,
+                },
+                {
+                  label: "Vue.js Development",
+                  href: "/solutions/vuejs",
+                  description: "Vue.js Applications",
+                  icon: Layers,
+                },
+                {
+                  label: "Tailwind CSS",
+                  href: "/solutions/tailwind",
+                  description: "Modern CSS Framework",
+                  icon: Palette,
+                },
+              ],
+            },
+          ],
+        },
+        {
+          // Second column: Backend
+          sections: [
+            {
+              title: "Backend",
+              items: [
+                {
+                  label: "PHP/Laravel Development",
+                  href: "/solutions/laravel",
+                  description: "PHP Framework",
+                  icon: Code,
+                },
+                {
+                  label: "Python/Django Development",
+                  href: "/solutions/django",
+                  description: "Python Framework",
+                  icon: Database,
+                },
+                {
+                  label: "Node.js Development",
+                  href: "/solutions/nodejs",
+                  description: "JavaScript Backend",
+                  icon: Server,
+                },
+                {
+                  label: "RESTful APIs",
+                  href: "/solutions/rest-api",
+                  description: "API Development",
+                  icon: GitBranch,
+                },
+                {
+                  label: "GraphQL Development",
+                  href: "/solutions/graphql",
+                  description: "GraphQL APIs",
+                  icon: Network,
+                },
+                {
+                  label: "Microservices",
+                  href: "/solutions/microservices",
+                  description: "Scalable Architecture",
+                  icon: Boxes,
+                },
+                {
+                  label: "Cloud & DevOps",
+                  href: "/solutions/cloud-devops",
+                  description: "AWS Infrastructure",
+                  icon: CloudCog,
+                },
+              ],
+            },
+          ],
+        },
+        {
+          // Third column: IT Solutions
+          sections: [
+            {
+              title: "IT Solutions",
+              items: [
+                {
+                  label: "IT Consulting",
+                  href: "/it-and-custom-solutions/consulting",
+                  description: "Strategic IT Guidance",
+                  icon: Lightbulb,
+                },
+                {
+                  label: "Cloud & Infrastructure",
+                  href: "/it-and-custom-solutions/cloud",
+                  description: "Cloud Architecture",
+                  icon: Cloud,
+                },
+                {
+                  label: "Security & Compliance",
+                  href: "/it-and-custom-solutions/security",
+                  description: "Protect Your Business",
+                  icon: Lock,
+                },
+                {
+                  label: "Managed IT Services",
+                  href: "/it-and-custom-solutions/managed",
+                  description: "24/7 IT Support",
+                  icon: Headphones,
+                },
+                {
+                  label: "Custom Software",
+                  href: "/it-and-custom-solutions/software",
+                  description: "Bespoke Applications",
+                  icon: Cpu,
+                },
+                {
+                  label: "Digital Transformation",
+                  href: "/it-and-custom-solutions/digital",
+                  description: "Modernize Your Business",
+                  icon: Workflow,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: "About Us",
+      href: "/about",
       hasDropdown: false,
-      isExternal: true,
     },
   ];
 
@@ -439,60 +879,98 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-1 lg:flex absolute left-1/2 -translate-x-1/2">
-            {menuItems.map((item) => (
-              <div
-                key={item.label}
-                ref={(el) => {
-                  if (item.hasDropdown) {
-                    menuRefs.current[item.label] = el;
+          <div className="hidden items-center gap-2 lg:flex absolute left-1/2 -translate-x-1/2">
+            {menuItems.map((item) => {
+              const isActive = item.hasDropdown
+                ? pathname?.startsWith(item.href)
+                : pathname === item.href;
+              const isDropdownOpen = activeDropdown === item.label;
+              const showThemeGradient = isDropdownOpen;
+              const showPrimaryGradient = isActive && !isDropdownOpen;
+
+              const menuClassName = `group relative inline-block rounded-sm px-3 py-2 text-base font-medium transition-colors hover:text-foreground cursor-pointer ${
+                isActive || isDropdownOpen
+                  ? "text-foreground"
+                  : "text-muted-foreground"
+              }`;
+
+              const menuContent = (
+                <>
+                  {/* Dot Indicator - 3 Dots For Dropdown, 1 Dot For Regular */}
+                  <span className="absolute top-1 left-1/2 -translate-x-1/2 flex gap-1">
+                    <span className="w-[3px] h-[3px] rounded-full bg-primary" />
+                    {item.hasDropdown && (
+                      <>
+                        <span className="w-[3px] h-[3px] rounded-full bg-primary" />
+                        <span className="w-[3px] h-[3px] rounded-full bg-primary" />
+                      </>
+                    )}
+                  </span>
+                  <span>{item.label}</span>
+                  {/* Primary Gradient - Active State (Not Hovering Dropdown) */}
+                  <span
+                    className={`absolute bottom-0 left-0 right-0 h-[2px] transition-opacity duration-300 pointer-events-none ${
+                      showPrimaryGradient ? "opacity-100" : "opacity-0"
+                    }`}
+                    style={{
+                      background:
+                        "linear-gradient(90deg, transparent, var(--color-primary), transparent)",
+                    }}
+                  />
+                  {/* Theme Gradient - Hover Or Dropdown Open */}
+                  <span
+                    className={`absolute bottom-0 left-0 right-0 h-[2px] transition-opacity duration-300 pointer-events-none ${
+                      showThemeGradient
+                        ? "opacity-100"
+                        : "opacity-0 group-hover:opacity-100"
+                    }`}
+                    style={{
+                      background:
+                        "linear-gradient(to right, transparent, transparent, var(--color-primary), transparent, transparent)",
+                    }}
+                  />
+                </>
+              );
+
+              return (
+                <div
+                  key={item.label}
+                  ref={(el) => {
+                    if (item.hasDropdown) {
+                      menuRefs.current[item.label] = el;
+                    }
+                  }}
+                  className="relative"
+                  onMouseEnter={() =>
+                    item.hasDropdown && handleMouseEnter(item.label)
                   }
-                }}
-                className="relative"
-                onMouseEnter={() =>
-                  item.hasDropdown && handleMouseEnter(item.label)
-                }
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                {item.hasDropdown ? (
-                  <button
-                    className={`flex items-center gap-1 rounded-sm px-3 py-2 text-sm font-semibold transition-colors hover:text-foreground cursor-pointer ${
-                      pathname?.startsWith(item.href)
-                        ? "bg-muted text-foreground"
-                        : "text-muted-foreground"
-                    }`}
-                  >
-                    {item.label}
-                    <ChevronDown className="h-3 w-3" />
-                  </button>
-                ) : item.isExternal ? (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 rounded-sm bg-primary/5 px-3 py-1.5 ring-1 ring-primary/15 text-sm font-semibold transition-colors hover:bg-primary/10 hover:ring-primary/30 cursor-pointer text-primary ml-2"
-                  >
-                    <BookOpen className="h-4 w-4" />
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className={`rounded-sm px-3 py-2 text-sm font-semibold transition-colors hover:text-foreground cursor-pointer ${
-                      pathname === item.href
-                        ? "bg-muted text-foreground"
-                        : "text-muted-foreground"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
-            ))}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  {item.hasDropdown ? (
+                    <button type="button" className={menuClassName}>
+                      {menuContent}
+                    </button>
+                  ) : (
+                    <Link href={item.href} className={menuClassName}>
+                      {menuContent}
+                    </Link>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-4 ml-auto lg:ml-0">
+            <a
+              href="https://guides.multilat.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:flex items-center gap-2 h-8 rounded-full bg-primary/5 px-3 ring-1 ring-primary/15 text-sm font-medium transition-colors hover:bg-primary/10 hover:ring-primary/30 text-primary"
+            >
+              <BookOpen className="h-4 w-4" />
+              Guides
+            </a>
             <ThemeSwitch />
             <a
               href="https://hub.multilat.xyz"
@@ -543,7 +1021,7 @@ export function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="fixed z-50 pt-[15px]"
+                      className="fixed z-50 pt-8"
                       style={{
                         top: `${dropdownPosition.top}px`,
                         left: `${dropdownPosition.left}px`,
@@ -552,47 +1030,174 @@ export function Navbar() {
                       onMouseEnter={() => setActiveDropdown(item.label)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      {/* Caret Arrow Pointing Up */}
-                      <div className="absolute top-[8px] left-10 w-4 h-4 bg-background border-l border-t border-border rotate-45 transform"></div>
-                      <GlassContainer>
-                        <div className="pb-4">
-                          {item.dropdownSections?.map((section) => (
-                            <div key={section.title}>
-                              <h3 className="mb-3 px-3 text-xs font-semibold text-muted-foreground">
-                                {section.title}
-                              </h3>
-                              <div className="grid grid-cols-2 gap-2">
-                                {section.items.map((dropdownItem) => (
-                                  <Link
-                                    key={dropdownItem.href}
-                                    href={dropdownItem.href}
-                                    className="block rounded-md px-3 py-2 transition-colors hover:bg-muted cursor-pointer"
-                                  >
-                                    <div className="text-sm font-medium text-foreground">
-                                      {dropdownItem.label}
+                      <div className="rounded-xl border border-primary/25 bg-background/95 backdrop-blur-xl shadow-lg">
+                        {item.dropdownLayout === "solutions" ? (
+                          <div className="flex divide-x divide-border">
+                            {item.dropdownColumns?.map((column, colIndex) => (
+                              <div
+                                key={colIndex}
+                                className="divide-y divide-border"
+                                style={
+                                  column.width
+                                    ? { width: column.width, flexShrink: 0 }
+                                    : { flex: 1 }
+                                }
+                              >
+                                {column.sections.map((section) => (
+                                  <div key={section.title} className="p-4">
+                                    <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider">
+                                      <GradientText>
+                                        {section.title}
+                                      </GradientText>
+                                    </h3>
+                                    <div
+                                      className={
+                                        "gridCols" in section &&
+                                        section.gridCols === 2
+                                          ? "grid grid-cols-2 gap-1"
+                                          : "space-y-1"
+                                      }
+                                    >
+                                      {section.items.map((dropdownItem) => {
+                                        const Icon = dropdownItem.icon;
+                                        const isExternal =
+                                          "isExternal" in dropdownItem &&
+                                          dropdownItem.isExternal;
+                                        const LinkComponent = isExternal
+                                          ? "a"
+                                          : Link;
+                                        const linkProps = isExternal
+                                          ? {
+                                              href: dropdownItem.href,
+                                              target: "_blank",
+                                              rel: "noopener noreferrer",
+                                            }
+                                          : { href: dropdownItem.href };
+                                        return (
+                                          <LinkComponent
+                                            key={dropdownItem.href}
+                                            {...linkProps}
+                                            className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors hover:bg-muted cursor-pointer group"
+                                          >
+                                            <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-primary/30 group-hover:bg-primary/5 transition-colors">
+                                              <Icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                            </div>
+                                            <div className="flex-1 min-w-0">
+                                              <div className="text-sm font-medium text-foreground whitespace-nowrap">
+                                                {dropdownItem.label}
+                                              </div>
+                                              <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                                {dropdownItem.description}
+                                              </div>
+                                            </div>
+                                          </LinkComponent>
+                                        );
+                                      })}
                                     </div>
-                                    <div className="mt-0.5 text-xs leading-relaxed text-muted-foreground">
-                                      {dropdownItem.description}
-                                    </div>
-                                  </Link>
+                                  </div>
                                 ))}
                               </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        {item.dropdownFooter && (
-                          <div className="border-t border-border bg-muted/30 px-2 py-3 -mx-4 -mb-4">
-                            <Link
-                              href={item.dropdownFooter.href}
-                              className="flex items-center justify-between text-sm font-medium text-foreground transition-colors hover:text-primary px-2"
-                            >
-                              <span>{item.dropdownFooter.label}</span>
-                              <ChevronDown className="h-4 w-4 -rotate-90" />
-                            </Link>
+                            ))}
+                          </div>
+                        ) : item.dropdownLayout === "rows" ? (
+                          <div className="divide-y divide-border">
+                            {item.dropdownSections?.map((section) => (
+                              <div key={section.title} className="p-4">
+                                <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider">
+                                  <GradientText>{section.title}</GradientText>
+                                </h3>
+                                <div className="grid grid-cols-2 gap-1">
+                                  {section.items.map((dropdownItem) => {
+                                    const Icon = dropdownItem.icon;
+                                    const isExternal =
+                                      "isExternal" in dropdownItem &&
+                                      dropdownItem.isExternal;
+                                    const LinkComponent = isExternal
+                                      ? "a"
+                                      : Link;
+                                    const linkProps = isExternal
+                                      ? {
+                                          href: dropdownItem.href,
+                                          target: "_blank",
+                                          rel: "noopener noreferrer",
+                                        }
+                                      : { href: dropdownItem.href };
+                                    return (
+                                      <LinkComponent
+                                        key={dropdownItem.href}
+                                        {...linkProps}
+                                        className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors hover:bg-muted cursor-pointer group"
+                                      >
+                                        <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-primary/30 group-hover:bg-primary/5 transition-colors">
+                                          <Icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <div className="text-sm font-medium text-foreground whitespace-nowrap">
+                                            {dropdownItem.label}
+                                          </div>
+                                          <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                            {dropdownItem.description}
+                                          </div>
+                                        </div>
+                                      </LinkComponent>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="flex divide-x divide-border">
+                            {item.dropdownSections?.map((section) => (
+                              <div
+                                key={section.title}
+                                className="flex-1 p-4 min-w-0"
+                              >
+                                <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider">
+                                  <GradientText>{section.title}</GradientText>
+                                </h3>
+                                <div className="space-y-1">
+                                  {section.items.map((dropdownItem) => {
+                                    const Icon = dropdownItem.icon;
+                                    const isExternal =
+                                      "isExternal" in dropdownItem &&
+                                      dropdownItem.isExternal;
+                                    const LinkComponent = isExternal
+                                      ? "a"
+                                      : Link;
+                                    const linkProps = isExternal
+                                      ? {
+                                          href: dropdownItem.href,
+                                          target: "_blank",
+                                          rel: "noopener noreferrer",
+                                        }
+                                      : { href: dropdownItem.href };
+                                    return (
+                                      <LinkComponent
+                                        key={dropdownItem.href}
+                                        {...linkProps}
+                                        className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors hover:bg-muted cursor-pointer group"
+                                      >
+                                        <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-primary/30 group-hover:bg-primary/5 transition-colors">
+                                          <Icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <div className="text-sm font-medium text-foreground whitespace-nowrap">
+                                            {dropdownItem.label}
+                                          </div>
+                                          <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                            {dropdownItem.description}
+                                          </div>
+                                        </div>
+                                      </LinkComponent>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         )}
-                      </GlassContainer>
+                      </div>
                     </motion.div>
                   )
               )}

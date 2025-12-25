@@ -17,7 +17,7 @@ export default function Home() {
       {/* Hero - 2 Lines At Edges */}
       <GridLinesSection
         linePositions={[0, 100]}
-        showTopIntersections={false}
+        showTopIntersections={true}
         showBottomIntersections={false}
       >
         <HomeMainHero />

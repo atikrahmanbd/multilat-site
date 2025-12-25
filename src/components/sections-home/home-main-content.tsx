@@ -60,7 +60,7 @@ export function HomeMainContent() {
         >
           <EncryptedText
             text="One-Stop Digital, Creative & Technology Solutions Provider"
-            revealedClassName="text-primary"
+            revealedClassName="text-primary [.theme-blue:not(.dark)_&]:text-white"
             encryptedClassName="text-muted-foreground/50"
           />
         </ShimmerDarkButton>
