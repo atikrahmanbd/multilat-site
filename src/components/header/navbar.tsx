@@ -71,6 +71,14 @@ import {
   // Footer Icons
   Rocket,
   ArrowRight,
+  ExternalLink,
+  // Brand Icons (Fallback)
+  Box,
+  Send,
+  Scale,
+  // Product Icons
+  Rss,
+  Clock,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeSwitch } from "@/components/theme-switch";
@@ -152,16 +160,16 @@ export function Navbar() {
               icon: Globe,
             },
             {
-              label: "Cloud/VPS Hosting",
-              href: "/cloud-hosting",
-              description: "Scalable Cloud Infrastructure",
-              icon: Cloud,
-            },
-            {
               label: "High-Performance Hosting",
               href: "/web-hosting",
               description: "Fast & Reliable Web Hosting",
               icon: Server,
+            },
+            {
+              label: "Cloud/VPS Hosting",
+              href: "/cloud-hosting",
+              description: "Scalable Cloud Infrastructure",
+              icon: Cloud,
             },
             {
               label: "Dedicated Servers",
@@ -380,12 +388,6 @@ export function Navbar() {
                   icon: Layout,
                 },
                 {
-                  label: "Custom UI/UX Design",
-                  href: "/solutions/ui-ux",
-                  description: "User-Centered Design",
-                  icon: PenSquare,
-                },
-                {
                   label: "WordPress Development",
                   href: "/solutions/wordpress",
                   description: "WordPress Expertise",
@@ -396,6 +398,12 @@ export function Navbar() {
                   href: "/web-design-and-development",
                   description: "Custom Web Solutions",
                   icon: MonitorSmartphone,
+                },
+                {
+                  label: "Custom UI/UX Design",
+                  href: "/solutions/ui-ux",
+                  description: "User-Centered Design",
+                  icon: PenSquare,
                 },
               ],
             },
@@ -590,6 +598,81 @@ export function Navbar() {
           ],
         },
       ],
+      dropdownBottomSection: {
+        title: "Our Brands",
+        gridCols: 2,
+        items: [
+          {
+            label: "Cut Out Image, Inc.",
+            href: "https://cutoutimage.com",
+            description: "Complete Image Editing Solution",
+            image: "/our-brands/cut-out-image.png",
+            isExternal: true,
+          },
+          {
+            label: "Render Bakery",
+            href: "https://renderbakery.com",
+            description: "3D Studio - Complete 3D Solution",
+            icon: Box,
+            isExternal: true,
+          },
+          {
+            label: "Sendsfer",
+            href: "https://sendsfer.com",
+            description: "File Transfer w/ Ease",
+            icon: Send,
+            isExternal: true,
+          },
+          {
+            label: "Ruxuly",
+            href: "https://ruxuly.com",
+            description: "Online Store Front of Luxury Products",
+            image: "/our-brands/ruxuly.jpg",
+            isExternal: true,
+          },
+          {
+            label: "Onco Story",
+            href: "https://oncostory.org",
+            description: "Cancer Survivor Stories of Strength",
+            image: "/our-brands/oncostory.jpg",
+            isExternal: true,
+          },
+          {
+            label: "Joyee",
+            href: "https://joyee.com.bd",
+            description: "Skills For Women Empowerment",
+            image: "/our-brands/joyee-logo-text-color.svg",
+            isExternal: true,
+          },
+          {
+            label: "Socheton Nagorik",
+            href: "https://sochetonnagorik.org",
+            description: "Help People Learn Civic Sense",
+            icon: Scale,
+            isExternal: true,
+          },
+        ],
+      },
+      dropdownProductsSection: {
+        title: "Our Products / Tools",
+        gridCols: 2,
+        items: [
+          {
+            label: "Multilat Feed",
+            href: "https://feed.multilat.xyz",
+            description: "Automated Bank Feed For Xero",
+            icon: Rss,
+            isExternal: true,
+          },
+          {
+            label: "Multilat Time",
+            href: "https://time.multilat.xyz",
+            description: "Time and Project Management For Teams",
+            icon: Clock,
+            isExternal: true,
+          },
+        ],
+      },
       dropdownFooter: {
         text: "Let's Build Something Amazing Together. Hire Us Today!",
         buttonLabel: "Start A Project",
@@ -626,7 +709,7 @@ export function Navbar() {
   const moreServicesItems = [
     {
       label: "Web Design & Dev.",
-      ariaLabel: "Web Design And Development Services",
+      ariaLabel: "Web Design and Development Services",
       link: "/web-design-and-development",
       icon: Palette,
     },
@@ -638,13 +721,13 @@ export function Navbar() {
     },
     {
       label: "IT & Custom Solutions",
-      ariaLabel: "IT And Custom Solutions",
+      ariaLabel: "IT and Custom Solutions",
       link: "/it-and-custom-solutions",
       icon: Settings,
     },
     {
       label: "SEO & Marketing",
-      ariaLabel: "SEO And Marketing",
+      ariaLabel: "SEO and Marketing",
       link: "/seo-and-marketing",
       icon: TrendingUp,
     },
@@ -653,7 +736,7 @@ export function Navbar() {
   const bottomMenuItems = [
     {
       label: "Guides",
-      ariaLabel: "Guides And Tutorials",
+      ariaLabel: "Guides and Tutorials",
       link: "https://guides.multilat.xyz",
       icon: BookOpen,
       isExternal: true,
@@ -1063,81 +1146,289 @@ export function Navbar() {
                       <div className="rounded-xl border border-primary/25 bg-background/95 backdrop-blur-xl shadow-lg">
                         {item.dropdownLayout === "solutions" ? (
                           <div className="flex divide-x divide-border">
-                            {item.dropdownColumns?.map((column, colIndex) => (
+                            {/* Left Column - 50% */}
+                            {item.dropdownColumns?.[0] && (
                               <div
-                                key={colIndex}
                                 className="divide-y divide-border"
-                                style={
-                                  column.width
-                                    ? { width: column.width, flexShrink: 0 }
-                                    : { flex: 1 }
-                                }
+                                style={{ width: "50%", flexShrink: 0 }}
                               >
-                                {column.sections.map((section) => (
-                                  <div key={section.title} className="p-4">
+                                {item.dropdownColumns[0].sections.map(
+                                  (section) => (
+                                    <div key={section.title} className="p-4">
+                                      <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
+                                        <GradientText>
+                                          {section.title}
+                                        </GradientText>
+                                      </h3>
+                                      <div
+                                        className={
+                                          "gridCols" in section &&
+                                          section.gridCols === 2
+                                            ? "grid grid-cols-2 gap-1"
+                                            : "space-y-1"
+                                        }
+                                      >
+                                        {section.items.map((dropdownItem) => {
+                                          const Icon = dropdownItem.icon;
+                                          const isExternal =
+                                            "isExternal" in dropdownItem &&
+                                            dropdownItem.isExternal;
+                                          const LinkComponent = isExternal
+                                            ? "a"
+                                            : Link;
+                                          const linkProps = isExternal
+                                            ? {
+                                                href: dropdownItem.href,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                              }
+                                            : { href: dropdownItem.href };
+                                          return (
+                                            <LinkComponent
+                                              key={dropdownItem.href}
+                                              {...linkProps}
+                                              className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
+                                            >
+                                              <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                                <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
+                                              </div>
+                                              <div className="flex-1 min-w-0">
+                                                <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
+                                                  {dropdownItem.label}
+                                                </div>
+                                                <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                                  {dropdownItem.description}
+                                                </div>
+                                              </div>
+                                            </LinkComponent>
+                                          );
+                                        })}
+                                      </div>
+                                    </div>
+                                  )
+                                )}
+                              </div>
+                            )}
+                            {/* Right Column - 50% (Backend + IT Solutions + Our Brands) */}
+                            <div className="flex-1 flex flex-col">
+                              {/* Top Row: Backend & IT Solutions side by side */}
+                              <div className="flex divide-x divide-border flex-1">
+                                {item.dropdownColumns
+                                  ?.slice(1)
+                                  .map((column, colIndex) => (
+                                    <div
+                                      key={colIndex}
+                                      className="flex-1 divide-y divide-border"
+                                    >
+                                      {column.sections.map((section) => (
+                                        <div
+                                          key={section.title}
+                                          className="p-4"
+                                        >
+                                          <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
+                                            <GradientText>
+                                              {section.title}
+                                            </GradientText>
+                                          </h3>
+                                          <div className="space-y-1">
+                                            {section.items.map(
+                                              (dropdownItem) => {
+                                                const Icon = dropdownItem.icon;
+                                                const isExternal =
+                                                  "isExternal" in
+                                                    dropdownItem &&
+                                                  dropdownItem.isExternal;
+                                                const LinkComponent = isExternal
+                                                  ? "a"
+                                                  : Link;
+                                                const linkProps = isExternal
+                                                  ? {
+                                                      href: dropdownItem.href,
+                                                      target: "_blank",
+                                                      rel: "noopener noreferrer",
+                                                    }
+                                                  : { href: dropdownItem.href };
+                                                return (
+                                                  <LinkComponent
+                                                    key={dropdownItem.href}
+                                                    {...linkProps}
+                                                    className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
+                                                  >
+                                                    <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                                      <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
+                                                    </div>
+                                                    <div className="flex-1 min-w-0">
+                                                      <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
+                                                        {dropdownItem.label}
+                                                      </div>
+                                                      <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                                        {
+                                                          dropdownItem.description
+                                                        }
+                                                      </div>
+                                                    </div>
+                                                  </LinkComponent>
+                                                );
+                                              }
+                                            )}
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  ))}
+                              </div>
+                              {/* Bottom Row: Our Brands spanning full width of right half */}
+                              {"dropdownBottomSection" in item &&
+                                item.dropdownBottomSection && (
+                                  <div className="p-4 border-t border-border">
                                     <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
                                       <GradientText>
-                                        {section.title}
+                                        {item.dropdownBottomSection.title}
                                       </GradientText>
                                     </h3>
-                                    <div
-                                      className={
-                                        "gridCols" in section &&
-                                        section.gridCols === 2
-                                          ? "grid grid-cols-2 gap-1"
-                                          : "space-y-1"
-                                      }
-                                    >
-                                      {section.items.map((dropdownItem) => {
-                                        const Icon = dropdownItem.icon;
-                                        const isExternal =
-                                          "isExternal" in dropdownItem &&
-                                          dropdownItem.isExternal;
-                                        const LinkComponent = isExternal
-                                          ? "a"
-                                          : Link;
-                                        const linkProps = isExternal
-                                          ? {
-                                              href: dropdownItem.href,
-                                              target: "_blank",
-                                              rel: "noopener noreferrer",
-                                            }
-                                          : { href: dropdownItem.href };
-                                        return (
-                                          <LinkComponent
-                                            key={dropdownItem.href}
-                                            {...linkProps}
-                                            className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
-                                          >
-                                            <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
-                                              <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                              <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
-                                                {dropdownItem.label}
+                                    <div className="grid grid-rows-4 grid-flow-col gap-1">
+                                      {item.dropdownBottomSection.items.map(
+                                        (brandItem) => {
+                                          const isExternal =
+                                            "isExternal" in brandItem &&
+                                            brandItem.isExternal;
+                                          const hasImage =
+                                            "image" in brandItem &&
+                                            brandItem.image;
+                                          const Icon =
+                                            "icon" in brandItem
+                                              ? brandItem.icon
+                                              : null;
+                                          const LinkComponent = isExternal
+                                            ? "a"
+                                            : Link;
+                                          const linkProps = isExternal
+                                            ? {
+                                                href: brandItem.href,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                              }
+                                            : { href: brandItem.href };
+                                          return (
+                                            <LinkComponent
+                                              key={brandItem.href}
+                                              {...linkProps}
+                                              className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
+                                            >
+                                              {hasImage ? (
+                                                <div className="flex-shrink-0 w-8 h-8 rounded-md border border-border bg-muted/50 overflow-hidden group-hover:border-primary/50 transition-colors">
+                                                  <Image
+                                                    src={
+                                                      brandItem.image as string
+                                                    }
+                                                    alt={brandItem.label}
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-full h-full object-cover"
+                                                    unoptimized
+                                                  />
+                                                </div>
+                                              ) : Icon ? (
+                                                <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                                  <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
+                                                </div>
+                                              ) : null}
+                                              <div className="flex-1 min-w-0">
+                                                <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors flex items-center gap-1">
+                                                  {brandItem.label}
+                                                  {isExternal && (
+                                                    <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                                                  )}
+                                                </div>
+                                                <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                                  {brandItem.description}
+                                                </div>
                                               </div>
-                                              <div className="text-xs text-muted-foreground whitespace-nowrap">
-                                                {dropdownItem.description}
-                                              </div>
-                                            </div>
-                                          </LinkComponent>
-                                        );
-                                      })}
+                                            </LinkComponent>
+                                          );
+                                        }
+                                      )}
                                     </div>
                                   </div>
-                                ))}
-                              </div>
-                            ))}
+                                )}
+                              {/* Products / Tools Row */}
+                              {"dropdownProductsSection" in item &&
+                                item.dropdownProductsSection && (
+                                  <div className="p-4 border-t border-border">
+                                    <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
+                                      <GradientText>
+                                        {item.dropdownProductsSection.title}
+                                      </GradientText>
+                                    </h3>
+                                    <div className="grid grid-cols-2 gap-1">
+                                      {item.dropdownProductsSection.items.map(
+                                        (productItem) => {
+                                          const isExternal =
+                                            "isExternal" in productItem &&
+                                            productItem.isExternal;
+                                          const Icon =
+                                            "icon" in productItem
+                                              ? productItem.icon
+                                              : null;
+                                          const LinkComponent = isExternal
+                                            ? "a"
+                                            : Link;
+                                          const linkProps = isExternal
+                                            ? {
+                                                href: productItem.href,
+                                                target: "_blank",
+                                                rel: "noopener noreferrer",
+                                              }
+                                            : { href: productItem.href };
+                                          return (
+                                            <LinkComponent
+                                              key={productItem.href}
+                                              {...linkProps}
+                                              className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
+                                            >
+                                              {Icon && (
+                                                <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
+                                                  <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
+                                                </div>
+                                              )}
+                                              <div className="flex-1 min-w-0">
+                                                <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors flex items-center gap-1">
+                                                  {productItem.label}
+                                                  {isExternal && (
+                                                    <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                                                  )}
+                                                </div>
+                                                <div className="text-xs text-muted-foreground whitespace-nowrap">
+                                                  {productItem.description}
+                                                </div>
+                                              </div>
+                                            </LinkComponent>
+                                          );
+                                        }
+                                      )}
+                                    </div>
+                                  </div>
+                                )}
+                            </div>
                           </div>
                         ) : item.dropdownLayout === "rows" ? (
                           <div className="divide-y divide-border">
-                            {item.dropdownSections?.map((section) => (
-                              <div key={section.title} className="p-4">
-                                <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
-                                  <GradientText>{section.title}</GradientText>
-                                </h3>
-                                <div className="grid grid-cols-2 gap-1">
-                                  {section.items.map((dropdownItem) => {
+                            {item.dropdownSections?.map((section) => {
+                              const rowCount = Math.ceil(
+                                section.items.length / 2
+                              );
+                              return (
+                                <div key={section.title} className="p-4">
+                                  <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
+                                    <GradientText>{section.title}</GradientText>
+                                  </h3>
+                                  <div
+                                    className="grid grid-flow-col gap-1"
+                                    style={{
+                                      gridTemplateRows: `repeat(${rowCount}, auto)`,
+                                    }}
+                                  >
+                                    {section.items.map((dropdownItem) => {
                                     const Icon = dropdownItem.icon;
                                     const isExternal =
                                       "isExternal" in dropdownItem &&
@@ -1172,9 +1463,10 @@ export function Navbar() {
                                       </LinkComponent>
                                     );
                                   })}
+                                  </div>
                                 </div>
-                              </div>
-                            ))}
+                              );
+                            })}
                           </div>
                         ) : (
                           <div className="flex divide-x divide-border">
