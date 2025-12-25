@@ -439,10 +439,12 @@ export function PlaceholdersAndVanishInput({
       className={cn(
         "w-full relative p-2.5",
         "bg-white/30 dark:bg-black/20 backdrop-blur-lg",
-        "border border-border shadow-2xl",
+        "shadow-2xl",
         "transition-all duration-300 ease-out",
         value && "bg-white/30 dark:bg-black/40",
-        hasDropdown ? "rounded-t-2xl rounded-b-none border-b-0" : "rounded-full"
+        hasDropdown
+          ? "rounded-t-2xl rounded-b-none border-t border-x border-gray-400 dark:border-gray-500"
+          : "rounded-full border border-border"
       )}
       onSubmit={handleSubmit}
     >

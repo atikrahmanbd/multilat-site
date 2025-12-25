@@ -41,8 +41,10 @@ export function DomainSearchResults({
       >
         <div
           className={cn(
-            "bg-card/95 backdrop-blur-sm border-x border-b border-border p-4",
-            isConnected ? "rounded-b-xl border-t-0" : "rounded-xl border"
+            "bg-card/95 backdrop-blur-sm p-4",
+            isConnected
+              ? "rounded-b-xl border-x border-b border-gray-400 dark:border-gray-500"
+              : "rounded-xl border border-border"
           )}
         >
           <div className="flex items-center justify-center gap-3">
@@ -78,7 +80,7 @@ export function DomainSearchResults({
         className={cn(
           "bg-card/95 backdrop-blur-sm overflow-hidden",
           isConnected
-            ? "rounded-b-xl border-x border-b border-border"
+            ? "rounded-b-xl border-x border-b border-gray-400 dark:border-gray-500"
             : "rounded-xl border border-border"
         )}
       >
