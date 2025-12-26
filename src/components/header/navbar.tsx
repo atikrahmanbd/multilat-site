@@ -20,7 +20,6 @@ import {
   // Domains & Hosting
   Cloud,
   HardDrive,
-  LayoutDashboard,
   Search,
   MapPin,
   Network,
@@ -92,6 +91,56 @@ import {
   TailwindConnectButton,
 } from "@/components/ui/buttons";
 import GradientText from "@/components/ui/gradient-text";
+import { cn } from "@/lib/utils";
+
+// Badge Types and Configuration
+type BadgeType = "new" | "hot" | "free" | "popular" | "open-source" | "beta";
+
+const badgeConfig: Record<BadgeType, { label: string; className: string }> = {
+  new: {
+    label: "New",
+    className:
+      "bg-green-500/15 text-green-600 dark:text-green-400 ring-green-500/30",
+  },
+  hot: {
+    label: "Hot",
+    className: "bg-red-500/15 text-red-600 dark:text-red-400 ring-red-500/30",
+  },
+  free: {
+    label: "Free",
+    className: "bg-primary/15 text-primary ring-primary/30",
+  },
+  popular: {
+    label: "Popular",
+    className:
+      "bg-purple-500/15 text-purple-600 dark:text-purple-400 ring-purple-500/30",
+  },
+  "open-source": {
+    label: "Open Source",
+    className:
+      "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 ring-emerald-500/30",
+  },
+  beta: {
+    label: "Beta",
+    className:
+      "bg-amber-500/15 text-amber-600 dark:text-amber-400 ring-amber-500/30",
+  },
+};
+
+// Menu Badge Component
+function MenuBadge({ type }: { type: BadgeType }) {
+  const config = badgeConfig[type];
+  return (
+    <span
+      className={cn(
+        "ml-1.5 px-1.5 py-0.25 text-[9px] font-semibold uppercase rounded-full ring-1 whitespace-nowrap",
+        config.className
+      )}
+    >
+      {config.label}
+    </span>
+  );
+}
 
 export function Navbar() {
   const pathname = usePathname();
@@ -158,37 +207,41 @@ export function Navbar() {
       dropdownLayout: "rows",
       dropdownSections: [
         {
-          title: "Hosting & Domains",
+          title: "Domains & Hosting",
           titleHref: "/hosting",
           items: [
             {
               label: "Domains",
               href: "/hosting/domains",
               description: "Register & Manage Domain Names",
+              badge: "hot" as BadgeType,
               icon: Globe,
             },
             {
               label: "Performance Hosting",
               href: "/hosting/performance-hosting",
               description: "Fast & Reliable Web Hosting",
+              badge: "popular" as BadgeType,
               icon: Server,
             },
             {
               label: "Cloud/VPS Servers",
               href: "/hosting/cloud-vps-servers",
               description: "Scalable Cloud Infrastructure",
+              badge: "new" as BadgeType,
               icon: Cloud,
             },
             {
               label: "Dedicated Servers",
               href: "/hosting/dedicated-servers",
               description: "Full Server Control & Power",
+              badge: "new" as BadgeType,
               icon: HardDrive,
             },
           ],
         },
         {
-          title: "Useful Tools",
+          title: "Free Useful Tools",
           titleHref: "/tools",
           items: [
             {
@@ -266,6 +319,7 @@ export function Navbar() {
               label: "360° Digital Marketing",
               href: "/marketing/360-digital-marketing",
               description: "Complete Marketing Solutions",
+              badge: "hot" as BadgeType,
               icon: Target,
             },
             {
@@ -308,12 +362,14 @@ export function Navbar() {
               label: "AI Content Creation",
               href: "/marketing/ai-content-creation",
               description: "AI-Powered Content",
+              badge: "new" as BadgeType,
               icon: Bot,
             },
             {
               label: "AI Marketing Automation",
               href: "/marketing/ai-marketing-automation",
               description: "Automate With AI",
+              badge: "new" as BadgeType,
               icon: Sparkles,
             },
             {
@@ -338,6 +394,7 @@ export function Navbar() {
               label: "Social Media Ads",
               href: "/marketing/paid-advertising/social-media-ads",
               description: "Meta (FB, Insta), TikTok, X, LinkedIn",
+              badge: "hot" as BadgeType,
               icon: Megaphone,
             },
             {
@@ -403,6 +460,7 @@ export function Navbar() {
                   href: "/solutions/web-development/elementor-development",
                   description: "Visual Page Builder",
                   icon: SiElementor,
+                  badge: "popular" as BadgeType,
                 },
                 {
                   label: "UI/UX Design",
@@ -428,6 +486,7 @@ export function Navbar() {
                   href: "/solutions/ecommerce-development/shopify-development",
                   description: "Shopify Store Setup",
                   icon: SiShopify,
+                  badge: "hot" as BadgeType,
                 },
                 {
                   label: "WooCommerce Development",
@@ -446,6 +505,39 @@ export function Navbar() {
                   href: "/solutions/ecommerce-development/custom-ecommerce",
                   description: "Tailored Online Stores",
                   icon: Boxes,
+                },
+              ],
+            },
+            {
+              title: "Frontend Development",
+              titleHref: "/solutions/frontend-development",
+              gridCols: 2,
+              items: [
+                {
+                  label: "React Development",
+                  href: "/solutions/frontend-development#react",
+                  description: "React.js Applications",
+                  icon: SiReact,
+                },
+                {
+                  label: "Next.js Development",
+                  href: "/solutions/frontend-development#nextjs",
+                  description: "Full-Stack React",
+                  icon: SiNextdotjs,
+                  badge: "hot" as BadgeType,
+                },
+                {
+                  label: "Vue.js Development",
+                  href: "/solutions/frontend-development#vuejs",
+                  description: "Vue.js Applications",
+                  icon: SiVuedotjs,
+                },
+                {
+                  label: "Tailwind CSS",
+                  href: "/solutions/frontend-development#tailwind",
+                  description: "Modern CSS Framework",
+                  icon: SiTailwindcss,
+                  badge: "popular" as BadgeType,
                 },
               ],
             },
@@ -477,37 +569,6 @@ export function Navbar() {
                   href: "/solutions/mobile-app-development#react-native",
                   description: "Hybrid Mobile Apps",
                   icon: SiReact,
-                },
-              ],
-            },
-            {
-              title: "Frontend Development",
-              titleHref: "/solutions/frontend-development",
-              gridCols: 2,
-              items: [
-                {
-                  label: "React Development",
-                  href: "/solutions/frontend-development#react",
-                  description: "React.js Applications",
-                  icon: SiReact,
-                },
-                {
-                  label: "Next.js Development",
-                  href: "/solutions/frontend-development#nextjs",
-                  description: "Full-Stack React",
-                  icon: SiNextdotjs,
-                },
-                {
-                  label: "Vue.js Development",
-                  href: "/solutions/frontend-development#vuejs",
-                  description: "Vue.js Applications",
-                  icon: SiVuedotjs,
-                },
-                {
-                  label: "Tailwind CSS",
-                  href: "/solutions/frontend-development#tailwind",
-                  description: "Modern CSS Framework",
-                  icon: SiTailwindcss,
                 },
               ],
             },
@@ -591,7 +652,7 @@ export function Navbar() {
         },
       ],
       dropdownBottomSection: {
-        title: "Our Brands / Additional Services",
+        title: "Our Products / Additional Services",
         gridCols: 2,
         items: [
           {
@@ -609,26 +670,41 @@ export function Navbar() {
             isExternal: true,
           },
           {
+            label: "FullStack Crew",
+            href: "https://fullstackcrew.com",
+            description: "All Inclusive BPO Solutions",
+            image: "/our-brands/fullstack-crew.jpg",
+            isExternal: true,
+          },
+          {
             label: "Sendsfer",
             href: "https://sendsfer.com",
             description: "File Transfer w/ Ease",
+            badge: "open-source" as BadgeType,
             icon: Send,
             isExternal: true,
           },
           {
-            label: "Ruxuly",
-            href: "https://ruxuly.com",
-            description: "Online Store Front of Luxury Products",
-            image: "/our-brands/ruxuly.jpg",
+            label: "Desk Optic",
+            href: "https://deskoptic.com",
+            description: "Desktop Time & Activity Tracking",
+            badge: "open-source" as BadgeType,
+            icon: Clock,
             isExternal: true,
           },
           {
-            label: "Onco Story",
-            href: "https://oncostory.org",
-            description: "Cancer Survivor Stories of Strength",
-            image: "/our-brands/oncostory.jpg",
+            label: "Multilat Feed",
+            href: "https://feed.multilat.xyz",
+            description: "Automated Bank Feed For Xero",
+            icon: Rss,
             isExternal: true,
           },
+        ],
+      },
+      dropdownSocialContributionSection: {
+        title: "Our Social Contributions",
+        gridCols: 2,
+        items: [
           {
             label: "Joyee",
             href: "https://joyee.com.bd",
@@ -643,24 +719,11 @@ export function Navbar() {
             icon: Scale,
             isExternal: true,
           },
-        ],
-      },
-      dropdownProductsSection: {
-        title: "Our Products / Tools",
-        gridCols: 2,
-        items: [
           {
-            label: "Multilat Feed",
-            href: "https://feed.multilat.xyz",
-            description: "Automated Bank Feed For Xero",
-            icon: Rss,
-            isExternal: true,
-          },
-          {
-            label: "Multilat Time",
-            href: "https://time.multilat.xyz",
-            description: "Time and Project Management For Teams",
-            icon: Clock,
+            label: "Onco Story",
+            href: "https://oncostory.org",
+            description: "Cancer Survivor Stories of Strength",
+            image: "/our-brands/oncostory.jpg",
             isExternal: true,
           },
         ],
@@ -681,316 +744,62 @@ export function Navbar() {
     },
   ];
 
-  // Mobile menu - Hosting sections (matching desktop)
-  const mobileHostingSections = [
-    {
-      title: "Hosting & Domains",
-      titleHref: "/hosting",
-      items: [
-        { label: "Domains", href: "/hosting/domains", icon: Globe },
-        {
-          label: "Performance Hosting",
-          href: "/hosting/performance-hosting",
-          icon: Server,
-        },
-        {
-          label: "Cloud/VPS Servers",
-          href: "/hosting/cloud-vps-servers",
-          icon: Cloud,
-        },
-        {
-          label: "Dedicated Servers",
-          href: "/hosting/dedicated-servers",
-          icon: HardDrive,
-        },
-      ],
-    },
-    {
-      title: "Useful Tools",
-      titleHref: "/tools",
-      items: [
-        {
-          label: "Go To Dashboard",
-          href: "https://hub.multilat.xyz",
-          icon: LayoutDashboard,
-          isExternal: true,
-        },
-        { label: "WHOIS Lookup", href: "/tools/whois-lookup", icon: Search },
-        { label: "IP Lookup", href: "/tools/ip-lookup", icon: MapPin },
-        { label: "DNS Lookup", href: "/tools/dns-lookup", icon: Network },
-        { label: "SSL Checker", href: "/tools/ssl-checker", icon: ShieldCheck },
-        {
-          label: "HTTP Header Checker",
-          href: "/tools/http-header-checker",
-          icon: FileText,
-        },
-        { label: "Speed Test", href: "/tools/speed-test", icon: Gauge },
-        { label: "Ping Test", href: "/tools/ping-test", icon: Radio },
-        { label: "Traceroute", href: "/tools/traceroute", icon: Route },
-      ],
-    },
-  ];
+  // Menu item type for mobile rendering
+  type MobileMenuItem = {
+    label: string;
+    href: string;
+    description?: string;
+    icon?: React.ComponentType<{ className?: string }>;
+    image?: string;
+    badge?: BadgeType;
+    isExternal?: boolean;
+  };
 
-  // Mobile menu - Marketing sections (matching desktop)
-  const mobileMarketingSections = [
-    {
-      title: "Core Marketing Strategies",
-      titleHref: "/marketing",
-      items: [
-        {
-          label: "360° Digital Marketing",
-          href: "/marketing/360-digital-marketing",
-          icon: Target,
-        },
-        {
-          label: "Search Engine Optimization",
-          href: "/marketing/search-engine-optimization",
-          icon: TrendingUp,
-        },
-        {
-          label: "Social Media Marketing",
-          href: "/marketing/social-media-marketing",
-          icon: Share2,
-        },
-        {
-          label: "Content Marketing",
-          href: "/marketing/content-marketing",
-          icon: PenTool,
-        },
-        {
-          label: "Reputation Management",
-          href: "/marketing/reputation-management",
-          icon: Star,
-        },
-        {
-          label: "Lead Generation",
-          href: "/marketing/lead-generation",
-          icon: Users,
-        },
-        {
-          label: "Email Marketing",
-          href: "/marketing/email-marketing",
-          icon: MailOpen,
-        },
-        {
-          label: "AI Content Creation",
-          href: "/marketing/ai-content-creation",
-          icon: Bot,
-        },
-        {
-          label: "AI Marketing Automation",
-          href: "/marketing/ai-marketing-automation",
-          icon: Sparkles,
-        },
-        {
-          label: "Influencer Marketing",
-          href: "/marketing/influencer-marketing",
-          icon: UserCheck,
-        },
-      ],
-    },
-    {
-      title: "Paid Advertising",
-      titleHref: "/marketing/paid-advertising",
-      items: [
-        {
-          label: "Google Ads",
-          href: "/marketing/paid-advertising/google-ads",
-          icon: CircleDollarSign,
-        },
-        {
-          label: "Social Media Ads",
-          href: "/marketing/paid-advertising/social-media-ads",
-          icon: Megaphone,
-        },
-        {
-          label: "PPC Campaign Management",
-          href: "/marketing/paid-advertising/ppc-campaign-management",
-          icon: MousePointerClick,
-        },
-        {
-          label: "Retargeting & Remarketing",
-          href: "/marketing/paid-advertising/retargeting-remarketing",
-          icon: RefreshCcw,
-        },
-        {
-          label: "Campaign Optimization",
-          href: "/marketing/paid-advertising/campaign-optimization",
-          icon: BarChart3,
-        },
-      ],
-    },
-  ];
+  type MobileSection = {
+    title: string;
+    titleHref?: string;
+    items: MobileMenuItem[];
+  };
 
-  // Mobile menu - Solutions sections (matching desktop)
-  const mobileSolutionsSections = [
-    {
-      title: "Web Development",
-      titleHref: "/solutions/web-development",
-      items: [
-        {
-          label: "Landing Page Design",
-          href: "/solutions/web-development/landing-page-design",
-          icon: Layout,
-        },
-        {
-          label: "WordPress Development",
-          href: "/solutions/web-development/wordpress-development",
-          icon: SiWordpress,
-        },
-        {
-          label: "Elementor Development",
-          href: "/solutions/web-development/elementor-development",
-          icon: SiElementor,
-        },
-        {
-          label: "UI/UX Design",
-          href: "/solutions/web-development/ui-ux-design",
-          icon: PenSquare,
-        },
-        {
-          label: "Custom Website",
-          href: "/solutions/web-development/custom-website",
-          icon: MonitorSmartphone,
-        },
-      ],
-    },
-    {
-      title: "E-commerce Development",
-      titleHref: "/solutions/ecommerce-development",
-      items: [
-        {
-          label: "Shopify Development",
-          href: "/solutions/ecommerce-development/shopify-development",
-          icon: SiShopify,
-        },
-        {
-          label: "WooCommerce Development",
-          href: "/solutions/ecommerce-development/woocommerce-development",
-          icon: SiWoo,
-        },
-        {
-          label: "BigCommerce Development",
-          href: "/solutions/ecommerce-development/bigcommerce-development",
-          icon: SiBigcommerce,
-        },
-        {
-          label: "Custom E-commerce",
-          href: "/solutions/ecommerce-development/custom-ecommerce",
-          icon: Boxes,
-        },
-      ],
-    },
-    {
-      title: "Mobile App Development",
-      titleHref: "/solutions/mobile-app-development",
-      items: [
-        {
-          label: "iOS App Development",
-          href: "/solutions/mobile-app-development#ios",
-          icon: FaApple,
-        },
-        {
-          label: "Android App Development",
-          href: "/solutions/mobile-app-development#android",
-          icon: FaAndroid,
-        },
-        {
-          label: "Flutter Development",
-          href: "/solutions/mobile-app-development#flutter",
-          icon: SiFlutter,
-        },
-        {
-          label: "React Native Development",
-          href: "/solutions/mobile-app-development#react-native",
-          icon: SiReact,
-        },
-      ],
-    },
-    {
-      title: "Frontend Development",
-      titleHref: "/solutions/frontend-development",
-      items: [
-        {
-          label: "React Development",
-          href: "/solutions/frontend-development#react",
-          icon: SiReact,
-        },
-        {
-          label: "Next.js Development",
-          href: "/solutions/frontend-development#nextjs",
-          icon: SiNextdotjs,
-        },
-        {
-          label: "Vue.js Development",
-          href: "/solutions/frontend-development#vuejs",
-          icon: SiVuedotjs,
-        },
-        {
-          label: "Tailwind CSS",
-          href: "/solutions/frontend-development#tailwind",
-          icon: SiTailwindcss,
-        },
-      ],
-    },
-    {
-      title: "Backend Development",
-      titleHref: "/solutions/backend-development",
-      items: [
-        {
-          label: "PHP/Laravel Development",
-          href: "/solutions/backend-development#php-laravel",
-          icon: SiLaravel,
-        },
-        {
-          label: "Python/Django Development",
-          href: "/solutions/backend-development#python-django",
-          icon: SiDjango,
-        },
-        {
-          label: "Node.js Development",
-          href: "/solutions/backend-development#nodejs",
-          icon: SiNodedotjs,
-        },
-        {
-          label: "RESTful APIs",
-          href: "/solutions/backend-development#restful-apis",
-          icon: GitBranch,
-        },
-        {
-          label: "Microservices",
-          href: "/solutions/backend-development#microservices",
-          icon: Boxes,
-        },
-      ],
-    },
-    {
-      title: "IT Solutions",
-      titleHref: "/solutions/it-solutions",
-      items: [
-        {
-          label: "IT Consulting",
-          href: "/solutions/it-solutions/it-consulting",
-          icon: Lightbulb,
-        },
-        {
-          label: "Managed IT Services",
-          href: "/solutions/it-solutions/managed-it-services",
-          icon: Headphones,
-        },
-        {
-          label: "Digital Transformation",
-          href: "/solutions/it-solutions/digital-transformation",
-          icon: Workflow,
-        },
-        {
-          label: "Cloud & DevOps",
-          href: "/solutions/it-solutions/cloud-devops",
-          icon: SiAmazonwebservices,
-        },
-      ],
-    },
-  ];
+  // Helper function to get mobile sections from desktop menu item
+  const getMobileSectionsFromMenuItem = (menuLabel: string): MobileSection[] => {
+    const menuItem = menuItems.find((item) => item.label === menuLabel);
+    if (!menuItem) return [];
+
+    // For Hosting and Marketing - use dropdownSections directly
+    if (menuItem.dropdownSections) {
+      return menuItem.dropdownSections as MobileSection[];
+    }
+
+    // For Solutions - flatten columns and add bottom sections
+    if (menuItem.dropdownColumns) {
+      const sections: MobileSection[] = [];
+
+      // Extract sections from all columns
+      menuItem.dropdownColumns.forEach((column) => {
+        column.sections.forEach((section) => {
+          sections.push(section as MobileSection);
+        });
+      });
+
+      // Add bottom section if exists
+      if ("dropdownBottomSection" in menuItem && menuItem.dropdownBottomSection) {
+        sections.push(menuItem.dropdownBottomSection as MobileSection);
+      }
+
+      // Add social contribution section if exists
+      if (
+        "dropdownSocialContributionSection" in menuItem &&
+        menuItem.dropdownSocialContributionSection
+      ) {
+        sections.push(menuItem.dropdownSocialContributionSection as MobileSection);
+      }
+
+      return sections;
+    }
+
+    return [];
+  };
 
   // Mobile menu - Bottom items
   const mobileBottomItems = [
@@ -1093,7 +902,7 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
                           >
-                            {mobileHostingSections.map((section) => (
+                            {getMobileSectionsFromMenuItem("Hosting").map((section) => (
                               <div key={section.title} className="mb-2">
                                 <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
                                   {section.title}
@@ -1101,8 +910,33 @@ export function Navbar() {
                                 <ul className="space-y-1">
                                   {section.items.map((item) => {
                                     const Icon = item.icon;
-                                    const isExternal =
-                                      "isExternal" in item && item.isExternal;
+                                    const hasImage = item.image;
+                                    const isExternal = item.isExternal;
+                                    const linkContent = (
+                                      <>
+                                        {hasImage ? (
+                                          <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
+                                            <Image
+                                              src={item.image as string}
+                                              alt={item.label}
+                                              width={20}
+                                              height={20}
+                                              className="w-full h-full object-cover"
+                                              unoptimized
+                                            />
+                                          </div>
+                                        ) : Icon ? (
+                                          <Icon className="h-5 w-5 flex-shrink-0" />
+                                        ) : null}
+                                        <span>{item.label}</span>
+                                        {item.badge && (
+                                          <MenuBadge type={item.badge} />
+                                        )}
+                                        {isExternal && (
+                                          <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                                        )}
+                                      </>
+                                    );
                                     return (
                                       <li key={item.href}>
                                         {isExternal ? (
@@ -1115,8 +949,7 @@ export function Navbar() {
                                             }
                                             className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
                                           >
-                                            <Icon className="h-4 w-4 flex-shrink-0" />
-                                            <span>{item.label}</span>
+                                            {linkContent}
                                           </a>
                                         ) : (
                                           <Link
@@ -1130,8 +963,7 @@ export function Navbar() {
                                                 : "text-muted-foreground hover:text-foreground"
                                             }`}
                                           >
-                                            <Icon className="h-4 w-4 flex-shrink-0" />
-                                            <span>{item.label}</span>
+                                            {linkContent}
                                           </Link>
                                         )}
                                       </li>
@@ -1170,7 +1002,7 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
                           >
-                            {mobileMarketingSections.map((section) => (
+                            {getMobileSectionsFromMenuItem("Marketing").map((section) => (
                               <div key={section.title} className="mb-2">
                                 <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
                                   {"titleHref" in section &&
@@ -1190,22 +1022,62 @@ export function Navbar() {
                                 <ul className="space-y-1">
                                   {section.items.map((item) => {
                                     const Icon = item.icon;
+                                    const hasImage = item.image;
+                                    const isExternal = item.isExternal;
+                                    const linkContent = (
+                                      <>
+                                        {hasImage ? (
+                                          <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
+                                            <Image
+                                              src={item.image as string}
+                                              alt={item.label}
+                                              width={20}
+                                              height={20}
+                                              className="w-full h-full object-cover"
+                                              unoptimized
+                                            />
+                                          </div>
+                                        ) : Icon ? (
+                                          <Icon className="h-5 w-5 flex-shrink-0" />
+                                        ) : null}
+                                        <span>{item.label}</span>
+                                        {item.badge && (
+                                          <MenuBadge type={item.badge} />
+                                        )}
+                                        {isExternal && (
+                                          <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                                        )}
+                                      </>
+                                    );
                                     return (
                                       <li key={item.href}>
-                                        <Link
-                                          href={item.href}
-                                          onClick={() =>
-                                            setMobileMenuOpen(false)
-                                          }
-                                          className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
-                                            pathname === item.href
-                                              ? "text-foreground"
-                                              : "text-muted-foreground hover:text-foreground"
-                                          }`}
-                                        >
-                                          <Icon className="h-4 w-4 flex-shrink-0" />
-                                          <span>{item.label}</span>
-                                        </Link>
+                                        {isExternal ? (
+                                          <a
+                                            href={item.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() =>
+                                              setMobileMenuOpen(false)
+                                            }
+                                            className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
+                                          >
+                                            {linkContent}
+                                          </a>
+                                        ) : (
+                                          <Link
+                                            href={item.href}
+                                            onClick={() =>
+                                              setMobileMenuOpen(false)
+                                            }
+                                            className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                              pathname === item.href
+                                                ? "text-foreground"
+                                                : "text-muted-foreground hover:text-foreground"
+                                            }`}
+                                          >
+                                            {linkContent}
+                                          </Link>
+                                        )}
                                       </li>
                                     );
                                   })}
@@ -1242,7 +1114,7 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
                           >
-                            {mobileSolutionsSections.map((section) => (
+                            {getMobileSectionsFromMenuItem("Solutions").map((section) => (
                               <div key={section.title} className="mb-2">
                                 <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
                                   {"titleHref" in section &&
@@ -1262,22 +1134,62 @@ export function Navbar() {
                                 <ul className="space-y-1">
                                   {section.items.map((item) => {
                                     const Icon = item.icon;
+                                    const hasImage = item.image;
+                                    const isExternal = item.isExternal;
+                                    const linkContent = (
+                                      <>
+                                        {hasImage ? (
+                                          <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
+                                            <Image
+                                              src={item.image as string}
+                                              alt={item.label}
+                                              width={20}
+                                              height={20}
+                                              className="w-full h-full object-cover"
+                                              unoptimized
+                                            />
+                                          </div>
+                                        ) : Icon ? (
+                                          <Icon className="h-5 w-5 flex-shrink-0" />
+                                        ) : null}
+                                        <span>{item.label}</span>
+                                        {item.badge && (
+                                          <MenuBadge type={item.badge} />
+                                        )}
+                                        {isExternal && (
+                                          <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                                        )}
+                                      </>
+                                    );
                                     return (
                                       <li key={item.href}>
-                                        <Link
-                                          href={item.href}
-                                          onClick={() =>
-                                            setMobileMenuOpen(false)
-                                          }
-                                          className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
-                                            pathname === item.href
-                                              ? "text-foreground"
-                                              : "text-muted-foreground hover:text-foreground"
-                                          }`}
-                                        >
-                                          <Icon className="h-4 w-4 flex-shrink-0" />
-                                          <span>{item.label}</span>
-                                        </Link>
+                                        {isExternal ? (
+                                          <a
+                                            href={item.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() =>
+                                              setMobileMenuOpen(false)
+                                            }
+                                            className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
+                                          >
+                                            {linkContent}
+                                          </a>
+                                        ) : (
+                                          <Link
+                                            href={item.href}
+                                            onClick={() =>
+                                              setMobileMenuOpen(false)
+                                            }
+                                            className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                              pathname === item.href
+                                                ? "text-foreground"
+                                                : "text-muted-foreground hover:text-foreground"
+                                            }`}
+                                          >
+                                            {linkContent}
+                                          </Link>
+                                        )}
                                       </li>
                                     );
                                   })}
@@ -1631,8 +1543,23 @@ export function Navbar() {
                                                   <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                                 </div>
                                                 <div className="flex-1 min-w-0">
-                                                  <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
+                                                  <div className="flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
                                                     {dropdownItem.label}
+                                                    {(
+                                                      dropdownItem as unknown as {
+                                                        badge?: BadgeType;
+                                                      }
+                                                    ).badge && (
+                                                      <MenuBadge
+                                                        type={
+                                                          (
+                                                            dropdownItem as unknown as {
+                                                              badge: BadgeType;
+                                                            }
+                                                          ).badge
+                                                        }
+                                                      />
+                                                    )}
                                                   </div>
                                                   <div className="text-xs text-muted-foreground whitespace-nowrap">
                                                     {dropdownItem.description}
@@ -1710,8 +1637,23 @@ export function Navbar() {
                                                       <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                                     </div>
                                                     <div className="flex-1 min-w-0">
-                                                      <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
+                                                      <div className="flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
                                                         {dropdownItem.label}
+                                                        {(
+                                                          dropdownItem as unknown as {
+                                                            badge?: BadgeType;
+                                                          }
+                                                        ).badge && (
+                                                          <MenuBadge
+                                                            type={
+                                                              (
+                                                                dropdownItem as unknown as {
+                                                                  badge: BadgeType;
+                                                                }
+                                                              ).badge
+                                                            }
+                                                          />
+                                                        )}
                                                       </div>
                                                       <div className="text-xs text-muted-foreground whitespace-nowrap">
                                                         {
@@ -1738,7 +1680,7 @@ export function Navbar() {
                                         {item.dropdownBottomSection.title}
                                       </GradientText>
                                     </h3>
-                                    <div className="grid grid-cols-2 grid-rows-4 grid-flow-col gap-1">
+                                    <div className="grid grid-cols-2 grid-rows-3 grid-flow-col gap-1">
                                       {item.dropdownBottomSection.items.map(
                                         (brandItem) => {
                                           const isExternal =
@@ -1791,6 +1733,21 @@ export function Navbar() {
                                                   {isExternal && (
                                                     <ExternalLink className="h-3 w-3 text-muted-foreground" />
                                                   )}
+                                                  {(
+                                                    brandItem as unknown as {
+                                                      badge?: BadgeType;
+                                                    }
+                                                  ).badge && (
+                                                    <MenuBadge
+                                                      type={
+                                                        (
+                                                          brandItem as unknown as {
+                                                            badge: BadgeType;
+                                                          }
+                                                        ).badge
+                                                      }
+                                                    />
+                                                  )}
                                                 </div>
                                                 <div className="text-xs text-muted-foreground whitespace-nowrap">
                                                   {brandItem.description}
@@ -1804,20 +1761,26 @@ export function Navbar() {
                                   </div>
                                 )}
                               {/* Products / Tools Row */}
-                              {"dropdownProductsSection" in item &&
-                                item.dropdownProductsSection && (
+                              {"dropdownSocialContributionSection" in item &&
+                                item.dropdownSocialContributionSection && (
                                   <div className="p-4 border-t border-border">
                                     <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
                                       <GradientText>
-                                        {item.dropdownProductsSection.title}
+                                        {
+                                          item.dropdownSocialContributionSection
+                                            .title
+                                        }
                                       </GradientText>
                                     </h3>
                                     <div className="grid grid-cols-2 gap-1">
-                                      {item.dropdownProductsSection.items.map(
+                                      {item.dropdownSocialContributionSection.items.map(
                                         (productItem) => {
                                           const isExternal =
                                             "isExternal" in productItem &&
                                             productItem.isExternal;
+                                          const hasImage =
+                                            "image" in productItem &&
+                                            productItem.image;
                                           const Icon =
                                             "icon" in productItem
                                               ? productItem.icon
@@ -1838,16 +1801,44 @@ export function Navbar() {
                                               {...linkProps}
                                               className="flex items-center gap-3 rounded-md px-2 py-2 transition-colors cursor-pointer group"
                                             >
-                                              {Icon && (
+                                              {hasImage ? (
+                                                <div className="flex-shrink-0 w-8 h-8 rounded-md border border-border bg-muted/50 overflow-hidden group-hover:border-primary/50 transition-colors">
+                                                  <Image
+                                                    src={
+                                                      productItem.image as string
+                                                    }
+                                                    alt={productItem.label}
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-full h-full object-cover"
+                                                    unoptimized
+                                                  />
+                                                </div>
+                                              ) : Icon ? (
                                                 <div className="flex-shrink-0 p-1.5 rounded-md border border-border bg-muted/50 group-hover:border-transparent group-hover:bg-black dark:group-hover:bg-white transition-colors">
                                                   <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                                 </div>
-                                              )}
+                                              ) : null}
                                               <div className="flex-1 min-w-0">
                                                 <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors flex items-center gap-1">
                                                   {productItem.label}
                                                   {isExternal && (
                                                     <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                                                  )}
+                                                  {(
+                                                    productItem as unknown as {
+                                                      badge?: BadgeType;
+                                                    }
+                                                  ).badge && (
+                                                    <MenuBadge
+                                                      type={
+                                                        (
+                                                          productItem as unknown as {
+                                                            badge: BadgeType;
+                                                          }
+                                                        ).badge
+                                                      }
+                                                    />
                                                   )}
                                                 </div>
                                                 <div className="text-xs text-muted-foreground whitespace-nowrap">
@@ -1920,8 +1911,23 @@ export function Navbar() {
                                             <Icon className="h-4 w-4 text-muted-foreground group-hover:text-white dark:group-hover:text-black transition-colors" />
                                           </div>
                                           <div className="flex-1 min-w-0">
-                                            <div className="text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
+                                            <div className="flex items-center gap-1.5 text-sm font-medium text-foreground group-hover:text-primary whitespace-nowrap transition-colors">
                                               {dropdownItem.label}
+                                              {(
+                                                dropdownItem as unknown as {
+                                                  badge?: BadgeType;
+                                                }
+                                              ).badge && (
+                                                <MenuBadge
+                                                  type={
+                                                    (
+                                                      dropdownItem as unknown as {
+                                                        badge: BadgeType;
+                                                      }
+                                                    ).badge
+                                                  }
+                                                />
+                                              )}
                                             </div>
                                             <div className="text-xs text-muted-foreground whitespace-nowrap">
                                               {dropdownItem.description}
