@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   PlusIcon,
   Check,
@@ -817,14 +818,19 @@ function FeatureWithTooltip({
   feature: string;
   tooltip?: string;
 }) {
+  const [open, setOpen] = useState(false);
+
   if (!tooltip) {
     return <span>{feature}</span>;
   }
 
   return (
-    <Tooltip>
+    <Tooltip open={open} onOpenChange={setOpen}>
       <TooltipTrigger asChild>
-        <span className="cursor-help border-b border-transparent hover:border-dashed hover:border-primary hover:text-primary transition-colors">
+        <span
+          className="cursor-help border-b border-transparent hover:border-dashed hover:border-primary hover:text-primary transition-colors"
+          onClick={() => setOpen((prev) => !prev)}
+        >
           {feature}
         </span>
       </TooltipTrigger>
@@ -834,6 +840,7 @@ function FeatureWithTooltip({
         arrowAlign="start"
         sideOffset={8}
         className="max-w-64"
+        onPointerDownOutside={() => setOpen(false)}
       >
         {tooltip}
       </TooltipContent>
