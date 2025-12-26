@@ -22,18 +22,18 @@ export function CommonOrbitalDomainIcons() {
       {/* Central Hub - B.S.T Logo - 20% of container */}
       <div className="w-[20%] aspect-square bg-card absolute inset-0 shrink-0 border z-20 rounded-full m-auto flex items-center justify-center border-border shadow-sm">
         <Image
-          src="/logos/bst-logo-for-light.svg"
+          src="/logos/Multilat-Logo-Icon-Only.svg"
           alt="B.S.T Logo"
-          width={64}
-          height={64}
-          className="w-3/5 h-3/5 dark:hidden hover-shake"
+          width={24}
+          height={24}
+          className="w-12 h-12 dark:hidden hover-shake"
         />
         <Image
-          src="/logos/bst-logo-for-dark.svg"
+          src="/logos/Multilat-Logo-Icon-Only.svg"
           alt="B.S.T Logo"
-          width={64}
-          height={64}
-          className="w-3/5 h-3/5 hidden dark:block hover-shake"
+          width={24}
+          height={24}
+          className="w-12 h-12 hidden dark:block hover-shake"
         />
       </div>
 

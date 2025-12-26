@@ -13,8 +13,6 @@ import {
   Home,
   Globe,
   Server,
-  Palette,
-  Code,
   TrendingUp,
   Building2,
   Mail,
@@ -48,24 +46,14 @@ import {
   BarChart3,
   // Solutions
   Layout,
+  Layers,
   PenSquare,
   MonitorSmartphone,
-  Smartphone,
-  Apple,
-  Layers,
-  Zap,
-  ShoppingCart,
-  ShoppingBag,
-  Store,
-  Database,
   GitBranch,
   Boxes,
-  CloudCog,
   // IT Solutions
   Lightbulb,
-  Lock,
   Headphones,
-  Cpu,
   Workflow,
   // Footer Icons
   Rocket,
@@ -80,6 +68,24 @@ import {
   Clock,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+// Brand Icons From react-icons (Simple Icons)
+import {
+  SiWordpress,
+  SiElementor,
+  SiShopify,
+  SiWoo,
+  SiBigcommerce,
+  SiFlutter,
+  SiReact,
+  SiNextdotjs,
+  SiVuedotjs,
+  SiTailwindcss,
+  SiLaravel,
+  SiDjango,
+  SiNodedotjs,
+  SiAmazonwebservices,
+} from "react-icons/si";
+import { FaAndroid, FaApple } from "react-icons/fa6";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
   HoverBorderGradientButton,
@@ -146,35 +152,36 @@ export function Navbar() {
     },
     {
       label: "Hosting",
-      href: "/domains",
+      href: "/hosting",
       hasDropdown: true,
       dropdownWidth: 600,
       dropdownLayout: "rows",
       dropdownSections: [
         {
-          title: "Domains & Hosting Services",
+          title: "Hosting & Domains",
+          titleHref: "/hosting",
           items: [
             {
               label: "Domains",
-              href: "/domains",
+              href: "/hosting/domains",
               description: "Register & Manage Domain Names",
               icon: Globe,
             },
             {
-              label: "High-Performance Hosting",
-              href: "/high-performance-web-hosting",
+              label: "Performance Hosting",
+              href: "/hosting/performance-hosting",
               description: "Fast & Reliable Web Hosting",
               icon: Server,
             },
             {
               label: "Cloud/VPS Servers",
-              href: "/cloud-and-vps-servers",
+              href: "/hosting/cloud-vps-servers",
               description: "Scalable Cloud Infrastructure",
               icon: Cloud,
             },
             {
               label: "Dedicated Servers",
-              href: "/dedicated-servers",
+              href: "/hosting/dedicated-servers",
               description: "Full Server Control & Power",
               icon: HardDrive,
             },
@@ -182,10 +189,11 @@ export function Navbar() {
         },
         {
           title: "Useful Tools",
+          titleHref: "/tools",
           items: [
             {
               label: "WHOIS Lookup",
-              href: "/tools/whois",
+              href: "/tools/whois-lookup",
               description: "Domain Ownership Info",
               icon: Search,
             },
@@ -209,7 +217,7 @@ export function Navbar() {
             },
             {
               label: "HTTP Header Checker",
-              href: "/tools/http-headers",
+              href: "/tools/http-header-checker",
               description: "Inspect HTTP Headers",
               icon: FileText,
             },
@@ -221,7 +229,7 @@ export function Navbar() {
             },
             {
               label: "Ping Test",
-              href: "/tools/ping",
+              href: "/tools/ping-test",
               description: "Check Server Response",
               icon: Radio,
             },
@@ -318,35 +326,35 @@ export function Navbar() {
         },
         {
           title: "Paid Advertising",
-          titleHref: "/paid-marketing",
+          titleHref: "/marketing/paid-advertising",
           items: [
             {
               label: "Google Ads",
-              href: "/paid-marketing/google-ads",
+              href: "/marketing/paid-advertising/google-ads",
               description: "Search, Display & YouTube",
               icon: CircleDollarSign,
             },
             {
               label: "Social Media Ads",
-              href: "/paid-marketing/social-media-ads",
-              description: "Meta, Instagram, LinkedIn",
+              href: "/marketing/paid-advertising/social-media-ads",
+              description: "Meta (FB, Insta), TikTok, X, LinkedIn",
               icon: Megaphone,
             },
             {
               label: "PPC Campaign Management",
-              href: "/paid-marketing/ppc-campaign-management",
+              href: "/marketing/paid-advertising/ppc-campaign-management",
               description: "Pay-Per-Click Campaigns",
               icon: MousePointerClick,
             },
             {
               label: "Retargeting & Remarketing",
-              href: "/paid-marketing/retargeting-remarketing",
+              href: "/marketing/paid-advertising/retargeting-remarketing",
               description: "Re-engage Your Visitors",
               icon: RefreshCcw,
             },
             {
               label: "Campaign Optimization",
-              href: "/paid-marketing/campaign-optimization",
+              href: "/marketing/paid-advertising/campaign-optimization",
               description: "Maximize Your ROI",
               icon: BarChart3,
             },
@@ -388,19 +396,25 @@ export function Navbar() {
                   label: "WordPress Development",
                   href: "/solutions/web-development/wordpress-development",
                   description: "WordPress Expertise",
-                  icon: Code,
+                  icon: SiWordpress,
                 },
                 {
-                  label: "Custom Website",
-                  href: "/solutions/web-development/custom-website",
-                  description: "Custom Web Solutions",
-                  icon: MonitorSmartphone,
+                  label: "Elementor Development",
+                  href: "/solutions/web-development/elementor-development",
+                  description: "Visual Page Builder",
+                  icon: SiElementor,
                 },
                 {
                   label: "UI/UX Design",
                   href: "/solutions/web-development/ui-ux-design",
                   description: "User-Centered Design",
                   icon: PenSquare,
+                },
+                {
+                  label: "Custom Website",
+                  href: "/solutions/web-development/custom-website",
+                  description: "Custom Web Solutions",
+                  icon: MonitorSmartphone,
                 },
               ],
             },
@@ -413,19 +427,19 @@ export function Navbar() {
                   label: "Shopify Development",
                   href: "/solutions/ecommerce-development/shopify-development",
                   description: "Shopify Store Setup",
-                  icon: ShoppingBag,
+                  icon: SiShopify,
                 },
                 {
                   label: "WooCommerce Development",
                   href: "/solutions/ecommerce-development/woocommerce-development",
                   description: "WordPress E-commerce",
-                  icon: ShoppingCart,
+                  icon: SiWoo,
                 },
                 {
                   label: "BigCommerce Development",
                   href: "/solutions/ecommerce-development/bigcommerce-development",
                   description: "Enterprise E-commerce",
-                  icon: Store,
+                  icon: SiBigcommerce,
                 },
                 {
                   label: "Custom E-commerce",
@@ -444,25 +458,25 @@ export function Navbar() {
                   label: "iOS App Development",
                   href: "/solutions/mobile-app-development#ios",
                   description: "Native iOS Apps",
-                  icon: Apple,
+                  icon: FaApple,
                 },
                 {
                   label: "Android App Development",
                   href: "/solutions/mobile-app-development#android",
                   description: "Native Android Apps",
-                  icon: Smartphone,
+                  icon: FaAndroid,
                 },
                 {
                   label: "Flutter Development",
                   href: "/solutions/mobile-app-development#flutter",
                   description: "Cross-Platform Apps",
-                  icon: Layers,
+                  icon: SiFlutter,
                 },
                 {
                   label: "React Native Development",
                   href: "/solutions/mobile-app-development#react-native",
                   description: "Hybrid Mobile Apps",
-                  icon: Zap,
+                  icon: SiReact,
                 },
               ],
             },
@@ -475,25 +489,25 @@ export function Navbar() {
                   label: "React Development",
                   href: "/solutions/frontend-development#react",
                   description: "React.js Applications",
-                  icon: Code,
+                  icon: SiReact,
                 },
                 {
                   label: "Next.js Development",
                   href: "/solutions/frontend-development#nextjs",
                   description: "Full-Stack React",
-                  icon: Zap,
+                  icon: SiNextdotjs,
                 },
                 {
                   label: "Vue.js Development",
                   href: "/solutions/frontend-development#vuejs",
                   description: "Vue.js Applications",
-                  icon: Layers,
+                  icon: SiVuedotjs,
                 },
                 {
                   label: "Tailwind CSS",
                   href: "/solutions/frontend-development#tailwind",
                   description: "Modern CSS Framework",
-                  icon: Palette,
+                  icon: SiTailwindcss,
                 },
               ],
             },
@@ -508,45 +522,33 @@ export function Navbar() {
               items: [
                 {
                   label: "PHP/Laravel Development",
-                  href: "/solutions/backend-development#laravel",
+                  href: "/solutions/backend-development#php-laravel",
                   description: "PHP Framework",
-                  icon: Code,
+                  icon: SiLaravel,
                 },
                 {
                   label: "Python/Django Development",
-                  href: "/solutions/backend-development#django",
+                  href: "/solutions/backend-development#python-django",
                   description: "Python Framework",
-                  icon: Database,
+                  icon: SiDjango,
                 },
                 {
                   label: "Node.js Development",
                   href: "/solutions/backend-development#nodejs",
                   description: "JavaScript Backend",
-                  icon: Server,
+                  icon: SiNodedotjs,
                 },
                 {
                   label: "RESTful APIs",
-                  href: "/solutions/backend-development#restful-api",
+                  href: "/solutions/backend-development#restful-apis",
                   description: "API Development",
                   icon: GitBranch,
-                },
-                {
-                  label: "GraphQL Development",
-                  href: "/solutions/backend-development#graphql",
-                  description: "GraphQL APIs",
-                  icon: Network,
                 },
                 {
                   label: "Microservices",
                   href: "/solutions/backend-development#microservices",
                   description: "Scalable Architecture",
                   icon: Boxes,
-                },
-                {
-                  label: "Cloud & DevOps",
-                  href: "/solutions/backend-development#cloud-devops",
-                  description: "AWS Infrastructure",
-                  icon: CloudCog,
                 },
               ],
             },
@@ -561,39 +563,27 @@ export function Navbar() {
               items: [
                 {
                   label: "IT Consulting",
-                  href: "/solutions/it-solutions#consulting",
+                  href: "/solutions/it-solutions/it-consulting",
                   description: "Strategic IT Guidance",
                   icon: Lightbulb,
                 },
                 {
-                  label: "Cloud Infrastructure",
-                  href: "/solutions/it-solutions#cloud-infrastructure",
-                  description: "Cloud Architecture",
-                  icon: Cloud,
-                },
-                {
-                  label: "Security & Compliance",
-                  href: "/solutions/it-solutions#security-compliance",
-                  description: "Protect Your Business",
-                  icon: Lock,
-                },
-                {
                   label: "Managed IT Services",
-                  href: "/solutions/it-solutions#managed-it-services",
+                  href: "/solutions/it-solutions/managed-it-services",
                   description: "24/7 IT Support",
                   icon: Headphones,
                 },
                 {
-                  label: "Custom Software",
-                  href: "/solutions/it-solutions#custom-software",
-                  description: "Bespoke Applications",
-                  icon: Cpu,
-                },
-                {
                   label: "Digital Transformation",
-                  href: "/solutions/it-solutions#digital-transformation",
+                  href: "/solutions/it-solutions/digital-transformation",
                   description: "Modernize Your Business",
                   icon: Workflow,
+                },
+                {
+                  label: "Cloud & DevOps",
+                  href: "/solutions/it-solutions/cloud-devops",
+                  description: "AWS Infrastructure",
+                  icon: SiAmazonwebservices,
                 },
               ],
             },
@@ -601,7 +591,7 @@ export function Navbar() {
         },
       ],
       dropdownBottomSection: {
-        title: "Our Brands",
+        title: "Our Brands / Additional Services",
         gridCols: 2,
         items: [
           {
@@ -694,25 +684,48 @@ export function Navbar() {
   // Mobile menu - Hosting sections (matching desktop)
   const mobileHostingSections = [
     {
-      title: "Domains & Hosting Services",
+      title: "Hosting & Domains",
+      titleHref: "/hosting",
       items: [
-        { label: "Domains", href: "/domains", icon: Globe },
-        { label: "High-Performance Hosting", href: "/high-performance-web-hosting", icon: Server },
-        { label: "Cloud/VPS Servers", href: "/cloud-and-vps-servers", icon: Cloud },
-        { label: "Dedicated Servers", href: "/dedicated-servers", icon: HardDrive },
+        { label: "Domains", href: "/hosting/domains", icon: Globe },
+        {
+          label: "Performance Hosting",
+          href: "/hosting/performance-hosting",
+          icon: Server,
+        },
+        {
+          label: "Cloud/VPS Servers",
+          href: "/hosting/cloud-vps-servers",
+          icon: Cloud,
+        },
+        {
+          label: "Dedicated Servers",
+          href: "/hosting/dedicated-servers",
+          icon: HardDrive,
+        },
       ],
     },
     {
       title: "Useful Tools",
+      titleHref: "/tools",
       items: [
-        { label: "Go To Dashboard", href: "https://hub.multilat.xyz", icon: LayoutDashboard, isExternal: true },
-        { label: "WHOIS Lookup", href: "/tools/whois", icon: Search },
+        {
+          label: "Go To Dashboard",
+          href: "https://hub.multilat.xyz",
+          icon: LayoutDashboard,
+          isExternal: true,
+        },
+        { label: "WHOIS Lookup", href: "/tools/whois-lookup", icon: Search },
         { label: "IP Lookup", href: "/tools/ip-lookup", icon: MapPin },
         { label: "DNS Lookup", href: "/tools/dns-lookup", icon: Network },
         { label: "SSL Checker", href: "/tools/ssl-checker", icon: ShieldCheck },
-        { label: "HTTP Header Checker", href: "/tools/http-headers", icon: FileText },
+        {
+          label: "HTTP Header Checker",
+          href: "/tools/http-header-checker",
+          icon: FileText,
+        },
         { label: "Speed Test", href: "/tools/speed-test", icon: Gauge },
-        { label: "Ping Test", href: "/tools/ping", icon: Radio },
+        { label: "Ping Test", href: "/tools/ping-test", icon: Radio },
         { label: "Traceroute", href: "/tools/traceroute", icon: Route },
       ],
     },
@@ -724,27 +737,87 @@ export function Navbar() {
       title: "Core Marketing Strategies",
       titleHref: "/marketing",
       items: [
-        { label: "360° Digital Marketing", href: "/marketing/360-digital-marketing", icon: Target },
-        { label: "Search Engine Optimization", href: "/marketing/search-engine-optimization", icon: TrendingUp },
-        { label: "Social Media Marketing", href: "/marketing/social-media-marketing", icon: Share2 },
-        { label: "Content Marketing", href: "/marketing/content-marketing", icon: PenTool },
-        { label: "Reputation Management", href: "/marketing/reputation-management", icon: Star },
-        { label: "Lead Generation", href: "/marketing/lead-generation", icon: Users },
-        { label: "Email Marketing", href: "/marketing/email-marketing", icon: MailOpen },
-        { label: "AI Content Creation", href: "/marketing/ai-content-creation", icon: Bot },
-        { label: "AI Marketing Automation", href: "/marketing/ai-marketing-automation", icon: Sparkles },
-        { label: "Influencer Marketing", href: "/marketing/influencer-marketing", icon: UserCheck },
+        {
+          label: "360° Digital Marketing",
+          href: "/marketing/360-digital-marketing",
+          icon: Target,
+        },
+        {
+          label: "Search Engine Optimization",
+          href: "/marketing/search-engine-optimization",
+          icon: TrendingUp,
+        },
+        {
+          label: "Social Media Marketing",
+          href: "/marketing/social-media-marketing",
+          icon: Share2,
+        },
+        {
+          label: "Content Marketing",
+          href: "/marketing/content-marketing",
+          icon: PenTool,
+        },
+        {
+          label: "Reputation Management",
+          href: "/marketing/reputation-management",
+          icon: Star,
+        },
+        {
+          label: "Lead Generation",
+          href: "/marketing/lead-generation",
+          icon: Users,
+        },
+        {
+          label: "Email Marketing",
+          href: "/marketing/email-marketing",
+          icon: MailOpen,
+        },
+        {
+          label: "AI Content Creation",
+          href: "/marketing/ai-content-creation",
+          icon: Bot,
+        },
+        {
+          label: "AI Marketing Automation",
+          href: "/marketing/ai-marketing-automation",
+          icon: Sparkles,
+        },
+        {
+          label: "Influencer Marketing",
+          href: "/marketing/influencer-marketing",
+          icon: UserCheck,
+        },
       ],
     },
     {
       title: "Paid Advertising",
-      titleHref: "/paid-marketing",
+      titleHref: "/marketing/paid-advertising",
       items: [
-        { label: "Google Ads", href: "/paid-marketing/google-ads", icon: CircleDollarSign },
-        { label: "Social Media Ads", href: "/paid-marketing/social-media-ads", icon: Megaphone },
-        { label: "PPC Campaign Management", href: "/paid-marketing/ppc-campaign-management", icon: MousePointerClick },
-        { label: "Retargeting & Remarketing", href: "/paid-marketing/retargeting-remarketing", icon: RefreshCcw },
-        { label: "Campaign Optimization", href: "/paid-marketing/campaign-optimization", icon: BarChart3 },
+        {
+          label: "Google Ads",
+          href: "/marketing/paid-advertising/google-ads",
+          icon: CircleDollarSign,
+        },
+        {
+          label: "Social Media Ads",
+          href: "/marketing/paid-advertising/social-media-ads",
+          icon: Megaphone,
+        },
+        {
+          label: "PPC Campaign Management",
+          href: "/marketing/paid-advertising/ppc-campaign-management",
+          icon: MousePointerClick,
+        },
+        {
+          label: "Retargeting & Remarketing",
+          href: "/marketing/paid-advertising/retargeting-remarketing",
+          icon: RefreshCcw,
+        },
+        {
+          label: "Campaign Optimization",
+          href: "/marketing/paid-advertising/campaign-optimization",
+          icon: BarChart3,
+        },
       ],
     },
   ];
@@ -755,65 +828,166 @@ export function Navbar() {
       title: "Web Development",
       titleHref: "/solutions/web-development",
       items: [
-        { label: "Landing Page Design", href: "/solutions/web-development/landing-page-design", icon: Layout },
-        { label: "WordPress Development", href: "/solutions/web-development/wordpress-development", icon: Code },
-        { label: "Custom Website", href: "/solutions/web-development/custom-website", icon: MonitorSmartphone },
-        { label: "UI/UX Design", href: "/solutions/web-development/ui-ux-design", icon: PenSquare },
+        {
+          label: "Landing Page Design",
+          href: "/solutions/web-development/landing-page-design",
+          icon: Layout,
+        },
+        {
+          label: "WordPress Development",
+          href: "/solutions/web-development/wordpress-development",
+          icon: SiWordpress,
+        },
+        {
+          label: "Elementor Development",
+          href: "/solutions/web-development/elementor-development",
+          icon: SiElementor,
+        },
+        {
+          label: "UI/UX Design",
+          href: "/solutions/web-development/ui-ux-design",
+          icon: PenSquare,
+        },
+        {
+          label: "Custom Website",
+          href: "/solutions/web-development/custom-website",
+          icon: MonitorSmartphone,
+        },
       ],
     },
     {
       title: "E-commerce Development",
       titleHref: "/solutions/ecommerce-development",
       items: [
-        { label: "Shopify Development", href: "/solutions/ecommerce-development/shopify-development", icon: ShoppingBag },
-        { label: "WooCommerce Development", href: "/solutions/ecommerce-development/woocommerce-development", icon: ShoppingCart },
-        { label: "BigCommerce Development", href: "/solutions/ecommerce-development/bigcommerce-development", icon: Store },
-        { label: "Custom E-commerce", href: "/solutions/ecommerce-development/custom-ecommerce", icon: Boxes },
+        {
+          label: "Shopify Development",
+          href: "/solutions/ecommerce-development/shopify-development",
+          icon: SiShopify,
+        },
+        {
+          label: "WooCommerce Development",
+          href: "/solutions/ecommerce-development/woocommerce-development",
+          icon: SiWoo,
+        },
+        {
+          label: "BigCommerce Development",
+          href: "/solutions/ecommerce-development/bigcommerce-development",
+          icon: SiBigcommerce,
+        },
+        {
+          label: "Custom E-commerce",
+          href: "/solutions/ecommerce-development/custom-ecommerce",
+          icon: Boxes,
+        },
       ],
     },
     {
       title: "Mobile App Development",
       titleHref: "/solutions/mobile-app-development",
       items: [
-        { label: "iOS App Development", href: "/solutions/mobile-app-development#ios", icon: Apple },
-        { label: "Android App Development", href: "/solutions/mobile-app-development#android", icon: Smartphone },
-        { label: "Flutter Development", href: "/solutions/mobile-app-development#flutter", icon: Layers },
-        { label: "React Native Development", href: "/solutions/mobile-app-development#react-native", icon: Zap },
+        {
+          label: "iOS App Development",
+          href: "/solutions/mobile-app-development#ios",
+          icon: FaApple,
+        },
+        {
+          label: "Android App Development",
+          href: "/solutions/mobile-app-development#android",
+          icon: FaAndroid,
+        },
+        {
+          label: "Flutter Development",
+          href: "/solutions/mobile-app-development#flutter",
+          icon: SiFlutter,
+        },
+        {
+          label: "React Native Development",
+          href: "/solutions/mobile-app-development#react-native",
+          icon: SiReact,
+        },
       ],
     },
     {
       title: "Frontend Development",
       titleHref: "/solutions/frontend-development",
       items: [
-        { label: "React Development", href: "/solutions/frontend-development#react", icon: Code },
-        { label: "Next.js Development", href: "/solutions/frontend-development#nextjs", icon: Zap },
-        { label: "Vue.js Development", href: "/solutions/frontend-development#vuejs", icon: Layers },
-        { label: "Tailwind CSS", href: "/solutions/frontend-development#tailwind", icon: Palette },
+        {
+          label: "React Development",
+          href: "/solutions/frontend-development#react",
+          icon: SiReact,
+        },
+        {
+          label: "Next.js Development",
+          href: "/solutions/frontend-development#nextjs",
+          icon: SiNextdotjs,
+        },
+        {
+          label: "Vue.js Development",
+          href: "/solutions/frontend-development#vuejs",
+          icon: SiVuedotjs,
+        },
+        {
+          label: "Tailwind CSS",
+          href: "/solutions/frontend-development#tailwind",
+          icon: SiTailwindcss,
+        },
       ],
     },
     {
       title: "Backend Development",
       titleHref: "/solutions/backend-development",
       items: [
-        { label: "PHP/Laravel Development", href: "/solutions/backend-development#laravel", icon: Code },
-        { label: "Python/Django Development", href: "/solutions/backend-development#django", icon: Database },
-        { label: "Node.js Development", href: "/solutions/backend-development#nodejs", icon: Server },
-        { label: "RESTful APIs", href: "/solutions/backend-development#restful-api", icon: GitBranch },
-        { label: "GraphQL Development", href: "/solutions/backend-development#graphql", icon: Network },
-        { label: "Microservices", href: "/solutions/backend-development#microservices", icon: Boxes },
-        { label: "Cloud & DevOps", href: "/solutions/backend-development#cloud-devops", icon: CloudCog },
+        {
+          label: "PHP/Laravel Development",
+          href: "/solutions/backend-development#php-laravel",
+          icon: SiLaravel,
+        },
+        {
+          label: "Python/Django Development",
+          href: "/solutions/backend-development#python-django",
+          icon: SiDjango,
+        },
+        {
+          label: "Node.js Development",
+          href: "/solutions/backend-development#nodejs",
+          icon: SiNodedotjs,
+        },
+        {
+          label: "RESTful APIs",
+          href: "/solutions/backend-development#restful-apis",
+          icon: GitBranch,
+        },
+        {
+          label: "Microservices",
+          href: "/solutions/backend-development#microservices",
+          icon: Boxes,
+        },
       ],
     },
     {
       title: "IT Solutions",
       titleHref: "/solutions/it-solutions",
       items: [
-        { label: "IT Consulting", href: "/solutions/it-solutions#consulting", icon: Lightbulb },
-        { label: "Cloud Infrastructure", href: "/solutions/it-solutions#cloud-infrastructure", icon: Cloud },
-        { label: "Security & Compliance", href: "/solutions/it-solutions#security-compliance", icon: Lock },
-        { label: "Managed IT Services", href: "/solutions/it-solutions#managed-it-services", icon: Headphones },
-        { label: "Custom Software", href: "/solutions/it-solutions#custom-software", icon: Cpu },
-        { label: "Digital Transformation", href: "/solutions/it-solutions#digital-transformation", icon: Workflow },
+        {
+          label: "IT Consulting",
+          href: "/solutions/it-solutions/it-consulting",
+          icon: Lightbulb,
+        },
+        {
+          label: "Managed IT Services",
+          href: "/solutions/it-solutions/managed-it-services",
+          icon: Headphones,
+        },
+        {
+          label: "Digital Transformation",
+          href: "/solutions/it-solutions/digital-transformation",
+          icon: Workflow,
+        },
+        {
+          label: "Cloud & DevOps",
+          href: "/solutions/it-solutions/cloud-devops",
+          icon: SiAmazonwebservices,
+        },
       ],
     },
   ];
@@ -927,7 +1101,8 @@ export function Navbar() {
                                 <ul className="space-y-1">
                                   {section.items.map((item) => {
                                     const Icon = item.icon;
-                                    const isExternal = "isExternal" in item && item.isExternal;
+                                    const isExternal =
+                                      "isExternal" in item && item.isExternal;
                                     return (
                                       <li key={item.href}>
                                         {isExternal ? (
@@ -935,7 +1110,9 @@ export function Navbar() {
                                             href={item.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            onClick={() => setMobileMenuOpen(false)}
+                                            onClick={() =>
+                                              setMobileMenuOpen(false)
+                                            }
                                             className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
                                           >
                                             <Icon className="h-4 w-4 flex-shrink-0" />
@@ -944,7 +1121,9 @@ export function Navbar() {
                                         ) : (
                                           <Link
                                             href={item.href}
-                                            onClick={() => setMobileMenuOpen(false)}
+                                            onClick={() =>
+                                              setMobileMenuOpen(false)
+                                            }
                                             className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
                                               pathname === item.href
                                                 ? "text-foreground"
@@ -994,7 +1173,8 @@ export function Navbar() {
                             {mobileMarketingSections.map((section) => (
                               <div key={section.title} className="mb-2">
                                 <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                                  {"titleHref" in section && section.titleHref ? (
+                                  {"titleHref" in section &&
+                                  section.titleHref ? (
                                     <Link
                                       href={section.titleHref}
                                       onClick={() => setMobileMenuOpen(false)}
@@ -1014,7 +1194,9 @@ export function Navbar() {
                                       <li key={item.href}>
                                         <Link
                                           href={item.href}
-                                          onClick={() => setMobileMenuOpen(false)}
+                                          onClick={() =>
+                                            setMobileMenuOpen(false)
+                                          }
                                           className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
                                             pathname === item.href
                                               ? "text-foreground"
@@ -1063,7 +1245,8 @@ export function Navbar() {
                             {mobileSolutionsSections.map((section) => (
                               <div key={section.title} className="mb-2">
                                 <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                                  {"titleHref" in section && section.titleHref ? (
+                                  {"titleHref" in section &&
+                                  section.titleHref ? (
                                     <Link
                                       href={section.titleHref}
                                       onClick={() => setMobileMenuOpen(false)}
@@ -1083,7 +1266,9 @@ export function Navbar() {
                                       <li key={item.href}>
                                         <Link
                                           href={item.href}
-                                          onClick={() => setMobileMenuOpen(false)}
+                                          onClick={() =>
+                                            setMobileMenuOpen(false)
+                                          }
                                           className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
                                             pathname === item.href
                                               ? "text-foreground"
@@ -1390,8 +1575,12 @@ export function Navbar() {
                                     return (
                                       <div key={section.title} className="p-4">
                                         <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
-                                          {"titleHref" in section && section.titleHref ? (
-                                            <Link href={section.titleHref} className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                                          {"titleHref" in section &&
+                                          section.titleHref ? (
+                                            <Link
+                                              href={section.titleHref}
+                                              className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+                                            >
                                               <GradientText>
                                                 {section.title}
                                               </GradientText>
@@ -1476,8 +1665,12 @@ export function Navbar() {
                                           className="p-4"
                                         >
                                           <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
-                                            {"titleHref" in section && section.titleHref ? (
-                                              <Link href={section.titleHref} className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                                            {"titleHref" in section &&
+                                            section.titleHref ? (
+                                              <Link
+                                                href={section.titleHref}
+                                                className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+                                              >
                                                 <GradientText>
                                                   {section.title}
                                                 </GradientText>
@@ -1679,15 +1872,21 @@ export function Navbar() {
                               return (
                                 <div key={section.title} className="p-4">
                                   <h3 className="mb-3 pl-2 pt-2 text-xs font-semibold uppercase tracking-wider">
-                                    {"titleHref" in section && section.titleHref ? (
-                                      <Link href={section.titleHref} className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                                    {"titleHref" in section &&
+                                    section.titleHref ? (
+                                      <Link
+                                        href={section.titleHref}
+                                        className="group inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+                                      >
                                         <GradientText>
                                           {section.title}
                                         </GradientText>
                                         <ArrowRight className="h-3 w-3 text-primary opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
                                       </Link>
                                     ) : (
-                                      <GradientText>{section.title}</GradientText>
+                                      <GradientText>
+                                        {section.title}
+                                      </GradientText>
                                     )}
                                   </h3>
                                   <div

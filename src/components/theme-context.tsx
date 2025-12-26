@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useState } from "react"
+import React, { createContext, useContext, useEffect, useState, useMemo } from "react"
 import { useTheme } from "next-themes"
 
 type ThemeColor = "green" | "blue" | "red" | "orange" | "yellow" | "gray"
@@ -12,18 +12,25 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
-export function ThemeColorProvider({ children }: { children: React.ReactNode }) {
-	const [themeColor, setThemeColor] = useState<ThemeColor>("green")
-	const { resolvedTheme } = useTheme()
+// Get Default Color Based On Light/Dark Theme
+function getDefaultColor(resolvedTheme: string | undefined): ThemeColor {
+	return resolvedTheme === "light" ? "blue" : "green"
+}
 
-	// Switch Theme Color Based On Light/Dark Theme
-	useEffect(() => {
-		if (resolvedTheme === "light") {
-			setThemeColor("blue")
-		} else if (resolvedTheme === "dark") {
-			setThemeColor("green")
-		}
-	}, [resolvedTheme])
+export function ThemeColorProvider({ children }: { children: React.ReactNode }) {
+	const { resolvedTheme } = useTheme()
+	// Track User's Manual Color Preference (null = Follow System Theme)
+	const [userColorPreference, setUserColorPreference] = useState<ThemeColor | null>(null)
+
+	// Derive Theme Color: Use User Preference If Set, Otherwise Follow System Theme
+	const themeColor = useMemo<ThemeColor>(() => {
+		return userColorPreference ?? getDefaultColor(resolvedTheme)
+	}, [userColorPreference, resolvedTheme])
+
+	// Wrapper To Set User Preference
+	const setThemeColor = (color: ThemeColor) => {
+		setUserColorPreference(color)
+	}
 
 	useEffect(() => {
 		// Update CSS Variables When Theme Color Changes

@@ -14,11 +14,11 @@ export async function GET(request: NextRequest) {
 
   try {
     // Revalidate The Domains Page
-    revalidatePath("/domains");
+    revalidatePath("/hosting/domains");
 
     return NextResponse.json({
       revalidated: true,
-      message: "Domains Page Revalidated Successfully",
+      message: "Hosting Domains Page Revalidated Successfully",
       timestamp: new Date().toISOString(),
     });
   } catch (error) {

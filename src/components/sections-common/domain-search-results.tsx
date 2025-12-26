@@ -116,7 +116,7 @@ export function DomainSearchResults({
         {/* Footer */}
         <div className="px-4 py-2.5 border-t border-border bg-muted/30">
           <a
-            href="/domains"
+            href="/hosting/domains"
             className="text-sm text-primary hover:underline inline-flex items-center gap-1"
           >
             View All Domain Pricing
