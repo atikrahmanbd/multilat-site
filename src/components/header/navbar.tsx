@@ -713,17 +713,17 @@ export function Navbar() {
             isExternal: true,
           },
           {
-            label: "Socheton Nagorik",
-            href: "https://sochetonnagorik.org",
-            description: "Help People Learn Civic Sense",
-            icon: Scale,
-            isExternal: true,
-          },
-          {
             label: "Onco Story",
             href: "https://oncostory.org",
             description: "Cancer Survivor Stories of Strength",
             image: "/our-brands/oncostory.jpg",
+            isExternal: true,
+          },
+          {
+            label: "Socheton Nagorik",
+            href: "https://sochetonnagorik.org",
+            description: "Help People Learn Civic Sense",
+            icon: Scale,
             isExternal: true,
           },
         ],
@@ -762,7 +762,9 @@ export function Navbar() {
   };
 
   // Helper function to get mobile sections from desktop menu item
-  const getMobileSectionsFromMenuItem = (menuLabel: string): MobileSection[] => {
+  const getMobileSectionsFromMenuItem = (
+    menuLabel: string
+  ): MobileSection[] => {
     const menuItem = menuItems.find((item) => item.label === menuLabel);
     if (!menuItem) return [];
 
@@ -783,7 +785,10 @@ export function Navbar() {
       });
 
       // Add bottom section if exists
-      if ("dropdownBottomSection" in menuItem && menuItem.dropdownBottomSection) {
+      if (
+        "dropdownBottomSection" in menuItem &&
+        menuItem.dropdownBottomSection
+      ) {
         sections.push(menuItem.dropdownBottomSection as MobileSection);
       }
 
@@ -792,7 +797,9 @@ export function Navbar() {
         "dropdownSocialContributionSection" in menuItem &&
         menuItem.dropdownSocialContributionSection
       ) {
-        sections.push(menuItem.dropdownSocialContributionSection as MobileSection);
+        sections.push(
+          menuItem.dropdownSocialContributionSection as MobileSection
+        );
       }
 
       return sections;
@@ -902,76 +909,78 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
                           >
-                            {getMobileSectionsFromMenuItem("Hosting").map((section) => (
-                              <div key={section.title} className="mb-2">
-                                <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                                  {section.title}
-                                </h4>
-                                <ul className="space-y-1">
-                                  {section.items.map((item) => {
-                                    const Icon = item.icon;
-                                    const hasImage = item.image;
-                                    const isExternal = item.isExternal;
-                                    const linkContent = (
-                                      <>
-                                        {hasImage ? (
-                                          <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
-                                            <Image
-                                              src={item.image as string}
-                                              alt={item.label}
-                                              width={20}
-                                              height={20}
-                                              className="w-full h-full object-cover"
-                                              unoptimized
-                                            />
-                                          </div>
-                                        ) : Icon ? (
-                                          <Icon className="h-5 w-5 flex-shrink-0" />
-                                        ) : null}
-                                        <span>{item.label}</span>
-                                        {item.badge && (
-                                          <MenuBadge type={item.badge} />
-                                        )}
-                                        {isExternal && (
-                                          <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
-                                        )}
-                                      </>
-                                    );
-                                    return (
-                                      <li key={item.href}>
-                                        {isExternal ? (
-                                          <a
-                                            href={item.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={() =>
-                                              setMobileMenuOpen(false)
-                                            }
-                                            className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
-                                          >
-                                            {linkContent}
-                                          </a>
-                                        ) : (
-                                          <Link
-                                            href={item.href}
-                                            onClick={() =>
-                                              setMobileMenuOpen(false)
-                                            }
-                                            className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
-                                              pathname === item.href
-                                                ? "text-foreground"
-                                                : "text-muted-foreground hover:text-foreground"
-                                            }`}
-                                          >
-                                            {linkContent}
-                                          </Link>
-                                        )}
-                                      </li>
-                                    );
-                                  })}
-                                </ul>
-                              </div>
-                            ))}
+                            {getMobileSectionsFromMenuItem("Hosting").map(
+                              (section) => (
+                                <div key={section.title} className="mb-2">
+                                  <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
+                                    {section.title}
+                                  </h4>
+                                  <ul className="space-y-1">
+                                    {section.items.map((item) => {
+                                      const Icon = item.icon;
+                                      const hasImage = item.image;
+                                      const isExternal = item.isExternal;
+                                      const linkContent = (
+                                        <>
+                                          {hasImage ? (
+                                            <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
+                                              <Image
+                                                src={item.image as string}
+                                                alt={item.label}
+                                                width={20}
+                                                height={20}
+                                                className="w-full h-full object-cover"
+                                                unoptimized
+                                              />
+                                            </div>
+                                          ) : Icon ? (
+                                            <Icon className="h-5 w-5 flex-shrink-0" />
+                                          ) : null}
+                                          <span>{item.label}</span>
+                                          {item.badge && (
+                                            <MenuBadge type={item.badge} />
+                                          )}
+                                          {isExternal && (
+                                            <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                                          )}
+                                        </>
+                                      );
+                                      return (
+                                        <li key={item.href}>
+                                          {isExternal ? (
+                                            <a
+                                              href={item.href}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              onClick={() =>
+                                                setMobileMenuOpen(false)
+                                              }
+                                              className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
+                                            >
+                                              {linkContent}
+                                            </a>
+                                          ) : (
+                                            <Link
+                                              href={item.href}
+                                              onClick={() =>
+                                                setMobileMenuOpen(false)
+                                              }
+                                              className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                                pathname === item.href
+                                                  ? "text-foreground"
+                                                  : "text-muted-foreground hover:text-foreground"
+                                              }`}
+                                            >
+                                              {linkContent}
+                                            </Link>
+                                          )}
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </div>
+                              )
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -1002,88 +1011,90 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
                           >
-                            {getMobileSectionsFromMenuItem("Marketing").map((section) => (
-                              <div key={section.title} className="mb-2">
-                                <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                                  {"titleHref" in section &&
-                                  section.titleHref ? (
-                                    <Link
-                                      href={section.titleHref}
-                                      onClick={() => setMobileMenuOpen(false)}
-                                      className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
-                                    >
-                                      {section.title}
-                                      <ArrowRight className="h-3 w-3 opacity-60" />
-                                    </Link>
-                                  ) : (
-                                    section.title
-                                  )}
-                                </h4>
-                                <ul className="space-y-1">
-                                  {section.items.map((item) => {
-                                    const Icon = item.icon;
-                                    const hasImage = item.image;
-                                    const isExternal = item.isExternal;
-                                    const linkContent = (
-                                      <>
-                                        {hasImage ? (
-                                          <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
-                                            <Image
-                                              src={item.image as string}
-                                              alt={item.label}
-                                              width={20}
-                                              height={20}
-                                              className="w-full h-full object-cover"
-                                              unoptimized
-                                            />
-                                          </div>
-                                        ) : Icon ? (
-                                          <Icon className="h-5 w-5 flex-shrink-0" />
-                                        ) : null}
-                                        <span>{item.label}</span>
-                                        {item.badge && (
-                                          <MenuBadge type={item.badge} />
-                                        )}
-                                        {isExternal && (
-                                          <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
-                                        )}
-                                      </>
-                                    );
-                                    return (
-                                      <li key={item.href}>
-                                        {isExternal ? (
-                                          <a
-                                            href={item.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={() =>
-                                              setMobileMenuOpen(false)
-                                            }
-                                            className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
-                                          >
-                                            {linkContent}
-                                          </a>
-                                        ) : (
-                                          <Link
-                                            href={item.href}
-                                            onClick={() =>
-                                              setMobileMenuOpen(false)
-                                            }
-                                            className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
-                                              pathname === item.href
-                                                ? "text-foreground"
-                                                : "text-muted-foreground hover:text-foreground"
-                                            }`}
-                                          >
-                                            {linkContent}
-                                          </Link>
-                                        )}
-                                      </li>
-                                    );
-                                  })}
-                                </ul>
-                              </div>
-                            ))}
+                            {getMobileSectionsFromMenuItem("Marketing").map(
+                              (section) => (
+                                <div key={section.title} className="mb-2">
+                                  <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
+                                    {"titleHref" in section &&
+                                    section.titleHref ? (
+                                      <Link
+                                        href={section.titleHref}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+                                      >
+                                        {section.title}
+                                        <ArrowRight className="h-3 w-3 opacity-60" />
+                                      </Link>
+                                    ) : (
+                                      section.title
+                                    )}
+                                  </h4>
+                                  <ul className="space-y-1">
+                                    {section.items.map((item) => {
+                                      const Icon = item.icon;
+                                      const hasImage = item.image;
+                                      const isExternal = item.isExternal;
+                                      const linkContent = (
+                                        <>
+                                          {hasImage ? (
+                                            <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
+                                              <Image
+                                                src={item.image as string}
+                                                alt={item.label}
+                                                width={20}
+                                                height={20}
+                                                className="w-full h-full object-cover"
+                                                unoptimized
+                                              />
+                                            </div>
+                                          ) : Icon ? (
+                                            <Icon className="h-5 w-5 flex-shrink-0" />
+                                          ) : null}
+                                          <span>{item.label}</span>
+                                          {item.badge && (
+                                            <MenuBadge type={item.badge} />
+                                          )}
+                                          {isExternal && (
+                                            <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                                          )}
+                                        </>
+                                      );
+                                      return (
+                                        <li key={item.href}>
+                                          {isExternal ? (
+                                            <a
+                                              href={item.href}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              onClick={() =>
+                                                setMobileMenuOpen(false)
+                                              }
+                                              className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
+                                            >
+                                              {linkContent}
+                                            </a>
+                                          ) : (
+                                            <Link
+                                              href={item.href}
+                                              onClick={() =>
+                                                setMobileMenuOpen(false)
+                                              }
+                                              className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                                pathname === item.href
+                                                  ? "text-foreground"
+                                                  : "text-muted-foreground hover:text-foreground"
+                                              }`}
+                                            >
+                                              {linkContent}
+                                            </Link>
+                                          )}
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </div>
+                              )
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -1114,88 +1125,90 @@ export function Navbar() {
                             transition={{ duration: 0.2 }}
                             className="mt-1 overflow-hidden border-l-2 border-border ml-[19px]"
                           >
-                            {getMobileSectionsFromMenuItem("Solutions").map((section) => (
-                              <div key={section.title} className="mb-2">
-                                <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
-                                  {"titleHref" in section &&
-                                  section.titleHref ? (
-                                    <Link
-                                      href={section.titleHref}
-                                      onClick={() => setMobileMenuOpen(false)}
-                                      className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
-                                    >
-                                      {section.title}
-                                      <ArrowRight className="h-3 w-3 opacity-60" />
-                                    </Link>
-                                  ) : (
-                                    section.title
-                                  )}
-                                </h4>
-                                <ul className="space-y-1">
-                                  {section.items.map((item) => {
-                                    const Icon = item.icon;
-                                    const hasImage = item.image;
-                                    const isExternal = item.isExternal;
-                                    const linkContent = (
-                                      <>
-                                        {hasImage ? (
-                                          <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
-                                            <Image
-                                              src={item.image as string}
-                                              alt={item.label}
-                                              width={20}
-                                              height={20}
-                                              className="w-full h-full object-cover"
-                                              unoptimized
-                                            />
-                                          </div>
-                                        ) : Icon ? (
-                                          <Icon className="h-5 w-5 flex-shrink-0" />
-                                        ) : null}
-                                        <span>{item.label}</span>
-                                        {item.badge && (
-                                          <MenuBadge type={item.badge} />
-                                        )}
-                                        {isExternal && (
-                                          <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
-                                        )}
-                                      </>
-                                    );
-                                    return (
-                                      <li key={item.href}>
-                                        {isExternal ? (
-                                          <a
-                                            href={item.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={() =>
-                                              setMobileMenuOpen(false)
-                                            }
-                                            className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
-                                          >
-                                            {linkContent}
-                                          </a>
-                                        ) : (
-                                          <Link
-                                            href={item.href}
-                                            onClick={() =>
-                                              setMobileMenuOpen(false)
-                                            }
-                                            className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
-                                              pathname === item.href
-                                                ? "text-foreground"
-                                                : "text-muted-foreground hover:text-foreground"
-                                            }`}
-                                          >
-                                            {linkContent}
-                                          </Link>
-                                        )}
-                                      </li>
-                                    );
-                                  })}
-                                </ul>
-                              </div>
-                            ))}
+                            {getMobileSectionsFromMenuItem("Solutions").map(
+                              (section) => (
+                                <div key={section.title} className="mb-2">
+                                  <h4 className="pl-4 py-2 text-xs font-semibold uppercase tracking-wider text-primary">
+                                    {"titleHref" in section &&
+                                    section.titleHref ? (
+                                      <Link
+                                        href={section.titleHref}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+                                      >
+                                        {section.title}
+                                        <ArrowRight className="h-3 w-3 opacity-60" />
+                                      </Link>
+                                    ) : (
+                                      section.title
+                                    )}
+                                  </h4>
+                                  <ul className="space-y-1">
+                                    {section.items.map((item) => {
+                                      const Icon = item.icon;
+                                      const hasImage = item.image;
+                                      const isExternal = item.isExternal;
+                                      const linkContent = (
+                                        <>
+                                          {hasImage ? (
+                                            <div className="flex-shrink-0 w-5 h-5 rounded overflow-hidden">
+                                              <Image
+                                                src={item.image as string}
+                                                alt={item.label}
+                                                width={20}
+                                                height={20}
+                                                className="w-full h-full object-cover"
+                                                unoptimized
+                                              />
+                                            </div>
+                                          ) : Icon ? (
+                                            <Icon className="h-5 w-5 flex-shrink-0" />
+                                          ) : null}
+                                          <span>{item.label}</span>
+                                          {item.badge && (
+                                            <MenuBadge type={item.badge} />
+                                          )}
+                                          {isExternal && (
+                                            <ExternalLink className="h-3 w-3 text-muted-foreground ml-auto" />
+                                          )}
+                                        </>
+                                      );
+                                      return (
+                                        <li key={item.href}>
+                                          {isExternal ? (
+                                            <a
+                                              href={item.href}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              onClick={() =>
+                                                setMobileMenuOpen(false)
+                                              }
+                                              className="flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors text-muted-foreground hover:text-foreground"
+                                            >
+                                              {linkContent}
+                                            </a>
+                                          ) : (
+                                            <Link
+                                              href={item.href}
+                                              onClick={() =>
+                                                setMobileMenuOpen(false)
+                                              }
+                                              className={`flex items-center gap-3 pl-4 pr-3 py-2 text-sm font-medium transition-colors ${
+                                                pathname === item.href
+                                                  ? "text-foreground"
+                                                  : "text-muted-foreground hover:text-foreground"
+                                              }`}
+                                            >
+                                              {linkContent}
+                                            </Link>
+                                          )}
+                                        </li>
+                                      );
+                                    })}
+                                  </ul>
+                                </div>
+                              )
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -1772,7 +1785,15 @@ export function Navbar() {
                                         }
                                       </GradientText>
                                     </h3>
-                                    <div className="grid grid-cols-2 gap-1">
+                                    <div
+                                      className="grid grid-cols-2 grid-flow-col gap-1"
+                                      style={{
+                                        gridTemplateRows: `repeat(${Math.ceil(
+                                          item.dropdownSocialContributionSection
+                                            .items.length / 2
+                                        )}, auto)`,
+                                      }}
+                                    >
                                       {item.dropdownSocialContributionSection.items.map(
                                         (productItem) => {
                                           const isExternal =
