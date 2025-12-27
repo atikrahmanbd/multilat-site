@@ -122,7 +122,7 @@ const costOptimizedX86Plans = [
     processor: "Intel/AMD",
     category: "cost-optimized" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 1090, // €4.99
+    monthlyPrice: 1100, // €4.99
     specs: {
       vCPU: "4",
       ram: "8 GB",
@@ -136,7 +136,7 @@ const costOptimizedX86Plans = [
     processor: "Intel/AMD",
     category: "cost-optimized" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 1960, // €8.99
+    monthlyPrice: 2000, // €8.99
     specs: {
       vCPU: "8",
       ram: "16 GB",
@@ -168,7 +168,7 @@ const costOptimizedArm64Plans = [
     processor: "Ampere",
     category: "cost-optimized" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 720, // €3.29
+    monthlyPrice: 700, // €3.29
     specs: {
       vCPU: "2",
       ram: "4 GB",
@@ -196,7 +196,7 @@ const costOptimizedArm64Plans = [
     processor: "Ampere",
     category: "cost-optimized" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 2610, // €11.99
+    monthlyPrice: 2600, // €11.99
     specs: {
       vCPU: "8",
       ram: "16 GB",
@@ -210,7 +210,7 @@ const costOptimizedArm64Plans = [
     processor: "Ampere",
     category: "cost-optimized" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 5220, // €23.99
+    monthlyPrice: 5200, // €23.99
     specs: {
       vCPU: "16",
       ram: "32 GB",
@@ -243,7 +243,7 @@ const sharedPlansGermanyFinland = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 2280, // €10.49
+    monthlyPrice: 2300, // €10.49
     specs: {
       vCPU: "4",
       ram: "8 GB",
@@ -257,7 +257,7 @@ const sharedPlansGermanyFinland = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 4240, // €19.49
+    monthlyPrice: 4200, // €19.49
     specs: {
       vCPU: "8",
       ram: "16 GB",
@@ -271,7 +271,7 @@ const sharedPlansGermanyFinland = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 6090, // €27.99
+    monthlyPrice: 6100, // €27.99
     specs: {
       vCPU: "12",
       ram: "24 GB",
@@ -285,7 +285,7 @@ const sharedPlansGermanyFinland = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 8370, // €38.49
+    monthlyPrice: 8400, // €38.49
     specs: {
       vCPU: "16",
       ram: "32 GB",
@@ -316,7 +316,7 @@ const sharedPlansSingapore = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 2610, // €11.99
+    monthlyPrice: 2600, // €11.99
     specs: {
       vCPU: "2",
       ram: "4 GB",
@@ -330,7 +330,7 @@ const sharedPlansSingapore = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 5440, // €24.99
+    monthlyPrice: 5400, // €24.99
     specs: {
       vCPU: "4",
       ram: "8 GB",
@@ -344,7 +344,7 @@ const sharedPlansSingapore = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 9350, // €42.99
+    monthlyPrice: 9400, // €42.99
     specs: {
       vCPU: "8",
       ram: "16 GB",
@@ -358,7 +358,7 @@ const sharedPlansSingapore = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 13050, // €59.99
+    monthlyPrice: 12900, // €59.99
     specs: {
       vCPU: "12",
       ram: "24 GB",
@@ -372,7 +372,7 @@ const sharedPlansSingapore = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 16750, // €76.99
+    monthlyPrice: 16800, // €76.99
     specs: {
       vCPU: "16",
       ram: "32 GB",
@@ -389,7 +389,7 @@ const sharedPlansUSA = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 980, // €4.49
+    monthlyPrice: 1000, // €4.49
     specs: {
       vCPU: "2",
       ram: "2 GB",
@@ -403,7 +403,7 @@ const sharedPlansUSA = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 1960, // €8.99
+    monthlyPrice: 2000, // €8.99
     specs: {
       vCPU: "3",
       ram: "4 GB",
@@ -417,7 +417,7 @@ const sharedPlansUSA = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 3480, // €15.99
+    monthlyPrice: 3500, // €15.99
     specs: {
       vCPU: "4",
       ram: "8 GB",
@@ -431,7 +431,7 @@ const sharedPlansUSA = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 6520, // €29.99
+    monthlyPrice: 6500, // €29.99
     specs: {
       vCPU: "8",
       ram: "16 GB",
@@ -445,7 +445,7 @@ const sharedPlansUSA = [
     processor: "AMD",
     category: "regular-performance" as Category,
     resourceType: "shared" as ResourceType,
-    monthlyPrice: 13050, // €59.99
+    monthlyPrice: 12900, // €59.99
     specs: {
       vCPU: "16",
       ram: "32 GB",
@@ -464,7 +464,7 @@ const dedicatedPlansGermanyFinland = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 2610, // €11.99
+    monthlyPrice: 2600, // €11.99
     specs: {
       vCPU: "2",
       ram: "8 GB",
@@ -478,7 +478,7 @@ const dedicatedPlansGermanyFinland = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 5220, // €23.99
+    monthlyPrice: 5200, // €23.99
     specs: {
       vCPU: "4",
       ram: "16 GB",
@@ -492,7 +492,7 @@ const dedicatedPlansGermanyFinland = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 10440, // €47.99
+    monthlyPrice: 10500, // €47.99
     specs: {
       vCPU: "8",
       ram: "32 GB",
@@ -506,7 +506,7 @@ const dedicatedPlansGermanyFinland = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 20880, // €95.99
+    monthlyPrice: 20900, // €95.99
     specs: {
       vCPU: "16",
       ram: "64 GB",
@@ -520,7 +520,7 @@ const dedicatedPlansGermanyFinland = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 41760, // €191.99
+    monthlyPrice: 41800, // €191.99
     specs: {
       vCPU: "32",
       ram: "128 GB",
@@ -534,7 +534,7 @@ const dedicatedPlansGermanyFinland = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 62640, // €287.99
+    monthlyPrice: 62600, // €287.99
     specs: {
       vCPU: "48",
       ram: "192 GB",
@@ -553,7 +553,7 @@ const dedicatedPlansSingapore = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 4570, // €21.00
+    monthlyPrice: 4600, // €21.00
     specs: {
       vCPU: "2",
       ram: "8 GB",
@@ -567,7 +567,7 @@ const dedicatedPlansSingapore = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 8570, // €39.40
+    monthlyPrice: 8600, // €39.40
     specs: {
       vCPU: "4",
       ram: "16 GB",
@@ -581,7 +581,7 @@ const dedicatedPlansSingapore = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 16180, // €74.40
+    monthlyPrice: 16200, // €74.40
     specs: {
       vCPU: "8",
       ram: "32 GB",
@@ -609,7 +609,7 @@ const dedicatedPlansSingapore = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 63950, // €294.00
+    monthlyPrice: 64000, // €294.00
     specs: {
       vCPU: "32",
       ram: "128 GB",
@@ -623,7 +623,7 @@ const dedicatedPlansSingapore = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 104840, // €482.00
+    monthlyPrice: 104800, // €482.00
     specs: {
       vCPU: "48",
       ram: "192 GB",
@@ -642,7 +642,7 @@ const dedicatedPlansUSA = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 2830, // €12.99
+    monthlyPrice: 2800, // €12.99
     specs: {
       vCPU: "2",
       ram: "8 GB",
@@ -656,7 +656,7 @@ const dedicatedPlansUSA = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 5650, // €25.99
+    monthlyPrice: 5600, // €25.99
     specs: {
       vCPU: "4",
       ram: "16 GB",
@@ -670,7 +670,7 @@ const dedicatedPlansUSA = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 10870, // €49.99
+    monthlyPrice: 10900, // €49.99
     specs: {
       vCPU: "8",
       ram: "32 GB",
@@ -684,7 +684,7 @@ const dedicatedPlansUSA = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 21750, // €99.99
+    monthlyPrice: 21800, // €99.99
     specs: {
       vCPU: "16",
       ram: "64 GB",
@@ -712,7 +712,7 @@ const dedicatedPlansUSA = [
     processor: "AMD",
     category: "general-purpose" as Category,
     resourceType: "dedicated" as ResourceType,
-    monthlyPrice: 65250, // €299.99
+    monthlyPrice: 65200, // €299.99
     specs: {
       vCPU: "48",
       ram: "192 GB",
