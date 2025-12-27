@@ -1,17 +1,16 @@
 "use client";
 import Link from "next/link";
 import {
-  Layers,
-  Code2,
   ArrowRight,
   Clock,
   Zap,
   Headphones,
+  Cloud,
+  Server,
 } from "lucide-react";
 import { GlassContainer } from "@/components/ui/glass-container";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { motion } from "motion/react";
-import { IconBrandWordpress } from "@tabler/icons-react";
 import GradientText from "../ui/gradient-text";
 import { CommonOrbitalDomainIcons } from "@/components/sections-common/common-orbital-domain-icons";
 import {
@@ -106,15 +105,14 @@ export function HomeServicesOffered() {
                       transition={{ duration: 0.3, delay: 0.4 }}
                     >
                       <div className="size-5 sm:size-6 shrink-0 rounded-full bg-primary flex mt-0.5 sm:mt-1 items-center justify-center">
-                        <Layers className="size-3 sm:size-4 text-primary-foreground" />
+                        <Zap className="size-3 sm:size-4 text-primary-foreground" />
                       </div>
                       <div>
                         <p className="text-sm sm:text-base md:text-md font-bold text-foreground">
-                          Shared Hosting
+                          Performance Hosting
                         </p>
                         <p className="text-xs sm:text-sm text-muted-foreground text-balance">
-                          Ideal For Small Websites and Blogs With Reliable
-                          Performance and Affordable Pricing
+                          NVMe Storage, LiteSpeed Cache, and Optimized Performance
                         </p>
                       </div>
                     </motion.div>
@@ -127,15 +125,14 @@ export function HomeServicesOffered() {
                       transition={{ duration: 0.3, delay: 0.5 }}
                     >
                       <div className="size-5 sm:size-6 shrink-0 rounded-full bg-primary flex mt-0.5 sm:mt-1 items-center justify-center">
-                        <IconBrandWordpress className="size-3 sm:size-4 text-primary-foreground" />
+                        <Cloud className="size-3 sm:size-4 text-primary-foreground" />
                       </div>
                       <div>
                         <p className="text-sm sm:text-base md:text-md font-bold text-foreground">
-                          WordPress Hosting
+                          Cloud / VPS Servers
                         </p>
                         <p className="text-xs sm:text-sm text-muted-foreground text-balance">
-                          Optimized WordPress Hosting With Enhanced Security,
-                          Auto Updates, and Lightning-Fast Performance
+                          Scalable VPS With Dedicated Resources and Root Access
                         </p>
                       </div>
                     </motion.div>
@@ -148,16 +145,14 @@ export function HomeServicesOffered() {
                       transition={{ duration: 0.3, delay: 0.6 }}
                     >
                       <div className="size-5 sm:size-6 shrink-0 rounded-full bg-primary flex mt-0.5 sm:mt-1 items-center justify-center">
-                        <Code2 className="size-3 sm:size-4 text-primary-foreground" />
+                        <Server className="size-3 sm:size-4 text-primary-foreground" />
                       </div>
                       <div>
                         <p className="text-sm sm:text-base md:text-md font-bold text-foreground">
-                          Frontend Tech Stack Hosting
+                          Dedicated Servers
                         </p>
                         <p className="text-xs sm:text-sm text-muted-foreground text-balance">
-                          Hosting Optimized For Modern Frameworks Like Vue,
-                          Next.js, React, Svelte, And More — Perfect For
-                          Developers
+                          Enterprise Bare Metal Servers With Maximum Power, Full Control, and No Shared Resources
                         </p>
                       </div>
                     </motion.div>

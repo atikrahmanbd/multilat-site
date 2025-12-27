@@ -299,12 +299,6 @@
   -webkit-background-clip: text;
 }
 
-/* SVG Gradient Fill */
-.svg-gradient-blue-aqua {
-  fill: url(#gradient-blue-aqua);
-  stroke: url(#gradient-blue-aqua);
-}
-
 @keyframes first {
   0% {
     transform: rotate(0deg);
